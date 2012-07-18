@@ -4,6 +4,7 @@
 <!DOCTYPE rdf:RDF [
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY OBO_REL "http://purl.org/obo/owl/OBO_REL#" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY snap "http://www.ifomis.org/bfo/1.1/snap#" >
     <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
@@ -22,7 +23,8 @@
      xmlns:snap="http://www.ifomis.org/bfo/1.1/snap#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#">
     <owl:Ontology rdf:about="http://www.purl.obolibrary.org/obo/omiabis.owl">
         <owl:imports rdf:resource="&obo;iao/pno.owl"/>
     </owl:Ontology>
@@ -335,14 +337,14 @@ for now.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000838"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">OBI-Branch</obo:IAO_0000119>
@@ -366,6 +368,39 @@ for now.</obo:IAO_0000116>
         <obo:IAO_0000115 xml:lang="en">Digital curation is the process of establishing and developing long term repositories of digital assets for current and future reference by researchers, scientists, and historians, and scholars generally.</obo:IAO_0000115>
         <obo:IAO_0000112 xml:lang="en">PMID: 16901087. Supporting the curation of biological databases with reusable text mining.Genome Inform. 2005;16(2):32-44.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMRSE_00000022 -->
+
+    <owl:Class rdf:about="&obo;OMRSE_00000022">
+        <rdfs:label xml:lang="en">collection of organisms</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;ObjectAggregate"/>
+        <obo:IAO_0000115 xml:lang="en">An object aggregate of organisms.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Any arbitrary collection of organisms.  They need not be of the same taxonomic class.  </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMRSE_00000023 -->
+
+    <owl:Class rdf:about="&obo;OMRSE_00000023">
+        <rdfs:label xml:lang="en">collection of humans</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000022"/>
+        <rdfs:comment xml:lang="en">An object aggregate all of whose components are human beings.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMRSE_00000024 -->
+
+    <owl:Class rdf:about="&obo;OMRSE_00000024">
+        <rdfs:label xml:lang="en">role in human social processes</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <obo:IAO_0000115 xml:lang="en">A role inhering in an entity realized by social interactions in human society.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">Previous definition: A role played by an entity in human social processes.</rdfs:comment>
     </owl:Class>
     
 
@@ -419,6 +454,33 @@ for now.</obo:IAO_0000116>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OMRSE_00000038 -->
+
+    <owl:Class rdf:about="&obo;OMRSE_00000038">
+        <rdfs:label xml:lang="en">legal person role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000024"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OBO_REL;inheres_in"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
+                            <rdf:Description rdf:about="&obo;OMRSE_00000023"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000119>Malcolm N. Shaw: International Law. Cambridge University Press, Cambridge, 2008.</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">A role borne by a human individual or by a collection of humans regarded as possessing rights and duties enforeable at law.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">We are aware of the fact that Wikipedia&#39;s definition differs from ours by saying that &quot;Legal personality (...) is the characteristic of a non-living entity regarded by law to have the status of personhood&quot; (http://en.wikipedia.org/wiki/Legal_personality) 
+However, Shaw explicates:
+&quot;In any legal system, certain entities, whether they be individuals or companies, will be regarded as possessing rights and duties enforceable at law. Thus an individual may prosecute or be prosecuted for assault and a company can sue for breach of contract. They are able to do this because the law recognises them as &#39;legal persons&#39; possessing the capacity to have and to maintain certain rights, and being subject to perform specific duties. (...) In municipal law individuals, limited companies and public corporations are recognized as each possessing a distinct legal personality, the terms of which are circumscribed by the relevant legislation&quot; (Shaw MN: International Law. Sixth Edition. Cambridge University Press, Cambridge, 2008).                We hold that Shaw&#39;s position is ontological more prolific since it not only allows to explain how groups of individuals become recognized as unities at law, but also how different individuals can hold different legal personality roles (always against the context of one legal system). The latter will proof useful when dealing with the representing comatous patients or minorsat law in ontologies.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000000 -->
 
     <owl:Class rdf:about="&omiabis;OMIABIS_0000000">
@@ -426,7 +488,25 @@ for now.</obo:IAO_0000116>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;OBI_0000245"/>
+                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;has_part"/>
+                        <owl:someValuesFrom rdf:resource="&obo;IAO_0000178"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;has_part"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&snap;ObjectAggregate"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&ro;has_part"/>
+                                        <owl:allValuesFrom rdf:resource="&obo;OBI_0100051"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&ro;participates_in"/>
                         <owl:someValuesFrom>
@@ -455,7 +535,17 @@ for now.</obo:IAO_0000116>
                                                     <rdf:Description rdf:about="&obo;IAO_0000100"/>
                                                     <owl:Restriction>
                                                         <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                                                        <owl:someValuesFrom rdf:resource="&obo;OBI_0100051"/>
+                                                        <owl:someValuesFrom>
+                                                            <owl:Class>
+                                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                                    <rdf:Description rdf:about="&snap;ObjectAggregate"/>
+                                                                    <owl:Restriction>
+                                                                        <owl:onProperty rdf:resource="&ro;has_part"/>
+                                                                        <owl:allValuesFrom rdf:resource="&obo;OBI_0100051"/>
+                                                                    </owl:Restriction>
+                                                                </owl:intersectionOf>
+                                                            </owl:Class>
+                                                        </owl:someValuesFrom>
                                                     </owl:Restriction>
                                                 </owl:intersectionOf>
                                             </owl:Class>
@@ -468,7 +558,6 @@ for now.</obo:IAO_0000116>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0000245"/>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">definition derived from the definition of &#39;human biobank&#39;</obo:IAO_0000119>
         <obo:IAO_0000115 xml:lang="en">is an organization storing and managing  biological specimens (DNA, blood, tissue, pollen) and information related to these specimens.</obo:IAO_0000115>
@@ -509,7 +598,8 @@ for now.</obo:IAO_0000116>
 
     <owl:Class rdf:about="&omiabis;OMIABIS_0000004">
         <rdfs:label xml:lang="en">ISO 3166-1 alpha-2 code</rdfs:label>
-        <owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;IAO_0020012"/>
                 <owl:someValuesFrom>
@@ -521,8 +611,7 @@ for now.</obo:IAO_0000116>
                     </owl:Class>
                 </owl:someValuesFrom>
             </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        </rdfs:subClassOf>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</obo:IAO_0000119>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">Two-letter country codes defined in ISO 3166-1, part of the ISO 3166 standard published by the International Organization for Standardization (ISO), to designate countries, dependent territories, and special areas of geographical interest.</obo:IAO_0000115>
