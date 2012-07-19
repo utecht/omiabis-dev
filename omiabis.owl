@@ -144,6 +144,14 @@
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">a ownes b iff a is the bearer of the role concretizes the claims and obligations  regarding b.</obo:IAO_0000115>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Ownership</obo:IAO_0000119>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
+                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -154,14 +162,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
-                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -408,14 +408,14 @@ for now.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000838"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">OBI-Branch</obo:IAO_0000119>
@@ -748,7 +748,7 @@ However, Shaw explicates:
     <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000010 -->
 
     <owl:Class rdf:about="&omiabis;OMIABIS_0000010">
-        <rdfs:label xml:lang="en">organization legally representing biobank</rdfs:label>
+        <rdfs:label xml:lang="en">biobank organization</rdfs:label>
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -776,6 +776,76 @@ However, Shaw explicates:
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">The organization bearing legal personality that ownes or adminstrates a biobank.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">biobank juristic person</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000011 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000011">
+        <rdfs:label xml:lang="en">contacting</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+        <obo:IAO_0000115 xml:lang="en">Contacting is the process of one human being starting a communication process with another human being. Contacting can be done using all modes of communication used by humans.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000012 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000012">
+        <rdfs:label xml:lang="en">organization contact role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000024"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000300"/>
+                <owl:allValuesFrom rdf:resource="&omiabis;OMIABIS_0000011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;inheres_in"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;OBI_0000846"/>
+                                <owl:someValuesFrom rdf:resource="&obo;OBI_0000245"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">is a role borne by a human being that is a member of a specific organisation and acts as contact person for that organization. This role gets realized by the bearer being a participant in a contacting process.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000013 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000013">
+        <rdfs:label xml:lang="en">biobank contact person</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;OBI_0000846"/>
+                        <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000010"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;bearer_of"/>
+                        <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000012"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;NCBITaxon_9606"/>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A human being that is member of a biobank organization and bears the organization contact role.</obo:IAO_0000115>
     </owl:Class>
 </rdf:RDF>
 
