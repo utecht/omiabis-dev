@@ -140,9 +140,9 @@
 
     <owl:ObjectProperty rdf:about="&omiabis;OMIABIS_0000008">
         <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
-        <rdfs:label xml:lang="en">ownes</rdfs:label>
+        <rdfs:label xml:lang="en">owns</rdfs:label>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">a ownes b iff a is the bearer of the role concretizes the claims and obligations  regarding b.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">a owns b iff a is the bearer of the roles that concretizes the claims and obligations  regarding b.</obo:IAO_0000115>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Ownership</obo:IAO_0000119>
         <rdfs:range>
             <owl:Class>
@@ -416,14 +416,14 @@ for now.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000838"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">OBI-Branch</obo:IAO_0000119>
@@ -667,9 +667,9 @@ However, Shaw explicates:
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <obo:IAO_0000115 xml:lang="en">A biobank is a material entity storing and managing  biological specimens (DNA, blood, tissue, pollen) and information related to these specimens.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">definition derived from the definition of &#39;human biobank&#39;</obo:IAO_0000119>
-        <obo:IAO_0000115 xml:lang="en">is an organization storing and managing  biological specimens (DNA, blood, tissue, pollen) and information related to these specimens.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -782,7 +782,7 @@ However, Shaw explicates:
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000245"/>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">The organization bearing legal personality that ownes or adminstrates a biobank.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">An organization bearing legal personality that ownes or adminstrates a biobank.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">biobank juristic person</obo:IAO_0000118>
     </owl:Class>
     
