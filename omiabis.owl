@@ -5,6 +5,7 @@
     <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
     <!ENTITY obo "http://purl.obolibrary.org/obo/" >
     <!ENTITY OBO_REL "http://purl.org/obo/owl/OBO_REL#" >
+    <!ENTITY dc "http://purl.org/dc/elements/1.1/" >
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
     <!ENTITY snap "http://www.ifomis.org/bfo/1.1/snap#" >
     <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
@@ -16,6 +17,7 @@
 
 <rdf:RDF xmlns="http://www.purl.obolibrary.org/obo/omiabis.owl#"
      xml:base="http://www.purl.obolibrary.org/obo/omiabis.owl"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
@@ -26,6 +28,18 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#">
     <owl:Ontology rdf:about="http://www.purl.obolibrary.org/obo/omiabis.owl">
+        <dc:contributor>Jan-Eric Litton</dc:contributor>
+        <dc:contributor>Sanela Kjellqvist</dc:contributor>
+        <dc:creator>Mathias Brochhausen</dc:creator>
+        <dc:contributor>Maria Anderberg</dc:contributor>
+        <dc:contributor>Martin N. Fransson</dc:contributor>
+        <dc:contributor>Roxana Merino-Martinez</dc:contributor>
+        <dc:contributor>Loreana Norlin</dc:contributor>
+        <dc:contributor>Mikael Eriksson</dc:contributor>
+        <dc:source xml:lang="en">MIABIS_v2_accepted</dc:source>
+        <dc:title xml:lang="en">Ontologized MIABIS</dc:title>
+        <dc:contributor>William R. Hogan</dc:contributor>
+        <owl:versionInfo xml:lang="en">development version (further information, see svn trunk)</owl:versionInfo>
         <owl:imports rdf:resource="&obo;iao/pno.owl"/>
     </owl:Ontology>
     
@@ -136,6 +150,20 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0001688 -->
+
+    <owl:ObjectProperty rdf:about="&obo;OBI_0001688">
+        <rdfs:label xml:lang="en">has organization member</rdfs:label>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">Person: Jie Zheng</obo:IAO_0000117>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">Relating an organization to a legal person or organization.</obo:IAO_0000115>
+        <obo:IAO_0000116 rdf:datatype="&xsd;string">See tracker:
+https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_id=177891&amp;atid=886178</obo:IAO_0000116>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000008 -->
 
     <owl:ObjectProperty rdf:about="&omiabis;OMIABIS_0000008">
@@ -174,14 +202,6 @@
         <rdfs:comment xml:lang="en">A definition of &quot;tranfers&quot; object property can be found in d-acts: http:purl.obolibrary.org/iao/d-acts.owl</rdfs:comment>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">a administrates b if c ownes b and some rights and obligation regarding b are transfered from c to a.</obo:IAO_0000115>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
-                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -192,6 +212,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
+                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -416,14 +444,14 @@ for now.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000838"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">OBI-Branch</obo:IAO_0000119>
@@ -913,6 +941,88 @@ However, Shaw explicates:
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000422"/>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">Postal address specifying the topographical location for deliveries to the biobank contact person.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000017 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000017">
+        <rdfs:label xml:lang="en">department</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000245"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Class>
+                        <owl:complementOf>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;bearer_of"/>
+                                <owl:someValuesFrom rdf:resource="&obo;OMRSE_00000038"/>
+                            </owl:Restriction>
+                        </owl:complementOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;OBI_0000846"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&obo;OBI_0000245"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&ro;bearer_of"/>
+                                        <owl:someValuesFrom rdf:resource="&obo;OMRSE_00000038"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A department is a part of a larger organization with a specific responsibility.</obo:IAO_0000115>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Department</obo:IAO_0000119>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000018 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000018">
+        <rdfs:label xml:lang="en">biobank contact&#39;s department</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&omiabis;OMIABIS_0000017"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;OBI_0001688"/>
+                        <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000013"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000017"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000019 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000019">
+        <rdfs:label xml:lang="en">unique resource locator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000578"/>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A CRID that constitutes a reference to an Internet resource.</obo:IAO_0000115>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Uniform_resource_locator</obo:IAO_0000119>
+        <obo:IAO_0000118 xml:lang="en">uri</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000020 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000020">
+        <rdfs:label xml:lang="en">biobank&#39;s unique resource locator</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000019"/>
+        <obo:IAO_0000118 xml:lang="en">biobank url</obo:IAO_0000118>
     </owl:Class>
 </rdf:RDF>
 
