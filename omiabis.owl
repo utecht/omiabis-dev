@@ -238,7 +238,12 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
     <!-- http://purl.obolibrary.org/obo/IAO_0000422 -->
 
     <rdf:Description rdf:about="&obo;IAO_0000422">
-        <rdfs:comment xml:lang="en">Mathias Brochhausen: I&#39;d hold that besides the criteria mentioned by the definition a postal address designates a site on earth. This holds for both topographical adress (including street names) and P.O. Boxes.</rdfs:comment>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000026"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </rdf:Description>
     
 
@@ -625,7 +630,7 @@ However, Shaw explicates:
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                    <rdf:Description rdf:about="&snap;ObjectAggregate"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&ro;has_part"/>
                         <owl:someValuesFrom rdf:resource="&obo;IAO_0000178"/>
@@ -695,6 +700,7 @@ However, Shaw explicates:
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&snap;ObjectAggregate"/>
         <obo:IAO_0000115 xml:lang="en">A biobank is a material entity storing and managing  biological specimens (DNA, blood, tissue, pollen) and information related to these specimens.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">definition derived from the definition of &#39;human biobank&#39;</obo:IAO_0000119>
@@ -940,7 +946,7 @@ However, Shaw explicates:
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000422"/>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">Postal address specifying the topographical location for deliveries to the biobank contact person.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">Postal address used as a directive for deliveries to the biobank contact person.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1023,6 +1029,267 @@ However, Shaw explicates:
         <rdfs:label xml:lang="en">biobank&#39;s unique resource locator</rdfs:label>
         <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000019"/>
         <obo:IAO_0000118 xml:lang="en">biobank url</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000021 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000021">
+        <rdfs:label xml:lang="en">telephone number</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000300"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;has_part"/>
+                <owl:allValuesFrom rdf:resource="&obo;IAO_0000029"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A telephone number  is a textual entity consisting of a sequence of digits used to call from one telephone line to another in a public switched telephone network.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">MB: This class should probably be a subclass to CRID. However, the textual definition of CRID right now states that each instance has the CRID identifier as a part. This is not the case for telephone numbers. Therefore, they cannot be subsumed under CRID now. I am looking into changing IAO accordingly. Once that is done, the class ought to be a subclass of CRID.</rdfs:comment>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Telephone_number</obo:IAO_0000119>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000022 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000022">
+        <rdfs:label xml:lang="en">biobank contact&#39;s phone</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&omiabis;OMIABIS_0000021"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000013"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000021"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000023 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000023">
+        <rdfs:label xml:lang="en">post-office box number</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000578"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0000219"/>
+                        <owl:allValuesFrom rdf:resource="&omiabis;OMIABIS_0000024"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000578"/>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A CRID denoting a post-office box.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000024 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000024">
+        <rdfs:label xml:lang="en">post-office box</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Post-office_box</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">A post-office box is material entity that is a box on the premises of a post office station and is uniquely addressable.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000026 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000026">
+        <rdfs:label xml:lang="en">postal code</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000300"/>
+        <obo:IAO_0000115 xml:lang="en">A postal code is a textual entity that is a series of letters and/or digits and is part of a postal address for the purpose of sorting mail.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">MB: This class should probably be a subclass to CRID. However, the textual definition of CRID right now states that each instance has the CRID identifier as a part. This is not the case for postal codes. Therefore, they cannot be subsumed under CRID now. I am looking into changing IAO accordingly. Once that is done, the class ought to be a subclass of CRID.</rdfs:comment>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Postal_code</obo:IAO_0000119>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000027 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000027">
+        <rdfs:label xml:lang="en">biobank contact&#39;s postal code</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&omiabis;OMIABIS_0000026"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                        <owl:allValuesFrom rdf:resource="&omiabis;OMIABIS_0000016"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000026"/>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">The postal code that is part of the postal address of the biobank contact person.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000028 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000028">
+        <rdfs:label xml:lang="en">biobank contact person&#39;s ISO 3166-1 alpha-2 code&#39;</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&omiabis;OMIABIS_0000004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                        <owl:allValuesFrom rdf:resource="&omiabis;OMIABIS_0000016"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000004"/>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">The ISO 3166-1 alpha-2 code that is part of the biobank contact person&#39;s postal address.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000029 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000029">
+        <rdfs:label xml:lang="en">settlement part of address</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000300"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000300"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                        <owl:allValuesFrom rdf:resource="&obo;IAO_0000422"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A textual entity that is part of a postal address and denotes a human settlement for the purpose of delivering mail.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000030 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000030">
+        <rdfs:label xml:lang="en">settlement part of biobank contact&#39;s address</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&omiabis;OMIABIS_0000029"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                        <owl:allValuesFrom rdf:resource="&omiabis;OMIABIS_0000016"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000029"/>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">The part of a biobank contact&#39;s adress denoting a settlement.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">biobank contact&#39;s city</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000031 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000031">
+        <rdfs:label xml:lang="en">intra-settlement specification part of address</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000300"/>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A textual entity that is part of a postal address and specifies the location inside the settlement. This can be a street name and a house number, or just a number or a post-office box number.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000032 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000032">
+        <rdfs:label xml:lang="en">intra-settlement specification part of biobank contact&#39;s address</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&omiabis;OMIABIS_0000031"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                        <owl:allValuesFrom rdf:resource="&omiabis;OMIABIS_0000016"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000031"/>
+        <obo:IAO_0000115 xml:lang="en">An intra-settlement specification part of address that is part of a biobank contact&#39;s postal address.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">biobank contact&#39;s street</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000033 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000033">
+        <rdfs:label xml:lang="en">hosted study collection</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&snap;ObjectAggregate"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;has_part"/>
+                        <owl:someValuesFrom rdf:resource="&obo;OBI_0100051"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;participates_in"/>
+                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000471"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                        <owl:allValuesFrom rdf:resource="&omiabis;OMIABIS_0000000"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&snap;ObjectAggregate"/>
+        <obo:IAO_0000115 xml:lang="en">A object aggregate that consists of specimens, participates in a study and is part of a biobank.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000034 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000034">
+        <rdfs:label xml:lang="en">name of hosted study collection</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0020000"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0020012"/>
+                        <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000033"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">The proper name that designates a hosted study collection.</obo:IAO_0000115>
     </owl:Class>
 </rdf:RDF>
 
