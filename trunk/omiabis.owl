@@ -38,8 +38,8 @@
         <dc:contributor>Mikael Eriksson</dc:contributor>
         <dc:source xml:lang="en">MIABIS_v2_accepted</dc:source>
         <dc:title xml:lang="en">Ontologized MIABIS</dc:title>
-        <owl:versionInfo xml:lang="en">Release version 2012-09-14</owl:versionInfo>
         <dc:contributor>William R. Hogan</dc:contributor>
+        <owl:versionInfo xml:lang="en">development version</owl:versionInfo>
         <owl:imports rdf:resource="&obo;iao/pno.owl"/>
     </owl:Ontology>
     
@@ -53,6 +53,36 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    <rdf:Description rdf:about="&obo;IAO_0000115">
+        <rdfs:label xml:lang="en">definition</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000116">
+        <rdfs:label xml:lang="en">editor note</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000412">
+        <rdfs:label xml:lang="en">imported from</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000114">
+        <rdfs:label xml:lang="en">has curation status</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000119">
+        <rdfs:label xml:lang="en">definition source</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000232">
+        <rdfs:label xml:lang="en">curator note</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000117">
+        <rdfs:label xml:lang="en">term editor</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000118">
+        <rdfs:label xml:lang="en">alternative term</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000111">
+        <rdfs:label xml:lang="en">editor preferred term</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000112">
+        <rdfs:label xml:lang="en">example of usage</rdfs:label>
+    </rdf:Description>
     
 
 
@@ -78,11 +108,36 @@
     
 
 
+    <!-- http://purl.obolibrary.org/obo/BFO_0000050 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BFO_0000050">
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
+        <obo:IAO_0000116 xml:lang="en">There is controversy about this relation intended to represent the relation between some arbitrary physical thing that is used as a represention/proxy/pointer to something else</obo:IAO_0000116>
+        <obo:IAO_0000118 xml:lang="en">part of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">part_of</obo:IAO_0000118>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/BFO_0000052 -->
 
     <owl:ObjectProperty rdf:about="&obo;BFO_0000052">
         <rdfs:label xml:lang="en">inheres in</rdfs:label>
         <obo:IAO_0000118 xml:lang="en">inheres_in</obo:IAO_0000118>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000053 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BFO_0000053">
+        <rdfs:label xml:lang="en">is bearer of</rdfs:label>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
+        <obo:IAO_0000118 xml:lang="en">bearer of</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">bearer_of</obo:IAO_0000118>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -94,6 +149,16 @@
         <rdfs:label xml:lang="en">is concretization of</rdfs:label>
         <obo:IAO_0000118 xml:lang="en">concretization of</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">concretization_of</obo:IAO_0000118>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000059 -->
+
+    <owl:ObjectProperty rdf:about="&obo;BFO_0000059">
+        <rdfs:label xml:lang="en">concretizes</rdfs:label>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -129,6 +194,19 @@
         <obo:IAO_0000119 rdf:datatype="&xsd;string">PPPB branch derived</obo:IAO_0000119>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">This relation obtains between a planned process and a objective specification when the criteria specified in the objective specification are met at the end of the planned process.</obo:IAO_0000115>
         <obo:IAO_0000111 rdf:datatype="&xsd;string">achieves_planned_objective</obo:IAO_0000111>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000833 -->
+
+    <owl:ObjectProperty rdf:about="&obo;OBI_0000833">
+        <rdfs:label rdf:datatype="&xsd;string">objective_achieved_by</rdfs:label>
+        <obo:IAO_0000115 rdf:datatype="&xsd;string">This relation obtains between a a objective specification and a planned process when the criteria specified in the objective specification are met at the end of the planned process.</obo:IAO_0000115>
+        <obo:IAO_0000116 rdf:datatype="&xsd;string">definition needs clean up to indicate directionality</obo:IAO_0000116>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
+        <obo:IAO_0000111 rdf:datatype="&xsd;string">objective_achieved_by</obo:IAO_0000111>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -202,6 +280,14 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
         <rdfs:comment xml:lang="en">A definition of &quot;tranfers&quot; object property can be found in d-acts: http:purl.obolibrary.org/iao/d-acts.owl</rdfs:comment>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">a administrates b if c ownes b and some rights and obligation regarding b are transfered from c to a.</obo:IAO_0000115>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
+                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -212,11 +298,25 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000042 -->
+
+    <owl:ObjectProperty rdf:about="&omiabis;OMIABIS_0000042">
+        <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
+        <rdf:type rdf:resource="&owl;IrreflexiveProperty"/>
+        <rdfs:label xml:lang="en">is contact information about</rdfs:label>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">a is contact information for b, if a is a information content entity, b is a human being or an organization and a identifies a physical location or electronic resource that allows to initiate communication with a.</obo:IAO_0000115>
+        <rdfs:domain rdf:resource="&obo;IAO_0000030"/>
+        <rdfs:subPropertyOf rdf:resource="&obo;IAO_0000136"/>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
-                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                    <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
+                    <rdf:Description rdf:about="&obo;OBI_0000245"/>
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
@@ -270,6 +370,39 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OBI_0000102 -->
+
+    <owl:Class rdf:about="&obo;OBI_0000102">
+        <rdfs:label xml:lang="en">responsible party role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000202"/>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
+        <obo:IAO_0000118 rdf:datatype="&xsd;string">responsible party</obo:IAO_0000118>
+        <obo:IAO_0000111 rdf:datatype="&xsd;string">responsible party role</obo:IAO_0000111>
+        <obo:IAO_0000119 xml:lang="en">OBI</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">Person: Jennifer Fostel</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">a study personnel role played by a party who is accountable for the execution of a study component and can make decisions about the conduct of the study</obo:IAO_0000115>
+        <obo:IAO_0000112 xml:lang="en">he THERAPIST has the ability to print a separate statement for the patient and each responsible party. http://www.beaverlog.com/therapist/ez_support/billing/responsible_party_statements.htm</obo:IAO_0000112>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000103 -->
+
+    <owl:Class rdf:about="&obo;OBI_0000103">
+        <rdfs:label xml:lang="en">principal investigator role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000102"/>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
+        <obo:IAO_0000118 rdf:datatype="&xsd;string">principal investigator</obo:IAO_0000118>
+        <obo:IAO_0000111 rdf:datatype="&xsd;string">principal investigator role</obo:IAO_0000111>
+        <obo:IAO_0000232 xml:lang="en">CDISC definition: A person responsible for the conduct of the clinical trial at a trial site. If a trial is conducted by a team of individuals at a trial site, the investigator is the responsible leader of the team and may be called the principal investigator. 2. The individual principal investigator. 2. The individual under whose immediate direction the test article is administered or dispensed to, or used involving, a subject, or, in the event of an investigation conducted by a team of individuals, is See also sponsor-investigator.; Leiter der klinischen Prufung.Under the German Drug Law, the physician who is head of the clinical investigation (CDISC): coordinating investigator (CDISC) (also study coordinator, MUSC); sponsor-investigator. An individual who both initiates and conducts, alone or with others, a clinical trial, and under whose immediate direction the investigational product is administered to, dispensed to, or used by a subject.NOTE: The term does not include any person other than an individual, hence not a corporation, agency (CDISC)</obo:IAO_0000232>
+        <obo:IAO_0000117 xml:lang="en">Person: Jennifer Fostel</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">a responsible party role played by a person responsible for the overall conduct of a study</obo:IAO_0000115>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000123"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OBI_0000112 -->
 
     <owl:Class rdf:about="&obo;OBI_0000112">
@@ -304,6 +437,76 @@ something taken from study subject, leaves the study and becomes the specimen.</
 - when parasite in people we study people, people are subjects and parasites are specimen
 - when parasite extracted, they become subject in the following study
 specimen can later be subject.</obo:IAO_0000116>
+        <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OBI_0000202 -->
+
+    <owl:Class rdf:about="&obo;OBI_0000202">
+        <rdfs:label rdf:datatype="&xsd;string">investigation agent role</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&snap;Role"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&OBO_REL;inheres_in"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
+                                            <rdf:Description rdf:about="&obo;OBI_0000245"/>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&obo;BFO_0000053"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&obo;BFO_0000059"/>
+                                                <owl:someValuesFrom>
+                                                    <owl:Class>
+                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="&obo;IAO_0000005"/>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="&obo;OBI_0000833"/>
+                                                                <owl:someValuesFrom>
+                                                                    <owl:Class>
+                                                                        <owl:intersectionOf rdf:parseType="Collection">
+                                                                            <rdf:Description rdf:about="&obo;OBI_0000011"/>
+                                                                            <owl:Restriction>
+                                                                                <owl:onProperty rdf:resource="&obo;BFO_0000050"/>
+                                                                                <owl:someValuesFrom rdf:resource="&obo;OBI_0000066"/>
+                                                                            </owl:Restriction>
+                                                                        </owl:intersectionOf>
+                                                                    </owl:Class>
+                                                                </owl:someValuesFrom>
+                                                            </owl:Restriction>
+                                                        </owl:intersectionOf>
+                                                    </owl:Class>
+                                                </owl:someValuesFrom>
+                                            </owl:Restriction>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <obo:IAO_0000232 rdf:datatype="&xsd;string">Feb 10, 2009.  changes after discussion at OBI Consortium Workshop Feb 2-6, 2009.  accepted as core term.</obo:IAO_0000232>
+        <obo:IAO_0000116 rdf:datatype="&xsd;string">Implementing a study means carrying out or performing the study and providing reagents or other materials used in the study and other tasks without which the study would not happen.</obo:IAO_0000116>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
+        <obo:IAO_0000111 rdf:datatype="&xsd;string">investigation agent role</obo:IAO_0000111>
+        <obo:IAO_0000118 rdf:datatype="&xsd;string">investigator</obo:IAO_0000118>
+        <obo:IAO_0000117 xml:lang="en">GROUP:  Role Branch</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">Investigation agent role is a role borne by a person or organization which is realized in a process that is part of an investigation in which an objective is achieved. These processes include: planning, overseeing, funding, reviewing.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">OBI</obo:IAO_0000119>
+        <obo:IAO_0000112 xml:lang="en">The person perform microarray experiments and submit microarray results (including raw data, processed data) with experiment description to ArrayExpress.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000122"/>
     </owl:Class>
     
@@ -736,9 +939,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <obo:IAO_0000115 xml:lang="en">A textural string of letters that represents a biobank.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">Name of biobank</obo:IAO_0000118>
-        <obo:IAO_0000115 xml:lang="en">Textural string of letters denoting the name of the biobank in the local language.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -777,7 +980,7 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;IAO_0000219"/>
+                        <owl:onProperty rdf:resource="&obo;IAO_0020012"/>
                         <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000000"/>
                     </owl:Restriction>
                     <owl:Restriction>
@@ -789,6 +992,18 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
         </rdfs:subClassOf>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">Textual string of letters starting with the country code (according to standard ISO1366 alpha2) followed by the underscore “_” and post-fixed by a biobank ID or name specified by its juristic person (nationally specific).</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000006 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000006">
+        <rdfs:label xml:lang="en">sample collection or study identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000037"/>
+        <obo:IAO_0000115 xml:lang="en">A sample collection or study proper name that is centrally registered and unique within one framework.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">Sample Collection/Study ID</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -842,8 +1057,14 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000012 -->
 
     <owl:Class rdf:about="&omiabis;OMIABIS_0000012">
-        <rdfs:label xml:lang="en">organization contact role</rdfs:label>
+        <rdfs:label xml:lang="en">contact role</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000024"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000300"/>
+                <owl:allValuesFrom rdf:resource="&omiabis;OMIABIS_0000011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&ro;inheres_in"/>
@@ -860,14 +1081,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000300"/>
-                <owl:allValuesFrom rdf:resource="&omiabis;OMIABIS_0000011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A role borne by a human being that is part of an group of individuals and acts as contact person for the group. This role gets realized by the bearer being a participant in a contacting process.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">is a role borne by a human being that is a member of a specific organisation and acts as contact person for that organization. This role gets realized by the bearer being a participant in a contacting process.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -944,7 +1159,7 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&obo;IAO_0000422"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                        <owl:onProperty rdf:resource="&omiabis;OMIABIS_0000042"/>
                         <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000013"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1012,6 +1227,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000017"/>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A department that has a contact person for a biobank as an organizational member.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1067,7 +1284,7 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&omiabis;OMIABIS_0000021"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                        <owl:onProperty rdf:resource="&omiabis;OMIABIS_0000042"/>
                         <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000013"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1218,6 +1435,38 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
 
     <owl:Class rdf:about="&omiabis;OMIABIS_0000031">
         <rdfs:label xml:lang="en">intra-settlement specification part of address</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000300"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;has_part"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&obo;IAO_0020000"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&obo;IAO_0020012"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:unionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="&omiabis;OMIABIS_0000024"/>
+                                                    <rdf:Description rdf:about="&omiabis;OMIABIS_0000041"/>
+                                                </owl:unionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                        <owl:someValuesFrom rdf:resource="&obo;IAO_0000422"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000300"/>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A textual entity that is part of a postal address and specifies the location inside the settlement. This can be a street name and a house number, or just a number or a post-office box number.</obo:IAO_0000115>
@@ -1235,7 +1484,31 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                     <rdf:Description rdf:about="&omiabis;OMIABIS_0000031"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&ro;part_of"/>
-                        <owl:allValuesFrom rdf:resource="&omiabis;OMIABIS_0000016"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&obo;IAO_0000422"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&omiabis;OMIABIS_0000042"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&obo;OBI_0000846"/>
+                                                        <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000010"/>
+                                                    </owl:Restriction>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&ro;bearer_of"/>
+                                                        <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000012"/>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
@@ -1257,21 +1530,20 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&snap;ObjectAggregate"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ro;has_part"/>
-                        <owl:someValuesFrom rdf:resource="&obo;OBI_0100051"/>
+                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                        <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000000"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&ro;participates_in"/>
                         <owl:someValuesFrom rdf:resource="&obo;OBI_0000471"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ro;part_of"/>
-                        <owl:allValuesFrom rdf:resource="&omiabis;OMIABIS_0000000"/>
+                        <owl:onProperty rdf:resource="&ro;has_part"/>
+                        <owl:allValuesFrom rdf:resource="&obo;OBI_0100051"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&snap;ObjectAggregate"/>
         <obo:IAO_0000115 xml:lang="en">A object aggregate that consists of specimens, participates in a study and is part of a biobank.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
@@ -1296,6 +1568,397 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">The proper name that designates a hosted study collection.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000036 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000036">
+        <rdfs:label xml:lang="en">sample collection or study aim description</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000300"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&snap;ObjectAggregate"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&ro;has_part"/>
+                                        <owl:allValuesFrom rdf:resource="&obo;OBI_0100051"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                                <owl:someValuesFrom>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&obo;IAO_0000005"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                <owl:someValuesFrom rdf:resource="&obo;OBI_0500000"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:someValuesFrom>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000300"/>
+        <obo:IAO_0000115 xml:lang="en">A textual entity describing a study aim or a sample collection.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000037 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000037">
+        <rdfs:label xml:lang="en">sample collection or study proper name</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0020000"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0020012"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&obo;OBI_0000471"/>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&snap;ObjectAggregate"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&ro;has_part"/>
+                                                <owl:allValuesFrom rdf:resource="&obo;OBI_0100051"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A proper name that designates a sample collection or a study.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000038 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000038">
+        <rdfs:label xml:lang="en">name of sample collection responsible or principal investigator</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0020000"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0020012"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&ro;bearer_of"/>
+                                                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000102"/>
+                                                    </owl:Restriction>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                        <owl:someValuesFrom>
+                                                            <owl:Class>
+                                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                                    <rdf:Description rdf:about="&snap;ObjectAggregate"/>
+                                                                    <owl:Restriction>
+                                                                        <owl:onProperty rdf:resource="&omiabis;OMIABIS_0000009"/>
+                                                                        <owl:someValuesFrom>
+                                                                            <owl:Class>
+                                                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                                                    <rdf:Description rdf:about="&snap;ObjectAggregate"/>
+                                                                                    <owl:Restriction>
+                                                                                        <owl:onProperty rdf:resource="&ro;has_part"/>
+                                                                                        <owl:allValuesFrom rdf:resource="&obo;OBI_0100051"/>
+                                                                                    </owl:Restriction>
+                                                                                </owl:intersectionOf>
+                                                                            </owl:Class>
+                                                                        </owl:someValuesFrom>
+                                                                    </owl:Restriction>
+                                                                </owl:intersectionOf>
+                                                            </owl:Class>
+                                                        </owl:someValuesFrom>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&ro;bearer_of"/>
+                                                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000103"/>
+                                                    </owl:Restriction>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&ro;participates_in"/>
+                                                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000471"/>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A proper name that designates the human being responsible for a sample collection or the human being being the principal investigator in a study.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000039 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000039">
+        <rdfs:label xml:lang="en">name of sample collection or study contact person</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0020000"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0020012"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&ro;bearer_of"/>
+                                                        <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000012"/>
+                                                    </owl:Restriction>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                        <owl:someValuesFrom>
+                                                            <owl:Class>
+                                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                                    <rdf:Description rdf:about="&snap;ObjectAggregate"/>
+                                                                    <owl:Restriction>
+                                                                        <owl:onProperty rdf:resource="&omiabis;OMIABIS_0000009"/>
+                                                                        <owl:someValuesFrom>
+                                                                            <owl:Class>
+                                                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                                                    <rdf:Description rdf:about="&snap;ObjectAggregate"/>
+                                                                                    <owl:Restriction>
+                                                                                        <owl:onProperty rdf:resource="&ro;has_part"/>
+                                                                                        <owl:allValuesFrom rdf:resource="&obo;OBI_0100051"/>
+                                                                                    </owl:Restriction>
+                                                                                </owl:intersectionOf>
+                                                                            </owl:Class>
+                                                                        </owl:someValuesFrom>
+                                                                    </owl:Restriction>
+                                                                </owl:intersectionOf>
+                                                            </owl:Class>
+                                                        </owl:someValuesFrom>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&ro;bearer_of"/>
+                                                        <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000012"/>
+                                                    </owl:Restriction>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&ro;participates_in"/>
+                                                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000471"/>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <obo:IAO_0000115 xml:lang="en">A proper name that designates the person acting as contact for a sample collection or a study.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000040 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000040">
+        <rdfs:label xml:lang="en">sample collection or study contact&#39;s department</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&omiabis;OMIABIS_0000017"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;OBI_0001688"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
+                                    <owl:Class>
+                                        <owl:unionOf rdf:parseType="Collection">
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&ro;bearer_of"/>
+                                                        <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000012"/>
+                                                    </owl:Restriction>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                        <owl:someValuesFrom>
+                                                            <owl:Class>
+                                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                                    <rdf:Description rdf:about="&snap;ObjectAggregate"/>
+                                                                    <owl:Restriction>
+                                                                        <owl:onProperty rdf:resource="&omiabis;OMIABIS_0000009"/>
+                                                                        <owl:someValuesFrom>
+                                                                            <owl:Class>
+                                                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                                                    <rdf:Description rdf:about="&snap;ObjectAggregate"/>
+                                                                                    <owl:Restriction>
+                                                                                        <owl:onProperty rdf:resource="&ro;has_part"/>
+                                                                                        <owl:allValuesFrom rdf:resource="&obo;OBI_0100051"/>
+                                                                                    </owl:Restriction>
+                                                                                </owl:intersectionOf>
+                                                                            </owl:Class>
+                                                                        </owl:someValuesFrom>
+                                                                    </owl:Restriction>
+                                                                </owl:intersectionOf>
+                                                            </owl:Class>
+                                                        </owl:someValuesFrom>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&ro;bearer_of"/>
+                                                        <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000012"/>
+                                                    </owl:Restriction>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&ro;participates_in"/>
+                                                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000471"/>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:unionOf>
+                                    </owl:Class>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000017"/>
+        <obo:IAO_0000115 xml:lang="en">A department that has a contact person for a sample collection or a study as an organizational member.</obo:IAO_0000115>
+        <obo:IAO_0000115>Mathias Brochhausen</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000041 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000041">
+        <rdfs:label xml:lang="en">street</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <obo:IAO_0000115 xml:lang="en">A street is a  thoroughfare in a built environment.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000043 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000043">
+        <rdfs:label xml:lang="en">intra-settlement specification part of sample collection or study contact&#39;s address</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&omiabis;OMIABIS_0000031"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&obo;IAO_0000422"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&omiabis;OMIABIS_0000042"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
+                                                    <owl:Class>
+                                                        <owl:unionOf rdf:parseType="Collection">
+                                                            <owl:Class>
+                                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                                    <owl:Restriction>
+                                                                        <owl:onProperty rdf:resource="&ro;part_of"/>
+                                                                        <owl:someValuesFrom rdf:resource="&snap;ObjectAggregate"/>
+                                                                    </owl:Restriction>
+                                                                    <owl:Restriction>
+                                                                        <owl:onProperty rdf:resource="&omiabis;OMIABIS_0000009"/>
+                                                                        <owl:someValuesFrom>
+                                                                            <owl:Class>
+                                                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                                                    <rdf:Description rdf:about="&snap;ObjectAggregate"/>
+                                                                                    <owl:Restriction>
+                                                                                        <owl:onProperty rdf:resource="&ro;has_part"/>
+                                                                                        <owl:allValuesFrom rdf:resource="&obo;OBI_0100051"/>
+                                                                                    </owl:Restriction>
+                                                                                </owl:intersectionOf>
+                                                                            </owl:Class>
+                                                                        </owl:someValuesFrom>
+                                                                    </owl:Restriction>
+                                                                </owl:intersectionOf>
+                                                            </owl:Class>
+                                                            <owl:Restriction>
+                                                                <owl:onProperty rdf:resource="&ro;participates_in"/>
+                                                                <owl:someValuesFrom rdf:resource="&obo;OBI_0000471"/>
+                                                            </owl:Restriction>
+                                                        </owl:unionOf>
+                                                    </owl:Class>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="&ro;bearer_of"/>
+                                                        <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000012"/>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000031"/>
     </owl:Class>
 </rdf:RDF>
 
