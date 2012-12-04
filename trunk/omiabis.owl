@@ -252,6 +252,14 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">a owns b iff a is the bearer of the roles that concretizes the claims and obligations  regarding b.</obo:IAO_0000115>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Ownership</obo:IAO_0000119>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
+                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -262,14 +270,6 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
-                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -654,14 +654,14 @@ for now.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000838"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">OBI-Branch</obo:IAO_0000119>
@@ -2108,7 +2108,7 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000037 -->
 
     <owl:Class rdf:about="&omiabis;OMIABIS_0000037">
-        <rdfs:label xml:lang="en">study proper name</rdfs:label>
+        <rdfs:label xml:lang="en">sample collection or study identifier</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
         <rdfs:subClassOf>
             <owl:Class>
@@ -2510,6 +2510,39 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">Postal code that is part of the address of a human being serving as sample collection or study contact.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Sample Collection/Study contact ZIP</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000045 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000045">
+        <rdfs:label xml:lang="en">biobank location ISO 3166-1 alpha-2 code</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&omiabis;OMIABIS_0000004"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0020012"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&obo;GAZ_00000448"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&ro;location_of"/>
+                                        <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000000"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000004"/>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An ISO 3166-1 alpha-2 code that designates the country a biobank is located in.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">Biobank country code</obo:IAO_0000118>
     </owl:Class>
 </rdf:RDF>
 
