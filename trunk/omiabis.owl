@@ -42,6 +42,7 @@
         <dc:source xml:lang="en">MIABIS_v2_accepted</dc:source>
         <dc:title xml:lang="en">Ontologized MIABIS</dc:title>
         <dc:contributor>William R. Hogan</dc:contributor>
+        <owl:imports rdf:resource="&obo;geo.owl"/>
         <owl:imports rdf:resource="&obo;iao/pno.owl"/>
     </owl:Ontology>
     
@@ -252,14 +253,6 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">a owns b iff a is the bearer of the roles that concretizes the claims and obligations  regarding b.</obo:IAO_0000115>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Ownership</obo:IAO_0000119>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
-                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -270,6 +263,14 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
+                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -654,14 +655,14 @@ for now.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000838"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">OBI-Branch</obo:IAO_0000119>
@@ -2540,9 +2541,66 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000004"/>
+        <obo:IAO_0000118 xml:lang="en">Biobank country code</obo:IAO_0000118>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An ISO 3166-1 alpha-2 code that designates the country a biobank is located in.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">Biobank country code</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000046 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000046">
+        <rdfs:label xml:lang="en">CTEP organization identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0020012"/>
+                <owl:allValuesFrom rdf:resource="&obo;OBI_0000245"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A proper name for an organization that is assigned to that organization by the Cancer Therapy Evaluation Program</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000047 -->
+
+    <owl:Class rdf:about="&omiabis;OMIABIS_0000047">
+        <rdfs:label xml:lang="en">biobank identifier with ISO 3166-1 alpha-2 code and CTEP organization identifier</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000005"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0020012"/>
+                        <owl:someValuesFrom rdf:resource="&omiabis;OMIABIS_0000000"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&ro;has_part"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&omiabis;OMIABIS_0000004"/>
+                                    <owl:Class>
+                                        <owl:intersectionOf rdf:parseType="Collection">
+                                            <rdf:Description rdf:about="&omiabis;OMIABIS_0000046"/>
+                                            <owl:Restriction>
+                                                <owl:onProperty rdf:resource="&obo;IAO_0020012"/>
+                                                <owl:allValuesFrom rdf:resource="&omiabis;OMIABIS_0000010"/>
+                                            </owl:Restriction>
+                                        </owl:intersectionOf>
+                                    </owl:Class>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A biobank identifier that has both an ISO 3166-1 alpha-2 code and a CTEP organization code.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
 </rdf:RDF>
 
