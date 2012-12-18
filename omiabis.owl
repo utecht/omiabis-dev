@@ -37,8 +37,8 @@
         <dc:contributor>Martin N. Fransson</dc:contributor>
         <dc:contributor>Roxana Merino-Martinez</dc:contributor>
         <dc:contributor>Loreana Norlin</dc:contributor>
-        <owl:versionInfo xml:lang="en">2012-12-12</owl:versionInfo>
         <dc:contributor>Mikael Eriksson</dc:contributor>
+        <owl:versionInfo xml:lang="en">2012-12-18</owl:versionInfo>
         <dc:source xml:lang="en">MIABIS_v2_accepted</dc:source>
         <dc:title xml:lang="en">Ontologized MIABIS</dc:title>
         <dc:contributor>William R. Hogan</dc:contributor>
@@ -283,14 +283,6 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
         <rdfs:comment xml:lang="en">A definition of &quot;tranfers&quot; object property can be found in d-acts: http:purl.obolibrary.org/iao/d-acts.owl</rdfs:comment>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">a administrates b if c ownes b and some rights and obligation regarding b are transfered from c to a.</obo:IAO_0000115>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
-                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -301,6 +293,14 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
+                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -655,14 +655,14 @@ for now.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000838"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">OBI-Branch</obo:IAO_0000119>
@@ -1557,9 +1557,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000021"/>
-        <obo:IAO_0000118 xml:lang="en">Biobank contact phone</obo:IAO_0000118>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A telephone number that is contact information about a biobank contact person.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">Biobank contact phone</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -2109,9 +2109,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000037 -->
 
     <owl:Class rdf:about="&omiabis;OMIABIS_0000037">
-        <rdfs:label xml:lang="en">sample collection or study identifier</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
-        <rdfs:subClassOf>
+        <rdfs:label xml:lang="en">study proper name</rdfs:label>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&obo;IAO_0020000"/>
@@ -2121,9 +2120,10 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A proper name that designates a sample collection or a study.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A proper name that designates a study.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Study name</obo:IAO_0000118>
     </owl:Class>
     
@@ -2541,9 +2541,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000004"/>
-        <obo:IAO_0000118 xml:lang="en">Biobank country code</obo:IAO_0000118>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An ISO 3166-1 alpha-2 code that designates the country a biobank is located in.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">Biobank country code</obo:IAO_0000118>
     </owl:Class>
     
 
