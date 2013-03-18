@@ -245,14 +245,26 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
     
 
 
+    <!-- http://www.obofoundry.org/ro/ro.owl#bearer_of -->
+
+    <owl:ObjectProperty rdf:about="&ro;bearer_of"/>
+    
+
+
+    <!-- http://www.obofoundry.org/ro/ro.owl#inheres_in -->
+
+    <owl:ObjectProperty rdf:about="&ro;inheres_in"/>
+    
+
+
     <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000008 -->
 
     <owl:ObjectProperty rdf:about="&omiabis;OMIABIS_0000008">
         <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
         <rdfs:label xml:lang="en">owns</rdfs:label>
+        <obo:IAO_0000119>Reinach, A. Sämtliche Werke. Texkritische Ausgabe, München: Philosophia Verlag, 1989, p.189-204.</obo:IAO_0000119>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">a owns b iff a is the bearer of the roles that concretizes the claims and obligations  regarding b.</obo:IAO_0000115>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Ownership</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">a owns b if a has complete power over b. All rights and obligations of ownership are grounded in this (primitive) relation. The claims and obligations of ownership can be partially transferred to a third party by the owner.</obo:IAO_0000115>
         <rdfs:range>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -282,7 +294,15 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
         <rdfs:label xml:lang="en">administrates</rdfs:label>
         <rdfs:comment xml:lang="en">A definition of &quot;tranfers&quot; object property can be found in d-acts: http:purl.obolibrary.org/iao/d-acts.owl</rdfs:comment>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">a administrates b if c ownes b and some rights and obligation regarding b are transfered from c to a.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">a administrates b if c owns b and some rights and obligations grounded in the owning relation regarding b are transferred  from c to a.</obo:IAO_0000115>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
+                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -293,14 +313,6 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
-                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -2541,9 +2553,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000004"/>
+        <obo:IAO_0000118 xml:lang="en">Biobank country code</obo:IAO_0000118>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An ISO 3166-1 alpha-2 code that designates the country a biobank is located in.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">Biobank country code</obo:IAO_0000118>
     </owl:Class>
     
 
