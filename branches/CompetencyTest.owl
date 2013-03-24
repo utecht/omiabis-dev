@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY obo "http://purl.obolibrary.org/obo/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY omiabis "http://www.purl.obolibrary.org/obo/omiabis.owl/" >
+    <!ENTITY CompetencyTest "http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/" >
+]>
+
+
+<rdf:RDF xmlns="http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl#"
+     xml:base="http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
+     xmlns:omiabis="http://www.purl.obolibrary.org/obo/omiabis.owl/"
+     xmlns:CompetencyTest="http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl">
+        <owl:imports rdf:resource="http://www.purl.obolibrary.org/obo/omiabis.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000075 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000075">
+        <rdf:type rdf:resource="&omiabis;OMIABIS_0000000"/>
+        <rdfs:label xml:lang="en">UU Biobank 1</rdfs:label>
+        <omiabis:OMIABIS_0000048 rdf:resource="&CompetencyTest;OMIABIS_0000077"/>
+        <ro:has_part rdf:resource="&CompetencyTest;OMIABIS_0000078"/>
+        <ro:has_part rdf:resource="&CompetencyTest;OMIABIS_0000080"/>
+        <ro:has_part rdf:resource="&CompetencyTest;OMIABIS_0000082"/>
+        <ro:has_part rdf:resource="&CompetencyTest;OMIABIS_0000092"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000076 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000076">
+        <rdf:type rdf:resource="&omiabis;OMIABIS_0000000"/>
+        <rdfs:label xml:lang="en">UU Biobank 2</rdfs:label>
+        <omiabis:OMIABIS_0000048 rdf:resource="&CompetencyTest;OMIABIS_0000077"/>
+        <ro:has_part rdf:resource="&CompetencyTest;OMIABIS_0000079"/>
+        <ro:has_part rdf:resource="&CompetencyTest;OMIABIS_0000081"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000077 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000077">
+        <rdf:type rdf:resource="&omiabis;OMIABIS_0000010"/>
+        <rdfs:label xml:lang="en">Unseen University</rdfs:label>
+        <omiabis:OMIABIS_0000008 rdf:resource="&CompetencyTest;OMIABIS_0000075"/>
+        <omiabis:OMIABIS_0000008 rdf:resource="&CompetencyTest;OMIABIS_0000076"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000078 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000078">
+        <rdf:type rdf:resource="&obo;OBI_0000655"/>
+        <rdfs:label xml:lang="en">specimen1</rdfs:label>
+        <obo:BFO_0000050 rdf:resource="&CompetencyTest;OMIABIS_0000075"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000079 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000079">
+        <rdf:type rdf:resource="&obo;OBI_0000655"/>
+        <rdfs:label xml:lang="en">specimen2</rdfs:label>
+        <obo:BFO_0000050 rdf:resource="&CompetencyTest;OMIABIS_0000076"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000080 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000080">
+        <rdf:type rdf:resource="&obo;OBI_0100016"/>
+        <rdfs:label xml:lang="en">specimen3</rdfs:label>
+        <obo:BFO_0000050 rdf:resource="&CompetencyTest;OMIABIS_0000075"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000081 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000081">
+        <rdf:type rdf:resource="&obo;OBI_0100016"/>
+        <rdfs:label xml:lang="en">specimen4</rdfs:label>
+        <obo:BFO_0000050 rdf:resource="&CompetencyTest;OMIABIS_0000076"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000082 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000082">
+        <rdf:type rdf:resource="&obo;OBI_0100017"/>
+        <rdfs:label xml:lang="en">specimen5</rdfs:label>
+        <obo:BFO_0000050 rdf:resource="&CompetencyTest;OMIABIS_0000075"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000083 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000083">
+        <rdf:type rdf:resource="&obo;OBI_0000922"/>
+        <rdf:type rdf:resource="&obo;OBI_0100016"/>
+        <rdfs:label xml:lang="en">specimen5</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000084 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000084">
+        <rdf:type rdf:resource="&omiabis;OMIABIS_0000013"/>
+        <rdfs:label xml:lang="en">Mustrum Ridcully</rdfs:label>
+        <obo:OBI_0000846 rdf:resource="&CompetencyTest;OMIABIS_0000077"/>
+        <obo:OBI_0000846 rdf:resource="&CompetencyTest;OMIABIS_0000097"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000085 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000085">
+        <rdf:type rdf:resource="&omiabis;OMIABIS_0000013"/>
+        <rdfs:label xml:lang="en">Ponder Stibbons</rdfs:label>
+        <obo:OBI_0000846 rdf:resource="&CompetencyTest;OMIABIS_0000077"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000086 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000086">
+        <rdf:type rdf:resource="&omiabis;OMIABIS_0000013"/>
+        <rdfs:label xml:lang="en">Esme Weatherwax</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000087 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000087">
+        <rdf:type rdf:resource="&omiabis;OMIABIS_0000015"/>
+        <rdfs:label xml:lang="en">Ridcully&#39;s email</rdfs:label>
+        <omiabis:OMIABIS_0000042 rdf:resource="&CompetencyTest;OMIABIS_0000084"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000088 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000088">
+        <rdf:type rdf:resource="&omiabis;OMIABIS_0000015"/>
+        <rdfs:label xml:lang="en">Stibbons&#39; email</rdfs:label>
+        <omiabis:OMIABIS_0000042 rdf:resource="&CompetencyTest;OMIABIS_0000085"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000089 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000089">
+        <rdf:type rdf:resource="&omiabis;OMIABIS_0000015"/>
+        <rdfs:label xml:lang="en">Weatherwaxes email</rdfs:label>
+        <omiabis:OMIABIS_0000042 rdf:resource="&CompetencyTest;OMIABIS_0000086"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000090 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000090">
+        <rdf:type rdf:resource="&obo;NCBITaxon_9606"/>
+        <rdfs:label xml:lang="en">Rincewind</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000091 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000091">
+        <rdf:type rdf:resource="&obo;IAO_0000429"/>
+        <rdfs:label xml:lang="en">Rincewind&#39;s email</rdfs:label>
+        <omiabis:OMIABIS_0000042 rdf:resource="&CompetencyTest;OMIABIS_0000090"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000092 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000092">
+        <rdf:type rdf:resource="&obo;OBI_0000922"/>
+        <rdf:type rdf:resource="&obo;OBI_0100016"/>
+        <rdfs:label xml:lang="en">specimen6</rdfs:label>
+        <obo:BFO_0000050 rdf:resource="&CompetencyTest;OMIABIS_0000075"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000095 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000095">
+        <rdf:type rdf:resource="&omiabis;OMIABIS_0000017"/>
+        <rdfs:label xml:lang="en">Department of Inadvisibly Apllied Magic</rdfs:label>
+        <obo:OBI_0001688 rdf:resource="&CompetencyTest;OMIABIS_0000085"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000096 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000096">
+        <rdf:type rdf:resource="&omiabis;OMIABIS_0000017"/>
+        <rdfs:label xml:lang="en">Department of Post Mortem Communication</rdfs:label>
+        <obo:OBI_0001688 rdf:resource="&CompetencyTest;OMIABIS_0000098"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000097 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000097">
+        <rdf:type rdf:resource="&omiabis;OMIABIS_0000017"/>
+        <rdfs:label xml:lang="en">Department of Pentacles</rdfs:label>
+        <obo:OBI_0001688 rdf:resource="&CompetencyTest;OMIABIS_0000084"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/OMIABIS_0000098 -->
+
+    <owl:NamedIndividual rdf:about="&CompetencyTest;OMIABIS_0000098">
+        <rdf:type rdf:resource="&obo;NCBITaxon_9606"/>
+        <rdfs:label xml:lang="en">Dr. Hicks</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
