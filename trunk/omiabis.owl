@@ -33,12 +33,12 @@
         <dc:contributor>Jan-Eric Litton</dc:contributor>
         <dc:contributor>Sanela Kjellqvist</dc:contributor>
         <dc:creator>Mathias Brochhausen</dc:creator>
+        <owl:versionInfo xml:lang="en">2013-03-24</owl:versionInfo>
         <dc:contributor>Maria Anderberg</dc:contributor>
         <dc:contributor>Martin N. Fransson</dc:contributor>
         <dc:contributor>Roxana Merino-Martinez</dc:contributor>
         <dc:contributor>Loreana Norlin</dc:contributor>
         <dc:contributor>Mikael Eriksson</dc:contributor>
-        <owl:versionInfo xml:lang="en">2012-12-18</owl:versionInfo>
         <dc:source xml:lang="en">MIABIS_v2_accepted</dc:source>
         <dc:title xml:lang="en">Ontologized MIABIS</dc:title>
         <dc:contributor>William R. Hogan</dc:contributor>
@@ -3184,6 +3184,7 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;NCBITaxon_9606"/>
+        <obo:IAO_0000115 xml:lang="en">The principle investigtor or responsible person for a study or a sample collection.</obo:IAO_0000115>
     </owl:Class>
 </rdf:RDF>
 
