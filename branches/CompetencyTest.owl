@@ -8,7 +8,7 @@
     <!ENTITY ro "http://www.obofoundry.org/ro/ro.owl#" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
-    <!ENTITY omiabis "http://www.purl.obolibrary.org/obo/omiabis.owl/" >
+    <!ENTITY omiabis "http://purl.obolibrary.org/obo/omiabis.owl/" >
     <!ENTITY CompetencyTest "http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/" >
 ]>
 
@@ -24,7 +24,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
     <owl:Ontology rdf:about="http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl">
-        <owl:imports rdf:resource="http://www.purl.obolibrary.org/obo/omiabis.owl"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/omiabis.owl"/>
     </owl:Ontology>
     
 
