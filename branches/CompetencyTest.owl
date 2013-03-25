@@ -18,7 +18,7 @@
      xmlns:obo="http://purl.obolibrary.org/obo/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:ro="http://www.obofoundry.org/ro/ro.owl#"
-     xmlns:omiabis="http://www.purl.obolibrary.org/obo/omiabis.owl/"
+     xmlns:omiabis="http://purl.obolibrary.org/obo/omiabis.owl/"
      xmlns:CompetencyTest="http://code.google.com/p/omiabis-dev/source/browse/branches/CompetencyTest.owl/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
