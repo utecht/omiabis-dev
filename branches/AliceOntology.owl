@@ -422,6 +422,12 @@
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000144"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000572"/>
             </owl:Restriction>
@@ -440,12 +446,6 @@
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000144"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1321,13 +1321,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#achieves_planned_objective"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0200166"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1345,7 +1339,13 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#achieves_planned_objective"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0200166"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1954,7 +1954,10 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#case_control -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#case_control">
+        <rdfs:label xml:lang="en">case control study</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0500000"/>
+        <obo:IAO_0000115>A study design that compares two existing groups of subjects who differ in outcome as identified and compared on the basis of some supposed causal attribute.</obo:IAO_0000115>
+        <rdfs:comment>For example: those with the disease or condition under study (cases) and a very similar group of subjects who do not have the disease or condition (controls). </rdfs:comment>
     </owl:Class>
     
 
@@ -1974,7 +1977,9 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#cohort -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#cohort">
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0500000"/>
+        <rdfs:label xml:lang="en">cohort study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#longitudinal"/>
+        <obo:IAO_0000115>A longitudinal study that aims to study a group of individuals identified by a common characteristic (e.g. demographic, exposures, illness etc.)</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2013,7 +2018,9 @@ http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000115>
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#cross_sectional -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#cross_sectional">
+        <rdfs:label xml:lang="en">cross sectional study</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0500000"/>
+        <obo:IAO_0000115>A study design in which all participants or a representative subset of partcipants are examined at only a single time for characteristics of a interest(i.e disease).</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2021,7 +2028,7 @@ http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000115>
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#current_sampled_human_study_participant -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#current_sampled_human_study_participant">
-        <rdfs:label xml:lang="en">current sampled human study participant</rdfs:label>
+        <rdfs:label xml:lang="en">count of current sampled human study participant</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000032"/>
         <rdfs:subClassOf>
             <owl:Class>
@@ -2063,7 +2070,7 @@ http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000115>
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#current_total_human_study_participant -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#current_total_human_study_participant">
-        <rdfs:label xml:lang="en">current total human study participant</rdfs:label>
+        <rdfs:label xml:lang="en">count of current total human study participant</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;APOLLO_SV_00000032"/>
         <rdfs:subClassOf>
             <owl:Class>
@@ -2105,7 +2112,9 @@ http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000115>
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#disease_specific_design -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#disease_specific_design">
+        <rdfs:label xml:lang="en">disease specific study</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0500000"/>
+        <obo:IAO_0000115>A study that examines subjects that have already developed a particular disease and from whom a biobank collects material sample and information to be studied.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2132,7 +2141,10 @@ http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000115>
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#longitudinal -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#longitudinal">
+        <rdfs:label xml:lang="en">longitudinal study</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0500000"/>
+        <obo:IAO_0000115>A study design that involves repeated observations of the same entity over time. 
+In the biobank context, longitudinal studies sample a group of people in a given time period, and study them at intervals by the acquisition and analyses of data and/or samples over time.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2204,12 +2216,24 @@ https://en.wikipedia.org/wiki/Medical_record</rdfs:comment>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#physiological_measurements -->
+    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#panel_study -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#physiological_measurements">
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000109"/>
-        <obo:IAO_0000115>A measurement datum which assess how well the body functions.</obo:IAO_0000115>
-        <rdfs:comment>Example: measurement of body temperature with a clinical thermometer.</rdfs:comment>
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#panel_study">
+        <rdfs:label xml:lang="en">panel study</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#longitudinal"/>
+        <obo:IAO_0000115>A longitudinal study that samples a cross-section and studies it at regular intervals.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#physiological_measurements&apos;_data -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#physiological_measurements&apos;_data">
+        <rdfs:label xml:lang="en">physiological measurement data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000100"/>
+        <obo:IAO_0000115>A data set that contains information about the assessment of major organ systems functioning, the extent of disease or disability as well as the provision and/or response to therapeutic interventions.</obo:IAO_0000115>
+        <rdfs:comment>Audiology, Cardiac Physiology, GI Physiology, Neurophysiology, Ophthalmic and Vision Science 
+Respiratory and Sleep Physiology, Urodynamics, Vascular Technology</rdfs:comment>
     </owl:Class>
     
 
@@ -2289,7 +2313,9 @@ https://en.wikipedia.org/wiki/Medical_record</rdfs:comment>
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#population_based -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#population_based">
+        <rdfs:label xml:lang="en">population based study</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0500000"/>
+        <obo:IAO_0000115>A study design that is multidisciplinary done at the population level or among the population groups, generally to find the cause, incidence or spread of the disease or to see the response to the treatment, nutrition or environment.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2297,7 +2323,9 @@ https://en.wikipedia.org/wiki/Medical_record</rdfs:comment>
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#quality_control -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#quality_control">
+        <rdfs:label xml:lang="en">quality control study</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0500000"/>
+        <obo:IAO_0000115>A study design where some aspect of the experiment is quality controlled for the purposes of quality assurance.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2465,21 +2493,9 @@ https://en.wikipedia.org/wiki/Medical_record</rdfs:comment>
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#twin_study -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#twin_study">
+        <rdfs:label xml:lang="en">twin study</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0500000"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#type_of_collection -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#type_of_collection">
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-        <rdfs:comment>Refer to Study Design to transfer definitions</rdfs:comment>
-        <rdfs:comment>Examples: Case-control, Cohort, Cross-sectional, Longitudinal, Twin-study, Quality control, Population-based, Other. </rdfs:comment>
-        <rdfs:comment>Definitions for the values are as follows: Case-control  = A case-control study design compares two groups of subjects: those with the disease or condition under study (cases) and a very similar group of subjects who do not have the disease or condition (controls) [3], Cohort  = A group of individuals identified by a common characteristic (e.g. demographic, exposures, illness etc.) [4], Cross-sectional  = A study in which participants are examined at only a single time for characteristics of a disease [3], Longitudinal = Research studies involving repeated observations of the same entity over time. In the biobank context, longitudinal studies sample a group of people in a given time period, and study them at intervals by the acquisition and analyses of data and/or samples over time [4], Twin-study  = A twin study design is a study design in behavior genetics which aid the study of individual differences between genetically identical twins by highlighting the role of environmental and genetic causes on behavior [3], Quality Control  = A quality control testing study design type is where some aspect of the experiment is quality controlled for the purposes of quality assurance [3] and Population-based  = Multidisciplinary study done at the population level or among the population groups, generally to find the cause, incidence or spread of the disease or to see the response to the treatment, nutrition or environment [3], Disease specific = A study or biobank for which material and information is collected from subjects that have already developed a particular disease [6], Other
-</rdfs:comment>
-        <rdfs:comment>Rule study design out.</rdfs:comment>
-        <obo:IAO_0000115>the nature of the sample collection or study design.</obo:IAO_0000115>
+        <obo:IAO_0000115>A study design usually in behavior genetics which aids the study of individual differences between genetically identical twins by highlighting the role of environmental and genetic causes on behavior.</obo:IAO_0000115>
     </owl:Class>
 </rdf:RDF>
 
