@@ -654,14 +654,14 @@
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000572"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000144"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000144"/>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000471"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -683,7 +683,7 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000471"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000572"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000118 rdf:datatype="&xsd;string"></obo:IAO_0000118>
@@ -1712,6 +1712,12 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:allValuesFrom rdf:resource="&obo;IAO_0000027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#achieves_planned_objective"/>
                 <owl:someValuesFrom rdf:resource="&obo;OBI_0200166"/>
             </owl:Restriction>
@@ -1720,12 +1726,6 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:allValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">Philippe Rocca-Serra</obo:IAO_0000117>
@@ -1897,14 +1897,14 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000838"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#achieves_planned_objective"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#achieves_planned_objective"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">OBI-Branch</obo:IAO_0000119>
@@ -2896,6 +2896,7 @@ https://en.wikipedia.org/wiki/Medical_record</rdfs:comment>
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#omic_experiments -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#omic_experiments">
+        <rdfs:label xml:lang="en">omic experiment</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <obo:IAO_0000115>A planned process of tentative procedure aimed at discovering some characteristic of a large familiy of cellular molecules, having named by appending suffix &quot;-omics.&quot;</obo:IAO_0000115>
         <rdfs:comment>interrelated experiments.</rdfs:comment>
@@ -2950,12 +2951,6 @@ Respiratory and Sleep Physiology, Urodynamics, Vascular Technology</rdfs:comment
         <rdfs:label xml:lang="en">planned sampled human study participant</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000005"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;part_of"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0500000"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -2978,6 +2973,12 @@ Respiratory and Sleep Physiology, Urodynamics, Vascular Technology</rdfs:comment
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;part_of"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0500000"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>An objective specification that specifies the number of individuals whom their biological specimen will be  sampled and will participate in a study. It is part of a study design.</rdfs:comment>
     </owl:Class>
@@ -3212,29 +3213,11 @@ Respiratory and Sleep Physiology, Urodynamics, Vascular Technology</rdfs:comment
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000000 -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000000">
-        <rdfs:label xml:lang="en">case id</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1#Entity"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000001 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000001">
         <rdfs:label xml:lang="en">time of surgical removal</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000416"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000002 -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000002">
-        <rdfs:label xml:lang="en">specification</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1#Entity"/>
     </owl:Class>
     
 
@@ -3257,35 +3240,11 @@ Respiratory and Sleep Physiology, Urodynamics, Vascular Technology</rdfs:comment
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000005 -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000005">
-        <rdfs:label xml:lang="en">specimen type</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1#Entity"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000006 -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000006">
-        <rdfs:label xml:lang="en">comments</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1#Entity"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000007 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000007">
         <rdfs:label xml:lang="en">biobank contact role</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#role_in_human_social_processes"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#is_realized_by"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/OMIABIS_0000011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&OBO_REL;inheres_in"/>
@@ -3302,17 +3261,14 @@ Respiratory and Sleep Physiology, Urodynamics, Vascular Technology</rdfs:comment
                 </owl:allValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#is_realized_by"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/OMIABIS_0000011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A contact role borne by a member of a sample collection or study organization and realized by serving as the contact for the collection or the study.</obo:IAO_0000115>
         <obo:IAO_0000115>A contact role borne by a member of a biobank organization and realized by serving as the contact for one of its biobanks.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000008 -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000008">
-        <rdfs:label xml:lang="en">procedure</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1#Entity"/>
     </owl:Class>
     
 
@@ -3341,15 +3297,6 @@ Respiratory and Sleep Physiology, Urodynamics, Vascular Technology</rdfs:comment
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000010 -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000010">
-        <rdfs:label xml:lang="en">sample preparation contact</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1#Entity"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000011 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000011">
@@ -3359,38 +3306,61 @@ Respiratory and Sleep Physiology, Urodynamics, Vascular Technology</rdfs:comment
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000012 -->
+    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000013 -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000012">
-        <rdfs:label xml:lang="en">specification adherance</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1#Entity"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000013">
+        <rdfs:label xml:lang="en">sample handling</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+        <obo:IAO_0000119>http://www.exchangenetwork.net/standards/SampleHandling_01_06_2006_Final.pdf
+</obo:IAO_0000119>
+        <obo:IAO_0000115>A planned process used to handle specimen for sample treatment and/or sample preservation.</obo:IAO_0000115>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000014 -->
+    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000017 -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000014">
-        <rdfs:label xml:lang="en">time in formalin</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1#Entity"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000017">
+        <rdfs:label xml:lang="en">sample treatment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000013"/>
+        <obo:IAO_0000115>A sample handling process used to preserve a sample either in the field or at the laboratory.</obo:IAO_0000115>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000015 -->
+    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000018 -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000015">
-        <rdfs:label xml:lang="en">specimen</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1#Entity"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000018">
+        <rdfs:label xml:lang="en">sample preservation</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000013"/>
+        <obo:IAO_0000115>A sample handling process used to treat a sample prior to measurement or sample preparation.</obo:IAO_0000115>
     </owl:Class>
     
 
 
-    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000016 -->
+    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000019 -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000016">
-        <rdfs:label xml:lang="en">specimen id</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.ifomis.org/bfo/1.1#Entity"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000019">
+        <rdfs:label xml:lang="en">storage temperature</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000018"/>
+        <rdfs:comment>TBR</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000020 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000020">
+        <rdfs:label xml:lang="en">sample handling summary</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000013"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000310"/>
+        <obo:IAO_0000115>A document that outlines the procedures employed to preserve and protect the material collected during specimen collection as an indication of sample quality.</obo:IAO_0000115>
+        <rdfs:comment>It could be freeze chain, freze time, SPREC compliant, etc.</rdfs:comment>
     </owl:Class>
     
 
