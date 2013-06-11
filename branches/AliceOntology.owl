@@ -354,6 +354,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000004 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000004">
+        <rdfs:label xml:lang="en">has temporal occupant</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/BFO_0000085 -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/BFO_0000085">
@@ -2631,7 +2639,7 @@ Amanda Hicks</obo:IAO_0000117>
                     <rdf:Description rdf:about="&snap;ObjectAggregate"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;OMIABIS_0000048"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#biobank_organization"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OMIABIS_0000010"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&ro;has_part"/>
@@ -2712,6 +2720,40 @@ Amanda Hicks</obo:IAO_0000117>
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OMIABIS_0000010 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OMIABIS_0000010">
+        <rdfs:label xml:lang="en">biobank organization</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;OBI_0000245"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;OMIABIS_0000008"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OMIABIS_0000000"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;OMIABIS_0000009"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OMIABIS_0000000"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#legal_person_role"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000245"/>
+        <obo:IAO_0000115>An organization bearing legal personality that ownes or adminstrates a biobank.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">biobank juristic person</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OMRSE_00000022 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OMRSE_00000022">
@@ -2732,7 +2774,21 @@ Amanda Hicks</obo:IAO_0000117>
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OWLClassImpl_00000014144493667942 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OWLClassImpl_00000014144493667942">
-        <rdfs:label xml:lang="en">date of entry</rdfs:label>
+        <rdfs:label xml:lang="en">date of entry into database</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000659"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000004"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000003"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000416"/>
         <rdfs:comment>It is denoted by Date in ISO-standard (8601) time format.</rdfs:comment>
         <obo:IAO_0000115>A time measurement datum that indicates when data about the sample collection was reported into a database. </obo:IAO_0000115>
@@ -2743,7 +2799,21 @@ Amanda Hicks</obo:IAO_0000117>
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OWLClassImpl_00000014144506574818 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OWLClassImpl_00000014144506574818">
-        <rdfs:label xml:lang="en">date of collection end</rdfs:label>
+        <rdfs:label xml:lang="en">date of specimen collection end</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000659"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000004"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000001"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000416"/>
         <obo:IAO_0000115>A time measurement datum that indicates when the sample collection rocess ended.</obo:IAO_0000115>
         <rdfs:comment>It is denoted by Date in ISO-standard (8601) time format.</rdfs:comment>
@@ -2754,7 +2824,21 @@ Amanda Hicks</obo:IAO_0000117>
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OWLClassImpl_00000014144515548450 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OWLClassImpl_00000014144515548450">
-        <rdfs:label xml:lang="en">date of collection start</rdfs:label>
+        <rdfs:label xml:lang="en">date of specimen collection start</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000659"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000004"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000000"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000416"/>
         <rdfs:comment>It is denoted by Date in ISO-standard (8601) time format.</rdfs:comment>
         <obo:IAO_0000115>A time measurement datum that indicates when the sample collection process began.</obo:IAO_0000115>
@@ -2765,7 +2849,21 @@ Amanda Hicks</obo:IAO_0000117>
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OWLClassImpl_00000014144516472137 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OWLClassImpl_00000014144516472137">
-        <rdfs:label xml:lang="en">date of update</rdfs:label>
+        <rdfs:label xml:lang="en">date of update in database</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000659"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000004"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000002"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000416"/>
         <rdfs:comment>It is denoted by Date in ISO-standard (8601) time format.</rdfs:comment>
         <obo:IAO_0000115>A time measurement datum that indicates when data about the sample was last updated in a database.</obo:IAO_0000115>
@@ -2814,40 +2912,6 @@ Amanda Hicks</obo:IAO_0000117>
             </owl:Class>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A average value for age.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#biobank_organization -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#biobank_organization">
-        <rdfs:label xml:lang="en">biobank organization</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;OBI_0000245"/>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&obo;OMIABIS_0000008"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OMIABIS_0000000"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&obo;OMIABIS_0000009"/>
-                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OMIABIS_0000000"/>
-                            </owl:Restriction>
-                        </owl:unionOf>
-                    </owl:Class>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#legal_person_role"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0000245"/>
-        <obo:IAO_0000115>An organization bearing legal personality that ownes or adminstrates a biobank.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">biobank juristic person</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -3539,11 +3603,50 @@ Respiratory and Sleep Physiology, Urodynamics, Vascular Technology</rdfs:comment
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000000 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000000">
+        <rdfs:label xml:lang="en">sample collection start</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OWLClassImpl_00000014144515548450"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&span;TemporalInterval"/>
+        <obo:IAO_0000115>A temporal interval when the specimen collection process was initiated.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000001 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000001">
-        <rdfs:label xml:lang="en">time of surgical removal</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000416"/>
+        <rdfs:label xml:lang="en">sample collection end</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OWLClassImpl_00000014144506574818"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&span;TemporalInterval"/>
+        <obo:IAO_0000115>A temporal interval when the specimen collection process was completed.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000002 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000002">
+        <rdfs:label xml:lang="en">sample collection data update</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OWLClassImpl_00000014144516472137"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&span;TemporalInterval"/>
+        <obo:IAO_0000115>A temporal interval when the specimen collection process was updated in a database.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3551,17 +3654,15 @@ Respiratory and Sleep Physiology, Urodynamics, Vascular Technology</rdfs:comment
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000003 -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000003">
-        <rdfs:label xml:lang="en">date of tissue collection</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000416"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000004 -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000004">
-        <rdfs:label xml:lang="en">time of freezing</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000416"/>
+        <rdfs:label xml:lang="en">sample collection data entry</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OWLClassImpl_00000014144493667942"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&span;TemporalInterval"/>
+        <obo:IAO_0000115>A temporal interval when the specimen collection process initiation date was reported in a database.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -3609,7 +3710,7 @@ Respiratory and Sleep Physiology, Urodynamics, Vascular Technology</rdfs:comment
                     <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&obo;OBI_0000846"/>
-                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#biobank_organization"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OMIABIS_0000010"/>
                     </owl:Restriction>
                     <owl:Restriction>
                         <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
