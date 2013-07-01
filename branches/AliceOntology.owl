@@ -186,6 +186,14 @@
         <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
         <rdfs:label xml:lang="en">owns</rdfs:label>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
+                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -196,14 +204,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
-                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -212,14 +212,6 @@
 
     <owl:ObjectProperty rdf:about="&obo;OMIABIS_0000009">
         <rdfs:label xml:lang="en">administrates</rdfs:label>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
-                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -230,6 +222,14 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
+                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -239,6 +239,14 @@
     <owl:ObjectProperty rdf:about="&obo;OMIABIS_0000048">
         <rdfs:label xml:lang="en">is owned by</rdfs:label>
         <owl:inverseOf rdf:resource="&obo;OMIABIS_0000008"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
+                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -249,14 +257,6 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
-                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -697,12 +697,6 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000572"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
                 <owl:someValuesFrom>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
@@ -720,6 +714,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="&obo;OBI_0000471"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000572"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1139,21 +1139,6 @@ for now.</obo:IAO_0000116>
 
     <owl:Class rdf:about="&obo;OBI_0000659">
         <rdfs:label rdf:datatype="&xsd;string">specimen collection</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;OBI_0000011"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                        <owl:someValuesFrom rdf:resource="&obo;OBI_0100051"/>
-                    </owl:Restriction>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#achieves_planned_objective"/>
-                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000684"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <obo:IAO_0000232 rdf:datatype="&xsd;string">5/31/2012: This process is not necessarily an acquisition, as specimens may be collected from materials already in posession</obo:IAO_0000232>
         <obo:IAO_0000232 rdf:datatype="&xsd;string">6/9/09: used at workshop</obo:IAO_0000232>
@@ -1985,12 +1970,24 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
+                <owl:allValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:allValuesFrom rdf:resource="&obo;IAO_0000027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1998,18 +1995,6 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#achieves_planned_objective"/>
                 <owl:someValuesFrom rdf:resource="&obo;OBI_0200166"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:allValuesFrom rdf:resource="&obo;IAO_0000027"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:allValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">Philippe Rocca-Serra</obo:IAO_0000117>
@@ -2183,14 +2168,14 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000838"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#achieves_planned_objective"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#achieves_planned_objective"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">OBI-Branch</obo:IAO_0000119>
@@ -2417,17 +2402,53 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OMIABIS-0001031 -->
+
+    <owl:Class rdf:about="&obo;OMIABIS-0001031">
+        <rdfs:label xml:lang="en">donor register data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0001002"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:allValuesFrom rdf:resource="&obo;OBI_1110087"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>It can be said to be a formal record of an internationally agreed minimum amount of information about clinical trial.</rdfs:comment>
+        <obo:IAO_0000115>A data set of collections of secondary data related to patients with a specific diagnosis, condition, or procedure and plays an important role in post marketing surveillance of pharmaceuticals.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMIABIS-0001032 -->
+
+    <owl:Class rdf:about="&obo;OMIABIS-0001032">
+        <rdfs:label xml:lang="en">study subject survey data</rdfs:label>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;OMIABIS_0001003"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
+                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000097"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                        <owl:allValuesFrom rdf:resource="&obo;OBI_1110087"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <obo:IAO_0000115>A data set that covers additional information existing about the sample donors and is usually gathered through a survey. </obo:IAO_0000115>
+        <rdfs:comment>Examples: Individual Disease History, Individual History of Injuries, Medication, Perception of Health, Women&apos;s Health, Reproductive History, Familial Disease History, Life Habits/Behaviors, Sociodemographic Characteristics, Socioeconomic Characteristics, Physical Environment, Mental Health, Other.</rdfs:comment>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OMIABIS_0000012 -->
 
     <owl:Class rdf:about="&obo;OMIABIS_0000012">
         <rdfs:label xml:lang="en">contact role</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000024"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#is_realized_by"/>
-                <owl:someValuesFrom rdf:resource="&Ontology1361812199190;OMIABIS_0000011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&OBO_REL;inheres_in"/>
@@ -2442,6 +2463,12 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#is_realized_by"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1361812199190;OMIABIS_0000011"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115>A role borne by a human being that is part of an group of individuals and acts as contact person for the group. This role gets realized by the bearer being a participant in a contacting process.</obo:IAO_0000115>
@@ -2474,32 +2501,40 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <owl:Class rdf:about="&obo;OMIABIS_0001000">
         <rdfs:label xml:lang="en">age interval</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000027"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                        <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="&obo;OMRSE_00000023"/>
-                                    <rdf:Description rdf:about="&snap;ObjectAggregate"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&obo;BFO_0000086"/>
+                                        <owl:someValuesFrom rdf:resource="&obo;PATO_0000011"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&OBO_REL;inheres_in"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="&obo;OBI_0100026"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#is_part_of"/>
+                                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OMRSE_00000022"/>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
                                 </owl:intersectionOf>
                             </owl:Class>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&obo;BFO_0000086"/>
-                                <owl:someValuesFrom rdf:resource="&obo;PATO_0000011"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
-                                <owl:someValuesFrom rdf:resource="&obo;OBI_0000097"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>A data item that states the given age range of the youngest study participant and the oldest study participant.</obo:IAO_0000115>
         <rdfs:comment>Example: age interval is 18-65</rdfs:comment>
     </owl:Class>
@@ -2510,30 +2545,39 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <owl:Class rdf:about="&obo;OMIABIS_0001001">
         <rdfs:label xml:lang="en">average age</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0000679"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;OMRSE_00000023"/>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;OBI_0000679"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;OBI_0000294"/>
+                        <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                                        <owl:someValuesFrom rdf:resource="&obo;IAO_0000029"/>
-                                    </owl:Restriction>
                                     <owl:Restriction>
                                         <owl:onProperty rdf:resource="&obo;BFO_0000086"/>
                                         <owl:someValuesFrom rdf:resource="&obo;PATO_0000011"/>
                                     </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&OBO_REL;inheres_in"/>
+                                        <owl:someValuesFrom>
+                                            <owl:Class>
+                                                <owl:intersectionOf rdf:parseType="Collection">
+                                                    <rdf:Description rdf:about="&obo;OBI_0100026"/>
+                                                    <owl:Restriction>
+                                                        <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#is_part_of"/>
+                                                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#OMRSE_00000022"/>
+                                                    </owl:Restriction>
+                                                </owl:intersectionOf>
+                                            </owl:Class>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
                                 </owl:intersectionOf>
                             </owl:Class>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </rdfs:subClassOf>
         <obo:IAO_0000115>An average value of the age of a certain group of individuals.</obo:IAO_0000115>
     </owl:Class>
@@ -2551,10 +2595,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
                 <owl:someValuesFrom rdf:resource="&obo;NCBITaxon_9606"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <owl:disjointWith rdf:resource="&obo;OMIABIS_0001003"/>
-        <owl:disjointWith rdf:resource="&obo;OMIABIS_0001012"/>
-        <rdfs:comment>It can be said to be a formal record of an internationally agreed minimum amount of information about clinical trial.</rdfs:comment>
-        <obo:IAO_0000115>A data set of collections of secondary data related to patients with a specific diagnosis, condition, or procedure and plays an important role in post marketing surveillance of pharmaceuticals.</obo:IAO_0000115>
+        <obo:IAO_0000115>A data set of collections of secondary data related to individuals.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2580,9 +2621,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000100"/>
-        <owl:disjointWith rdf:resource="&obo;OMIABIS_0001012"/>
-        <rdfs:comment>Examples: Individual Disease History, Individual History of Injuries, Medication, Perception of Health, Women&apos;s Health, Reproductive History, Familial Disease History, Life Habits/Behaviors, Sociodemographic Characteristics, Socioeconomic Characteristics, Physical Environment, Mental Health, Other.</rdfs:comment>
-        <obo:IAO_0000115>A data set that covers additional information existing about the sample donors and is usually gathered through a survey. </obo:IAO_0000115>
+        <obo:IAO_0000115>A data set that covers additional information existing about individuals and is usually gathered through a survey. </obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2603,7 +2642,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&Ontology1361812199190;0000004"/>
-                                <owl:someValuesFrom rdf:resource="&obo;OBI_0000011"/>
+                                <owl:someValuesFrom rdf:resource="&Ontology1361812199190;0000016"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2633,7 +2672,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&Ontology1361812199190;0000004"/>
-                                <owl:someValuesFrom rdf:resource="&obo;OBI_0000011"/>
+                                <owl:someValuesFrom rdf:resource="&Ontology1361812199190;0000019"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2663,7 +2702,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
                             </owl:Restriction>
                             <owl:Restriction>
                                 <owl:onProperty rdf:resource="&Ontology1361812199190;0000004"/>
-                                <owl:someValuesFrom rdf:resource="&obo;OBI_0000011"/>
+                                <owl:someValuesFrom rdf:resource="&obo;OBI_0000659"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -2681,31 +2720,26 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <owl:Class rdf:about="&obo;OMIABIS_0001007">
         <rdfs:label xml:lang="en">date of specimen collection start</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000027"/>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;IAO_0000027"/>
-                            <owl:Class>
-                                <owl:intersectionOf rdf:parseType="Collection">
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="&ro;has_part"/>
-                                        <owl:someValuesFrom rdf:resource="&span;TemporalInterval"/>
-                                    </owl:Restriction>
-                                    <owl:Restriction>
-                                        <owl:onProperty rdf:resource="&Ontology1361812199190;0000004"/>
-                                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000011"/>
-                                    </owl:Restriction>
-                                </owl:intersectionOf>
-                            </owl:Class>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_part"/>
+                                <owl:someValuesFrom rdf:resource="&span;TemporalInterval"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&Ontology1361812199190;0000004"/>
+                                <owl:someValuesFrom rdf:resource="&obo;OBI_0000659"/>
+                            </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <rdfs:comment>It is denoted by Date in ISO-standard (8601) time format.</rdfs:comment>
         <obo:IAO_0000115>A data item that indicates when the sample collection process began.</obo:IAO_0000115>
     </owl:Class>
@@ -2967,6 +3001,12 @@ http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000115>
         <rdfs:label xml:lang="en">planned sampled human study participant</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000005"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&ro;part_of"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0500000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -2989,12 +3029,6 @@ http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000115>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;part_of"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0500000"/>
-            </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&obo;OMIABIS_0001016"/>
         <rdfs:comment>An objective specification that specifies the number of individuals whom their biological specimen will be  sampled and will participate in a study. It is part of a study design.</rdfs:comment>
@@ -3199,7 +3233,27 @@ https://en.wikipedia.org/wiki/Medical_record</rdfs:comment>
 
     <owl:Class rdf:about="&obo;OMIABIS_0001029">
         <rdfs:label xml:lang="en">sample age interval</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0001000"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;OMIABIS_0001000"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="&obo;OMRSE_00000023"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
+                                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000097"/>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
         <obo:IAO_0000115>An age interval of the sample.</obo:IAO_0000115>
     </owl:Class>
     
@@ -3914,6 +3968,16 @@ However, Shaw explicates:
     
 
 
+    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000016 -->
+
+    <owl:Class rdf:about="&Ontology1361812199190;0000016">
+        <rdfs:label xml:lang="en">data entry</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+        <obo:IAO_0000115>A planned process that entails entering of information into a data storage and retrieval system.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000017 -->
 
     <owl:Class rdf:about="&Ontology1361812199190;0000017">
@@ -3931,6 +3995,16 @@ However, Shaw explicates:
         <rdfs:label xml:lang="en">sample preservation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&Ontology1361812199190;0000013"/>
         <obo:IAO_0000115>A sample handling process used to treat a sample prior to measurement or sample preparation.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/0000019 -->
+
+    <owl:Class rdf:about="&Ontology1361812199190;0000019">
+        <rdfs:label xml:lang="en">data update</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
+        <obo:IAO_0000115>A planned process that entails changing or editing information in a data storage and retrieval system.</obo:IAO_0000115>
     </owl:Class>
     
 
