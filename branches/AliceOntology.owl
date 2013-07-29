@@ -102,6 +102,15 @@
         <Class abbreviatedIRI="obo:IAO_0000572"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="obo:IAO_0020000"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:IAO_0020010"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:IAO_0020015"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="obo:NCBITaxon_10239"/>
     </Declaration>
     <Declaration>
@@ -756,6 +765,12 @@
         <ObjectProperty IRI="/0000010"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="/0000011"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="/0000012"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="/BFO_0000085"/>
     </Declaration>
     <Declaration>
@@ -817,6 +832,36 @@
             <ObjectProperty abbreviatedIRI="obo:OBI_0000312"/>
             <Class abbreviatedIRI="obo:IAO_0000572"/>
         </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="obo:IAO_0020000"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="/0000011"/>
+                <Class abbreviatedIRI="bfo:Entity"/>
+            </ObjectSomeValuesFrom>
+            <ObjectAllValuesFrom>
+                <ObjectProperty abbreviatedIRI="obo:OBI_0000312"/>
+                <Class abbreviatedIRI="obo:IAO_0020010"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="obo:IAO_0020010"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:OBI_0000299"/>
+            <Class abbreviatedIRI="obo:IAO_0020000"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="obo:IAO_0020015"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="obo:IAO_0020000"/>
+            <ObjectAllValuesFrom>
+                <ObjectProperty IRI="/0000011"/>
+                <Class abbreviatedIRI="obo:NCBITaxon_9606"/>
+            </ObjectAllValuesFrom>
+        </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class abbreviatedIRI="obo:OBI_0000011"/>
@@ -1287,6 +1332,18 @@
     <SubClassOf>
         <Class abbreviatedIRI="obo:IAO_0000572"/>
         <Class abbreviatedIRI="obo:OBI_0000011"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:IAO_0020000"/>
+        <Class abbreviatedIRI="obo:IAO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:IAO_0020010"/>
+        <Class abbreviatedIRI="obo:OBI_0000011"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:IAO_0020015"/>
+        <Class abbreviatedIRI="obo:IAO_0020000"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:NCBITaxon_10239"/>
@@ -2435,7 +2492,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001039"/>
-        <Class abbreviatedIRI="bfo:Entity"/>
+        <Class abbreviatedIRI="obo:IAO_0000027"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001040"/>
@@ -2447,7 +2504,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001042"/>
-        <Class abbreviatedIRI="bfo:Entity"/>
+        <Class abbreviatedIRI="obo:IAO_0020015"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001043"/>
@@ -2463,11 +2520,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001046"/>
-        <Class abbreviatedIRI="bfo:Entity"/>
+        <Class abbreviatedIRI="obo:IAO_0000577"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001047"/>
-        <Class abbreviatedIRI="bfo:Entity"/>
+        <Class abbreviatedIRI="obo:IAO_0000577"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001048"/>
@@ -3195,9 +3252,25 @@
         <ObjectProperty IRI="#realizes"/>
         <ObjectProperty IRI="#is_realized_by"/>
     </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="/0000012"/>
+        <ObjectProperty IRI="/0000011"/>
+    </InverseObjectProperties>
     <AsymmetricObjectProperty>
         <ObjectProperty abbreviatedIRI="obo:OMIABIS_0000008"/>
     </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="/0000011"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="/0000012"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="/0000011"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="/0000012"/>
+    </IrreflexiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty abbreviatedIRI="obo:OBI_0000299"/>
         <Class abbreviatedIRI="obo:OBI_0000011"/>
@@ -3245,6 +3318,10 @@
         <ObjectProperty IRI="#realizes"/>
         <Class abbreviatedIRI="span:Process"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="/0000011"/>
+        <Class abbreviatedIRI="obo:IAO_0000030"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty abbreviatedIRI="obo:OMIABIS_0000008"/>
         <ObjectUnionOf>
@@ -3281,6 +3358,10 @@
     <ObjectPropertyRange>
         <ObjectProperty IRI="#realizes"/>
         <Class abbreviatedIRI="snap:RealizableEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="/0000011"/>
+        <Class abbreviatedIRI="bfo:Entity"/>
     </ObjectPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
@@ -3586,6 +3667,76 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:IAO_0000572</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">documenting</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:IAO_0020000</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A proper name is an information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:IAO_0020000</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Mathias Brochhausen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <AbbreviatedIRI>obo:IAO_0020000</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Mathias Brochhausen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:IAO_0020000</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">identifier</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:IAO_0020000</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">proper name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:IAO_0020010</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A dubbing process is a planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:IAO_0020010</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Mathias Brochhausen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <AbbreviatedIRI>obo:IAO_0020010</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Mathias Brochhausen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:IAO_0020010</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">dubbing process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:IAO_0020015</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A personal name is a proper name identifying an individual person.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:IAO_0020015</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Mathias Brochhausen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
+        <AbbreviatedIRI>obo:IAO_0020015</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://en.wikipedia.org/wiki/Personal_name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>obo:IAO_0020015</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Personal names &quot;today usually comprises a given name bestowed at birth or at a young age plus a surname. It is nearly universal for a human to have a name; except in rare cases, for example feral children growing up in isolation, or infants orphaned by natural disaster for whom no written record survives.[citation needed] The Convention on the Rights of the Child specifies that a child has the right from birth to a name. Certain isolated tribes, such as the Machiguenga of the Amazon, also lack personal names.&quot; (http://en.wikipedia.org/wiki/Personal_name)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:IAO_0020015</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">personal name</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
@@ -8233,7 +8384,22 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:OMIABIS_0001039</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A data item that states the day the specimen was prepared to be studied or stored.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A data item that indicates the day which material processing involving the specimen took place.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001039</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alice Nzinga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001039</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Mathias Brochhausen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001039</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It is denoted by Date in ISO-standard (8601) time format.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8263,7 +8429,7 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:OMIABIS_0001041</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A proper name that designates the surgery name that produced to the specimen.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A planned process that produces the specimen.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000118"/>
@@ -8273,7 +8439,7 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OMIABIS_0001041</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">surgery name</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">surgical procedure</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
@@ -8333,7 +8499,7 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:OMIABIS_0001046</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The identification label included in the specimen cassette.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A CRID symbol that identifies a specimen and is usually in form of a label included in the specimen cassette.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
@@ -8348,7 +8514,7 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:OMIABIS_0001047</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A character identification which is obtained from the kits and assigned at the time of donor procurement.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A CRID symbol that is obtained from the kits and assigned at the time of donor procurement.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
@@ -8908,6 +9074,36 @@ However, Shaw explicates:
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>/0000010</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">has grain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <IRI>/0000011</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">x designates y, if for any given group of language users, x is an information content entity, is about y, and represents y in a linguistic context..</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <IRI>/0000011</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Mathias Brochhausen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/0000011</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">designates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <IRI>/0000012</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">p1 is designated by p2, if p2 is an information content entity that represents p1 in a linguistic context.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <IRI>/0000012</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Mathias Brochhausen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>/0000012</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">is designated by</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
