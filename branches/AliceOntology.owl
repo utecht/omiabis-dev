@@ -555,6 +555,12 @@
         <Class abbreviatedIRI="obo:OMIABIS_0001048"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="obo:OMIABIS_0001049"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:OMIABIS_0001050"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="obo:OMRSE_00000023"/>
     </Declaration>
     <Declaration>
@@ -2484,11 +2490,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001037"/>
-        <Class abbreviatedIRI="bfo:Entity"/>
+        <Class abbreviatedIRI="obo:IAO_0000027"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001038"/>
-        <Class abbreviatedIRI="bfo:Entity"/>
+        <Class abbreviatedIRI="obo:IAO_0000408"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001039"/>
@@ -2500,7 +2506,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001041"/>
-        <Class abbreviatedIRI="bfo:Entity"/>
+        <Class abbreviatedIRI="obo:OBI_0000011"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001042"/>
@@ -2508,15 +2514,15 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001043"/>
-        <Class abbreviatedIRI="bfo:Entity"/>
+        <Class abbreviatedIRI="obo:IAO_0000416"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001044"/>
-        <Class abbreviatedIRI="bfo:Entity"/>
+        <Class abbreviatedIRI="span:TemporalInterval"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001045"/>
-        <Class abbreviatedIRI="bfo:Entity"/>
+        <Class abbreviatedIRI="span:TemporalInterval"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001046"/>
@@ -2528,7 +2534,15 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001048"/>
-        <Class abbreviatedIRI="bfo:Entity"/>
+        <Class abbreviatedIRI="obo:IAO_0000005"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OMIABIS_0001049"/>
+        <Class abbreviatedIRI="obo:IAO_0000027"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OMIABIS_0001050"/>
+        <Class abbreviatedIRI="obo:IAO_0000027"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMRSE_00000023"/>
@@ -3253,8 +3267,8 @@
         <ObjectProperty IRI="#is_realized_by"/>
     </InverseObjectProperties>
     <InverseObjectProperties>
-        <ObjectProperty IRI="/0000012"/>
         <ObjectProperty IRI="/0000011"/>
+        <ObjectProperty IRI="/0000012"/>
     </InverseObjectProperties>
     <AsymmetricObjectProperty>
         <ObjectProperty abbreviatedIRI="obo:OMIABIS_0000008"/>
@@ -8374,7 +8388,7 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:OMIABIS_0001038</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An information content entity that states the specimen&apos;s linear measurements in a three-dimensional way.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A length measurement datum that states the specimen&apos;s linear measurements in a three-dimensional way.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8459,7 +8473,7 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:OMIABIS_0001043</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A time measurement datum for when the specimen was in formalin.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A time measurement datum that is the duration of the specimen being emerged in formalin.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8474,12 +8488,12 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:OMIABIS_0001044</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A time measurement datum for when the specimen was collected as a result of surgery.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A temporal interval when the specimen was collected as a result of surgery.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OMIABIS_0001044</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">time of surgical removal</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">specimen surgical removal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000112"/>
@@ -8489,12 +8503,12 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:OMIABIS_0001045</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A time measurement datum for when the specimen was frozen.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A temporal interval when the specimen was frozen.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OMIABIS_0001045</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">time of specimen freezing</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">specimen freezing</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
@@ -8534,12 +8548,7 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:OMIABIS_0001048</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A specification (often abbreviated as spec) may refer to an explicit set of requirements to be satisfied by a material, design, product, or service.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
-        <AbbreviatedIRI>obo:OMIABIS_0001048</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The technical standard measurement set that determines if a specimen qualifies for procurement or not.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An objective specification that states the technical standard measurement set that determines if a specimen qualifies for procurement or not.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
@@ -8547,9 +8556,24 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://en.wikipedia.org/wiki/Specification_(technical_standard)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001048</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A specification (often abbreviated as spec) may refer to an explicit set of requirements to be satisfied by a material, design, product, or service.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OMIABIS_0001048</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">specification</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">specimen measurement specification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001049</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">time of specimen freezing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001050</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">time of surgical removal</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
