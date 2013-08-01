@@ -8378,7 +8378,7 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OMIABIS_0001037</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">comments</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">comment</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000112"/>
