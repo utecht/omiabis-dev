@@ -16,20 +16,20 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      ontologyIRI="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl">
-    <Prefix name="physiological_measurements" IRI="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#physiological_measurements&#39;"/>
-    <Prefix name="Ontology1361812199190" IRI="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="ro" IRI="http://www.obofoundry.org/ro/ro.owl#"/>
-    <Prefix name="span" IRI="http://www.ifomis.org/bfo/1.1/span#"/>
-    <Prefix name="snap" IRI="http://www.ifomis.org/bfo/1.1/snap#"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="oboInOwl" IRI="http://www.geneontology.org/formats/oboInOwl#"/>
-    <Prefix name="bfo" IRI="http://www.ifomis.org/bfo/1.1#"/>
     <Prefix name="" IRI="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#"/>
+    <Prefix name="ro" IRI="http://www.obofoundry.org/ro/ro.owl#"/>
+    <Prefix name="bfo" IRI="http://www.ifomis.org/bfo/1.1#"/>
     <Prefix name="obo" IRI="http://purl.obolibrary.org/obo/"/>
-    <Prefix name="OBO_REL" IRI="http://purl.org/obo/owl/OBO_REL#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="snap" IRI="http://www.ifomis.org/bfo/1.1/snap#"/>
+    <Prefix name="span" IRI="http://www.ifomis.org/bfo/1.1/span#"/>
+    <Prefix name="OBO_REL" IRI="http://purl.org/obo/owl/OBO_REL#"/>
+    <Prefix name="oboInOwl" IRI="http://www.geneontology.org/formats/oboInOwl#"/>
+    <Prefix name="Ontology1361812199190" IRI="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl/"/>
+    <Prefix name="physiological_measurements" IRI="http://www.semanticweb.org/ontologies/2013/1/Ontology1361812199190.owl#physiological_measurements&apos;"/>
     <Import>http://purl.obolibrary.org/obo/iao.owl</Import>
     <Import>http://www.ifomis.org/bfo/1.1</Import>
     <Declaration>
@@ -291,6 +291,9 @@
         <Class abbreviatedIRI="obo:OBI_0000981"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="obo:OBI_0001003"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="obo:OBI_0001010"/>
     </Declaration>
     <Declaration>
@@ -325,6 +328,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:OBI_0100051"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:OBI_0100060"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:OBI_0100067"/>
@@ -379,6 +385,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:OBI_0600014"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:OBI_0600036"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:OBI_0600044"/>
@@ -592,6 +601,12 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:PATO_0001340"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:PATO_0001421"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:PATO_0001422"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="oboInOwl:ObsoleteClass"/>
@@ -992,6 +1007,70 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class abbreviatedIRI="obo:OBI_0000981"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:OBI_0000312"/>
+            <ObjectIntersectionOf>
+                <Class abbreviatedIRI="obo:OBI_0001003"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="obo:OBI_0000293"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty IRI="/0000007"/>
+                        <Class abbreviatedIRI="obo:OBI_0000112"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="obo:OBI_0001472"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="obo:OBI_0000971"/>
+            <ObjectIntersectionOf>
+                <Class abbreviatedIRI="obo:OBI_0100051"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="obo:OBI_0000312"/>
+                    <Class abbreviatedIRI="obo:OBI_0302893"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="obo:OBI_0001479"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="/0000007"/>
+                <Class abbreviatedIRI="obo:OBI_0000112"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="/0000008"/>
+                <Class abbreviatedIRI="obo:CARO_0001008"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="obo:OBI_0001506"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:OBI_0000312"/>
+            <ObjectIntersectionOf>
+                <Class abbreviatedIRI="obo:OBI_0000659"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="obo:OBI_0000293"/>
+                    <ObjectIntersectionOf>
+                        <Class abbreviatedIRI="obo:OBI_0100026"/>
+                        <ObjectSomeValuesFrom>
+                            <ObjectProperty abbreviatedIRI="obo:BFO_0000086"/>
+                            <ObjectUnionOf>
+                                <Class abbreviatedIRI="obo:PATO_0001421"/>
+                                <Class abbreviatedIRI="obo:PATO_0001422"/>
+                            </ObjectUnionOf>
+                        </ObjectSomeValuesFrom>
+                    </ObjectIntersectionOf>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class abbreviatedIRI="obo:OBI_0100026"/>
         <ObjectUnionOf>
             <Class abbreviatedIRI="obo:NCBITaxon_10239"/>
@@ -1158,6 +1237,13 @@
                 </ObjectSomeValuesFrom>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="obo:OMIABIS_0001025"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:OBI_0000300"/>
+            <Class abbreviatedIRI="obo:OMIABIS-0001035"/>
+        </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class abbreviatedIRI="obo:OMIABIS_0001028"/>
@@ -1579,6 +1665,30 @@
         <Class abbreviatedIRI="obo:OBI_0100051"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000680"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="snap:MaterialEntity"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="/0000007"/>
+                <Class abbreviatedIRI="obo:OBI_0000112"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000680"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:OBI_0000312"/>
+            <Class abbreviatedIRI="obo:OBI_0000659"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000680"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/0000008"/>
+            <Class abbreviatedIRI="obo:OBI_0100026"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0000684"/>
         <Class abbreviatedIRI="obo:IAO_0000005"/>
     </SubClassOf>
@@ -1593,6 +1703,10 @@
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0000744"/>
         <Class abbreviatedIRI="obo:OBI_0000659"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000747"/>
+        <Class abbreviatedIRI="obo:OBI_0100051"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0000747"/>
@@ -1720,6 +1834,24 @@
         <Class abbreviatedIRI="obo:OBI_0001472"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0001003"/>
+        <Class abbreviatedIRI="obo:OBI_0302893"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0001003"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:OBI_0000293"/>
+            <Class abbreviatedIRI="obo:OBI_0100060"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0001003"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#achieves_planned_objective"/>
+            <Class abbreviatedIRI="obo:OBI_0000806"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0001010"/>
         <Class abbreviatedIRI="obo:OBI_0000953"/>
     </SubClassOf>
@@ -1780,6 +1912,24 @@
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0100051"/>
         <Class abbreviatedIRI="snap:MaterialEntity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0100060"/>
+        <Class abbreviatedIRI="obo:OBI_0000047"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0100060"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:OBI_0000312"/>
+            <Class abbreviatedIRI="obo:OBI_0600036"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0100060"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/0000010"/>
+            <Class abbreviatedIRI="obo:CL_0000000"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0100067"/>
@@ -1988,6 +2138,10 @@
             <ObjectProperty abbreviatedIRI="obo:OBI_0000299"/>
             <Class abbreviatedIRI="snap:MaterialEntity"/>
         </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0600036"/>
+        <Class abbreviatedIRI="obo:OBI_0000094"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0600044"/>
@@ -2424,13 +2578,6 @@
         <Class abbreviatedIRI="obo:IAO_0000104"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="obo:OMIABIS_0001025"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty abbreviatedIRI="obo:OBI_0000300"/>
-            <Class abbreviatedIRI="obo:OMIABIS-0001035"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001026"/>
         <Class abbreviatedIRI="obo:IAO_0000310"/>
     </SubClassOf>
@@ -2493,6 +2640,25 @@
         <Class abbreviatedIRI="obo:IAO_0000027"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="obo:OMIABIS_0001037"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+            <ObjectIntersectionOf>
+                <Class abbreviatedIRI="obo:OBI_0100051"/>
+                <ObjectIntersectionOf>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="ro:has_part"/>
+                        <Class abbreviatedIRI="obo:OMIABIS_0001038"/>
+                    </ObjectSomeValuesFrom>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="ro:has_participant"/>
+                        <Class abbreviatedIRI="obo:OBI_1110087"/>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001038"/>
         <Class abbreviatedIRI="obo:IAO_0000109"/>
     </SubClassOf>
@@ -2509,7 +2675,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001040"/>
-        <Class abbreviatedIRI="bfo:Entity"/>
+        <Class abbreviatedIRI="obo:OBI_0100051"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001041"/>
@@ -2533,11 +2699,11 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001046"/>
-        <Class abbreviatedIRI="obo:IAO_0000577"/>
+        <Class abbreviatedIRI="obo:IAO_0020000"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001047"/>
-        <Class abbreviatedIRI="obo:IAO_0000577"/>
+        <Class abbreviatedIRI="obo:IAO_0020000"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001048"/>
@@ -2604,6 +2770,14 @@
     <SubClassOf>
         <Class abbreviatedIRI="obo:PATO_0001340"/>
         <Class abbreviatedIRI="obo:PATO_0000047"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:PATO_0001421"/>
+        <Class abbreviatedIRI="obo:PATO_0001237"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:PATO_0001422"/>
+        <Class abbreviatedIRI="obo:PATO_0001237"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="snap:IndependentContinuant"/>
@@ -3542,7 +3716,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
         <AbbreviatedIRI>obo:IAO_0000100</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">2009/10/23 Alan Ruttenberg. The intention is that this term represent collections of like data. So this isn&#39;t for, e.g. the whole contents of a cel file, which includes parameters, metadata etc. This is more like java arrays of a certain rather specific type</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">2009/10/23 Alan Ruttenberg. The intention is that this term represent collections of like data. So this isn&apos;t for, e.g. the whole contents of a cel file, which includes parameters, metadata etc. This is more like java arrays of a certain rather specific type</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
@@ -4132,8 +4306,8 @@ charter/rules/bylaws themselves.
 
 It is debatable what the organization itself is (some kind of dependent
 continuant or an aggregate of people). This also determines who/what the
-bearer of organization_roles&#39; are. My personal favorite is still to define
-organization as a kind of &#39;legal entity&#39;, but thinking it through leads to
+bearer of organization_roles&apos; are. My personal favorite is still to define
+organization as a kind of &apos;legal entity&apos;, but thinking it through leads to
 all kinds of questions that are clearly outside the scope of OBI.
 
 Interestingly enough, it does not seem to matter much where we place
@@ -4142,9 +4316,9 @@ Government Agency, Hospital), instantiate it (Affymetrix, NCBI, NIH, ISO,
 W3C, University of Oklahoma), and have it play roles.
 
 This leads to my proposal: We define organization through the statements 1 -
-3 above, but without an &#39;is a&#39; statement for now. We can leave it in its
+3 above, but without an &apos;is a&apos; statement for now. We can leave it in its
 current place in the is_a hierarchy (material entity) or move it up to
-&#39;continuant&#39;. We leave further clarifications to BFO, and close this issue
+&apos;continuant&apos;. We leave further clarifications to BFO, and close this issue
 for now.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -4245,7 +4419,7 @@ for now.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
         <AbbreviatedIRI>obo:OBI_0000339</AbbreviatedIRI>
-        <Literal datatypeIRI="&xsd;string">7/18/2011 BP: planning used to itself be a planned process. Barry Smith pointed out that this would lead to an infinite regression, as there would have to be a plan to conduct a planning process, which in itself would be the result of planning etc. Therefore, the restrictions on &#39;planning&#39; were loosened to allow for informal processes that result in an &#39;ad hoc plan &#39;. This required changing from &#39;has_specified_output some plan specifiction&#39; to &#39;has_participant some plan specification&#39;. </Literal>
+        <Literal datatypeIRI="&xsd;string">7/18/2011 BP: planning used to itself be a planned process. Barry Smith pointed out that this would lead to an infinite regression, as there would have to be a plan to conduct a planning process, which in itself would be the result of planning etc. Therefore, the restrictions on &apos;planning&apos; were loosened to allow for informal processes that result in an &apos;ad hoc plan &apos;. This required changing from &apos;has_specified_output some plan specifiction&apos; to &apos;has_participant some plan specification&apos;. </Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
@@ -4560,7 +4734,7 @@ for now.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000112"/>
         <AbbreviatedIRI>obo:OBI_0000425</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A mean calculation which has averaging objective is a descriptive statistics calculation in which the mean is calculated by taking the sum of all of the observations in a data set divided by the total number of observations. It gives a measure of the &#39;center of gravity&#39; for the data set. It is also known as the first moment.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A mean calculation which has averaging objective is a descriptive statistics calculation in which the mean is calculated by taking the sum of all of the observations in a data set divided by the total number of observations. It gives a measure of the &apos;center of gravity&apos; for the data set. It is also known as the first moment.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000114"/>
@@ -4765,7 +4939,7 @@ for now.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
         <AbbreviatedIRI>obo:OBI_0000652</AbbreviatedIRI>
-        <Literal datatypeIRI="&xsd;string">created at workshop as parent class for &#39;adding material into target&#39;, which is asymmetric, while combination encompasses all addition processes.</Literal>
+        <Literal datatypeIRI="&xsd;string">created at workshop as parent class for &apos;adding material into target&apos;, which is asymmetric, while combination encompasses all addition processes.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
@@ -4895,7 +5069,7 @@ for now.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
         <AbbreviatedIRI>obo:OBI_0000671</AbbreviatedIRI>
-        <Literal datatypeIRI="&xsd;string">we need to work on this: Is taking a urine sample a material separation process? If not, we will need to specify what &#39;taking a sample from organism&#39; entails. We can argue that the objective to obtain a urine sample from a patient is enough to call it a material separation process, but it could dilute what material separation was supposed to be about.</Literal>
+        <Literal datatypeIRI="&xsd;string">we need to work on this: Is taking a urine sample a material separation process? If not, we will need to specify what &apos;taking a sample from organism&apos; entails. We can argue that the objective to obtain a urine sample from a patient is enough to call it a material separation process, but it could dilute what material separation was supposed to be about.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
@@ -5045,7 +5219,7 @@ for now.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
         <AbbreviatedIRI>obo:OBI_0000740</AbbreviatedIRI>
-        <Literal datatypeIRI="&xsd;string">7/13/09: Note that this is a relational role: between the sample taken and the &#39;sampled&#39; material of which the sample is thought to be representative off.</Literal>
+        <Literal datatypeIRI="&xsd;string">7/13/09: Note that this is a relational role: between the sample taken and the &apos;sampled&apos; material of which the sample is thought to be representative off.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
@@ -5734,7 +5908,7 @@ aspiration.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:OBI_0000915</AbbreviatedIRI>
-        <Literal datatypeIRI="&xsd;string">A process in which a material entity has it&#39;s temperature lowered to below the freezing point in order to bring it to a state in which it can be maintained at this lower temperature in order to preserve some of its qualities</Literal>
+        <Literal datatypeIRI="&xsd;string">A process in which a material entity has it&apos;s temperature lowered to below the freezing point in order to bring it to a state in which it can be maintained at this lower temperature in order to preserve some of its qualities</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
@@ -6132,6 +6306,51 @@ Added duirng Mar 1, 2010 dev call</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OBI_0000981</AbbreviatedIRI>
         <Literal datatypeIRI="&xsd;string">agar stab specimen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:OBI_0001003</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">agar stab storage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000114"/>
+        <AbbreviatedIRI>obo:OBI_0001003</AbbreviatedIRI>
+        <AbbreviatedIRI>obo:IAO_0000120</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:OBI_0001003</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">a storage process with input cell culture and agar and output agar stab for long time storage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0001003</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">PERSON: Chris Stoeckert</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0001003</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">PERSON: Jie Zheng</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
+        <AbbreviatedIRI>obo:OBI_0001003</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">UPenn Group</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
+        <AbbreviatedIRI>obo:OBI_0001003</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>obo:OBI_0001003</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">need to specify that agar is one of input for this process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OBI_0001003</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">agar stab storage</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
@@ -6571,13 +6790,13 @@ Added duirng Mar 1, 2010 dev call</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
         <AbbreviatedIRI>obo:OBI_0100026</AbbreviatedIRI>
-        <Literal datatypeIRI="&xsd;string">10/21/09: This is a placeholder term, that should ideally be imported from the NCBI taxonomy, but the high level hierarchy there does not suit our needs (includes plasmids and &#39;other organisms&#39;)</Literal>
+        <Literal datatypeIRI="&xsd;string">10/21/09: This is a placeholder term, that should ideally be imported from the NCBI taxonomy, but the high level hierarchy there does not suit our needs (includes plasmids and &apos;other organisms&apos;)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
         <AbbreviatedIRI>obo:OBI_0100026</AbbreviatedIRI>
         <Literal datatypeIRI="&xsd;string">13-02-2009:
-OBI doesn&#39;t take position as to  when an organism starts or ends being an organism - e.g. sperm, foetus.
+OBI doesn&apos;t take position as to  when an organism starts or ends being an organism - e.g. sperm, foetus.
 This issue is outside the scope of OBI.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -6649,6 +6868,49 @@ This issue is outside the scope of OBI.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OBI_0100051</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">specimen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:OBI_0100060</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">cell culture</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000112"/>
+        <AbbreviatedIRI>obo:OBI_0100060</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Jurkat cell line in RPMI w/ 10% FCS. PBMCs were purified from blood sample and put into tissue culture media.
+Purification of recombinant human growth hormone from CHO cell culture supernatant by Gradiflow preparative electrophoresis technology.
+Protein Expr Purif. 2003 Nov;32(1):126-34.
+PMID: 14680949</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000114"/>
+        <AbbreviatedIRI>obo:OBI_0100060</AbbreviatedIRI>
+        <AbbreviatedIRI>obo:IAO_0000122</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:OBI_0100060</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">a cell culture is a material entity consisting of a population of cells that is maintained in vitro</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0100060</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">PERSON: Bjoern Peters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
+        <AbbreviatedIRI>obo:OBI_0100060</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">GROUP: OBI Biomaterial Branch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
+        <AbbreviatedIRI>obo:OBI_0100060</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OBI_0100060</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">cell culture</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
@@ -6848,7 +7110,7 @@ This issue is outside the scope of OBI.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:OBI_0200079</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A mean calculation is a descriptive statistics calculation in which the mean is calculated by taking the sum of all of the observations in a data set divided by the total number of observations. It gives a measure of the &#39;center of gravity&#39; for the data set. It is also known as the first moment.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A mean calculation is a descriptive statistics calculation in which the mean is calculated by taking the sum of all of the observations in a data set divided by the total number of observations. It gives a measure of the &apos;center of gravity&apos; for the data set. It is also known as the first moment.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
@@ -6878,7 +7140,7 @@ This issue is outside the scope of OBI.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000232"/>
         <AbbreviatedIRI>obo:OBI_0200079</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">From Monnie&#39;s file comments - need to add moment_calculation and center_calculation roles but they don&#39;t exist yet - (editor note added by James Jan 2008)</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">From Monnie&apos;s file comments - need to add moment_calculation and center_calculation roles but they don&apos;t exist yet - (editor note added by James Jan 2008)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
@@ -7447,6 +7709,49 @@ This issue is outside the scope of OBI.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:OBI_0600036</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">establishing cell culture</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000112"/>
+        <AbbreviatedIRI>obo:OBI_0600036</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Effects of establishing cell cultures and cell culture conditions on the proliferative life span of human fibroblasts isolated from different tissues and donors of different ages.
+Exp Cell Res. 2002 Apr 1;274(2):275-87. PMID: 11900488
+
+When harvesting blood from a human, isolating T cells, and then limited dilution cloning of the cells, the establishing_cell_culture step comprises preparing the cells at a certain dilution and plating them in a container with growth medium.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000114"/>
+        <AbbreviatedIRI>obo:OBI_0600036</AbbreviatedIRI>
+        <AbbreviatedIRI>obo:IAO_0000120</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:OBI_0600036</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">establishing a cell culture is a process which results in creating an in vitro environment in which cells are sustained from input material containing cells. input: cell-containing material, output cell culture, part of cell culturing. Cells are originally plated at a certain concentration referred to as seeding density.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0600036</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">PlanAndPlannedProcess Branch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
+        <AbbreviatedIRI>obo:OBI_0600036</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">OBI branch derived</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
+        <AbbreviatedIRI>obo:OBI_0600036</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OBI_0600036</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">establishing cell culture</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
         <AbbreviatedIRI>obo:OBI_0600044</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">lavage</Literal>
     </AnnotationAssertion>
@@ -7693,7 +7998,7 @@ This issue is outside the scope of OBI.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>obo:OMIABIS-0001032</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Examples: Individual Disease History, Individual History of Injuries, Medication, Perception of Health, Women&#39;s Health, Reproductive History, Familial Disease History, Life Habits/Behaviors, Sociodemographic Characteristics, Socioeconomic Characteristics, Physical Environment, Mental Health, Other.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Examples: Individual Disease History, Individual History of Injuries, Medication, Perception of Health, Women&apos;s Health, Reproductive History, Familial Disease History, Life Habits/Behaviors, Sociodemographic Characteristics, Socioeconomic Characteristics, Physical Environment, Mental Health, Other.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8340,7 +8645,7 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>obo:OMIABIS_0001028</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It could be argued as to why this class was not created as an &#39;objective specification&#39;. However, the emphasis here is to &#39;a briefing of how the specimen in the sample collection have been handled as an indication of specimen quality.&#39;</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">It could be argued as to why this class was not created as an &apos;objective specification&apos;. However, the emphasis here is to &apos;a briefing of how the specimen in the sample collection have been handled as an indication of specimen quality.&apos;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -8383,6 +8688,16 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">storage temperature</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001037</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alice Nzinga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001037</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An information content entity that states additional information about the specimen or donor that is relevant.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OMIABIS_0001037</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">comment</Literal>
@@ -8395,12 +8710,22 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:OMIABIS_0001038</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A measurement datum that is about the specimen&#39;s linear measurements in a three-dimensional way.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A measurement datum that is about the specimen&apos;s linear measurements in a three-dimensional way.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001038</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alice Nzinga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001038</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Mathias Brochhausen</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OMIABIS_0001038</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">specimen measurements</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">specimen measurement</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
@@ -8435,7 +8760,7 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <AbbreviatedIRI>obo:OMIABIS_0001040</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An information content entity that states if or if not the specimen meets the set parameters for it to be procured on.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">All specimens that meet the set parameters to be procured on.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8468,6 +8793,11 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A personal name that designates the person who prepared the specimen.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001042</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alice Nzinga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OMIABIS_0001042</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">specimen preparation contact</Literal>
@@ -8481,6 +8811,11 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:OMIABIS_0001043</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A time measurement datum that is the duration of the specimen being emerged in formalin.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001043</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alice Nzinga</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8520,7 +8855,12 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:OMIABIS_0001046</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A CRID symbol that identifies a specimen and is usually in form of a label included in the specimen cassette.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A proper name that identifies a specimen and is usually in form of a label included in the specimen cassette.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001046</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alice Nzinga</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
@@ -8535,7 +8875,12 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:OMIABIS_0001047</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A CRID symbol that is obtained from the kits and assigned at the time of donor procurement.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A proper name that identifies the donor who is participating in a tissue procurement act. It is usually assigned at the time of donor procurement.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001047</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alice Nzinga</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
@@ -8558,6 +8903,11 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An objective specification that states the technical standard measurement set that determines if a specimen qualifies for procurement or not.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001048</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alice Nzinga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <AbbreviatedIRI>obo:OMIABIS_0001048</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://en.wikipedia.org/wiki/Specification_(technical_standard)</Literal>
@@ -8573,9 +8923,19 @@ https://en.wikipedia.org/wiki/Medical_record</Literal>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">specimen measurement specification</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001049</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alice Nzinga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OMIABIS_0001049</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">time of specimen freezing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OMIABIS_0001050</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alice Nzinga</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8651,9 +9011,9 @@ Amanda Hicks</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <AbbreviatedIRI>obo:OMRSE_00000038</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">We are aware of the fact that Wikipedia&#39;s definition differs from ours by saying that &quot;Legal personality (...) is the characteristic of a non-living entity regarded by law to have the status of personhood&quot; (http://en.wikipedia.org/wiki/Legal_personality) 
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">We are aware of the fact that Wikipedia&apos;s definition differs from ours by saying that &quot;Legal personality (...) is the characteristic of a non-living entity regarded by law to have the status of personhood&quot; (http://en.wikipedia.org/wiki/Legal_personality) 
 However, Shaw explicates:
-&quot;In any legal system, certain entities, whether they be individuals or companies, will be regarded as possessing rights and duties enforceable at law. Thus an individual may prosecute or be prosecuted for assault and a company can sue for breach of contract. They are able to do this because the law recognises them as &#39;legal persons&#39; possessing the capacity to have and to maintain certain rights, and being subject to perform specific duties. (...) In municipal law individuals, limited companies and public corporations are recognized as each possessing a distinct legal personality, the terms of which are circumscribed by the relevant legislation&quot; (Shaw MN: International Law. Sixth Edition. Cambridge University Press, Cambridge, 2008).                We hold that Shaw&#39;s position is ontological more prolific since it not only allows to explain how groups of individuals become recognized as unities at law, but also how different individuals can hold different legal personality roles (always against the context of one legal system). The latter will proof useful when dealing with the representing comatous patients or minorsat law in ontologies.</Literal>
+&quot;In any legal system, certain entities, whether they be individuals or companies, will be regarded as possessing rights and duties enforceable at law. Thus an individual may prosecute or be prosecuted for assault and a company can sue for breach of contract. They are able to do this because the law recognises them as &apos;legal persons&apos; possessing the capacity to have and to maintain certain rights, and being subject to perform specific duties. (...) In municipal law individuals, limited companies and public corporations are recognized as each possessing a distinct legal personality, the terms of which are circumscribed by the relevant legislation&quot; (Shaw MN: International Law. Sixth Edition. Cambridge University Press, Cambridge, 2008).                We hold that Shaw&apos;s position is ontological more prolific since it not only allows to explain how groups of individuals become recognized as unities at law, but also how different individuals can hold different legal personality roles (always against the context of one legal system). The latter will proof useful when dealing with the representing comatous patients or minorsat law in ontologies.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8688,7 +9048,7 @@ However, Shaw explicates:
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <AbbreviatedIRI>obo:PATO_0000047</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An organismal quality inhering in a bearer by virtue of the bearer&#39;s ability to undergo sexual reproduction in order to differentiate the individuals or types involved.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An organismal quality inhering in a bearer by virtue of the bearer&apos;s ability to undergo sexual reproduction in order to differentiate the individuals or types involved.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
@@ -8801,6 +9161,46 @@ However, Shaw explicates:
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">hermaphrodite</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:PATO_0001421</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">alive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:PATO_0001421</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A viability quality inhering in a bearer by virtue of the bearer&apos;s condition before death.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
+        <AbbreviatedIRI>obo:PATO_0001421</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:PATO_0001421</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">alive</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:PATO_0001422</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">dead</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:PATO_0001422</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A viability quality inhering in a bearer by virtue of the cessation of the bearer&apos;s life.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
+        <AbbreviatedIRI>obo:PATO_0001422</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:PATO_0001422</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">dead</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>OBO_REL:bearer_of</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">bearer_of</Literal>
@@ -8819,7 +9219,7 @@ However, Shaw explicates:
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
         <IRI>#OMIABIS_0000000</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">definition derived from the definition of &#39;human biobank&#39;, based on http://www.ethikrat.org/files/der_opinion_human-biobanks.pdf</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">definition derived from the definition of &apos;human biobank&apos;, based on http://www.ethikrat.org/files/der_opinion_human-biobanks.pdf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8869,7 +9269,7 @@ However, Shaw explicates:
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000112"/>
         <IRI>#achieves_planned_objective</IRI>
-        <Literal datatypeIRI="&xsd;string">A cell sorting process achieves the objective specification &#39;material separation objective&#39;</Literal>
+        <Literal datatypeIRI="&xsd;string">A cell sorting process achieves the objective specification &apos;material separation objective&apos;</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
@@ -8904,7 +9304,7 @@ However, Shaw explicates:
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#cerebrospinal_fluid</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">Abbreviated as &#39;CSF&#39;.</Literal>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Abbreviated as &apos;CSF&apos;.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -8995,6 +9395,16 @@ However, Shaw explicates:
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#saliva_specimen</IRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">saliva specimen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <IRI>#sample_donor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Alice Nzinga</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <IRI>#sample_donor</IRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Mathias Brochhausen</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000118"/>
@@ -9171,5 +9581,5 @@ However, Shaw explicates:
 
 
 
-<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.3.1957) http://owlapi.sourceforge.net -->
 
