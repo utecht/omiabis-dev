@@ -1345,16 +1345,14 @@
         <Class abbreviatedIRI="obo:OMIABIS_0001039"/>
         <ObjectIntersectionOf>
             <Class abbreviatedIRI="obo:IAO_0000027"/>
-            <ObjectIntersectionOf>
-                <ObjectSomeValuesFrom>
-                    <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+                <ObjectIntersectionOf>
                     <Class abbreviatedIRI="obo:OBI_0100051"/>
-                </ObjectSomeValuesFrom>
-                <ObjectSomeValuesFrom>
-                    <ObjectProperty abbreviatedIRI="ro:has_part"/>
-                    <ObjectIntersectionOf>
-                        <Class abbreviatedIRI="span:TemporalInterval"/>
+                    <ObjectSomeValuesFrom>
+                        <ObjectProperty abbreviatedIRI="ro:has_part"/>
                         <ObjectIntersectionOf>
+                            <Class abbreviatedIRI="span:TemporalInterval"/>
                             <ObjectSomeValuesFrom>
                                 <ObjectProperty IRI="/0000004"/>
                                 <Class abbreviatedIRI="obo:OMIABIS_0001044"/>
@@ -1364,9 +1362,9 @@
                                 <Class abbreviatedIRI="obo:OMIABIS_0001045"/>
                             </ObjectSomeValuesFrom>
                         </ObjectIntersectionOf>
-                    </ObjectIntersectionOf>
-                </ObjectSomeValuesFrom>
-            </ObjectIntersectionOf>
+                    </ObjectSomeValuesFrom>
+                </ObjectIntersectionOf>
+            </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -3209,16 +3207,16 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001046"/>
-        <ObjectIntersectionOf>
-            <ObjectSomeValuesFrom>
-                <ObjectProperty abbreviatedIRI="ro:has_part"/>
-                <Class abbreviatedIRI="obo:IAO_0000577"/>
-            </ObjectSomeValuesFrom>
-            <ObjectAllValuesFrom>
-                <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+            <ObjectIntersectionOf>
                 <Class abbreviatedIRI="obo:OBI_0100051"/>
-            </ObjectAllValuesFrom>
-        </ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="ro:has_part"/>
+                    <Class abbreviatedIRI="obo:IAO_0000577"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectAllValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001047"/>
