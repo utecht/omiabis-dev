@@ -180,7 +180,13 @@
         <Class abbreviatedIRI="obo:OBI_0000356"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="obo:OBI_0000370"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="obo:OBI_0000371"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:OBI_0000372"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:OBI_0000375"/>
@@ -192,10 +198,16 @@
         <Class abbreviatedIRI="obo:OBI_0000401"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="obo:OBI_0000407"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="obo:OBI_0000423"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:OBI_0000425"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:OBI_0000453"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:OBI_0000456"/>
@@ -228,6 +240,9 @@
         <Class abbreviatedIRI="obo:OBI_0000680"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="obo:OBI_0000681"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="obo:OBI_0000684"/>
     </Declaration>
     <Declaration>
@@ -241,6 +256,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:OBI_0000806"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:OBI_0000832"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:OBI_0000834"/>
@@ -312,6 +330,9 @@
         <Class abbreviatedIRI="obo:OBI_0000924"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="obo:OBI_0000932"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="obo:OBI_0000950"/>
     </Declaration>
     <Declaration>
@@ -319,6 +340,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:OBI_0000965"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:OBI_0000968"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:OBI_0000971"/>
@@ -411,6 +435,9 @@
         <Class abbreviatedIRI="obo:OBI_0302914"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="obo:OBI_0400106"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="obo:OBI_0500000"/>
     </Declaration>
     <Declaration>
@@ -454,6 +481,9 @@
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:OBI_1110087"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:OGMS_0000045"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:OGMS_0000073"/>
@@ -1062,6 +1092,16 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
+        <Class abbreviatedIRI="obo:OBI_0000832"/>
+        <ObjectIntersectionOf>
+            <Class abbreviatedIRI="obo:OBI_0000968"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="/BFO_0000085"/>
+                <Class abbreviatedIRI="obo:OBI_0000453"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
         <Class abbreviatedIRI="obo:OBI_0000838"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#achieves_planned_objective"/>
@@ -1090,6 +1130,13 @@
                 <Class abbreviatedIRI="obo:OBI_0000112"/>
             </ObjectSomeValuesFrom>
         </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="obo:OBI_0000932"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/BFO_0000085"/>
+            <Class abbreviatedIRI="obo:OBI_0000372"/>
+        </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class abbreviatedIRI="obo:OBI_0000953"/>
@@ -1230,7 +1277,7 @@
             <Class abbreviatedIRI="obo:OBI_0000011"/>
             <ObjectSomeValuesFrom>
                 <ObjectProperty abbreviatedIRI="obo:OBI_0000299"/>
-                <Class abbreviatedIRI="obo:OMIABIS_0001003"/>
+                <Class abbreviatedIRI="obo:IAO_0000027"/>
             </ObjectSomeValuesFrom>
             <ObjectSomeValuesFrom>
                 <ObjectProperty IRI="#realizes"/>
@@ -1763,7 +1810,14 @@
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0000257"/>
-        <Class abbreviatedIRI="obo:OBI_0302884"/>
+        <Class abbreviatedIRI="obo:OBI_0666667"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000257"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:OBI_0000299"/>
+            <Class abbreviatedIRI="obo:CHEBI_16991"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0000272"/>
@@ -1796,7 +1850,15 @@
         <Class abbreviatedIRI="obo:OBI_0000066"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000370"/>
+        <Class abbreviatedIRI="snap:Function"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0000371"/>
+        <Class abbreviatedIRI="snap:Function"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000372"/>
         <Class abbreviatedIRI="snap:Function"/>
     </SubClassOf>
     <SubClassOf>
@@ -1812,12 +1874,34 @@
         <Class abbreviatedIRI="snap:Function"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000407"/>
+        <Class abbreviatedIRI="obo:OBI_0666666"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000407"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:OBI_0000293"/>
+            <Class abbreviatedIRI="obo:NCBITaxon_10239"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0000423"/>
         <Class abbreviatedIRI="obo:OBI_0000047"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000423"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:OBI_0000312"/>
+            <Class abbreviatedIRI="obo:OBI_0302884"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0000425"/>
         <Class abbreviatedIRI="obo:OBI_0200166"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000453"/>
+        <Class abbreviatedIRI="snap:Function"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0000456"/>
@@ -1891,6 +1975,10 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000681"/>
+        <Class abbreviatedIRI="obo:OBI_0000639"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0000684"/>
         <Class abbreviatedIRI="obo:IAO_0000005"/>
     </SubClassOf>
@@ -1917,6 +2005,10 @@
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0000806"/>
         <Class abbreviatedIRI="obo:IAO_0000005"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000832"/>
+        <Class abbreviatedIRI="obo:OBI_0000968"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0000834"/>
@@ -2133,6 +2225,10 @@
         <Class abbreviatedIRI="obo:OBI_0000953"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000932"/>
+        <Class abbreviatedIRI="obo:OBI_0000968"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0000950"/>
         <Class abbreviatedIRI="obo:OBI_0001472"/>
     </SubClassOf>
@@ -2147,6 +2243,24 @@
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0000965"/>
         <Class abbreviatedIRI="obo:OBI_0001472"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000968"/>
+        <Class abbreviatedIRI="obo:OBI_0000047"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000968"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:OBI_0000312"/>
+            <Class abbreviatedIRI="obo:OBI_0000094"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000968"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/BFO_0000085"/>
+            <Class abbreviatedIRI="snap:Function"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0000971"/>
@@ -2462,12 +2576,33 @@
         <Class abbreviatedIRI="obo:OBI_0600014"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0302884"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#achieves_planned_objective"/>
+            <Class abbreviatedIRI="obo:OBI_0000681"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0302885"/>
         <Class abbreviatedIRI="obo:OBI_0600014"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0302886"/>
         <Class abbreviatedIRI="obo:OBI_0600014"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0302886"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="ro:has_participant"/>
+            <Class abbreviatedIRI="obo:OBI_0400106"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0302886"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#achieves_planned_objective"/>
+            <Class abbreviatedIRI="obo:OBI_0000681"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0302893"/>
@@ -2490,6 +2625,44 @@
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0302914"/>
         <Class abbreviatedIRI="obo:IAO_0000572"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0400106"/>
+        <Class abbreviatedIRI="obo:OBI_0000832"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0400106"/>
+        <Class abbreviatedIRI="obo:OBI_0000932"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0400106"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:BFO_0000051"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="/BFO_0000085"/>
+                <Class abbreviatedIRI="obo:OBI_0000370"/>
+            </ObjectSomeValuesFrom>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0400106"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/BFO_0000085"/>
+            <Class abbreviatedIRI="obo:OBI_0000453"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0400106"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="/BFO_0000085"/>
+            <ObjectIntersectionOf>
+                <Class abbreviatedIRI="obo:OBI_0000372"/>
+                <ObjectAllValuesFrom>
+                    <ObjectProperty IRI="#is_realized_by"/>
+                    <Class abbreviatedIRI="obo:OBI_0302886"/>
+                </ObjectAllValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0500000"/>
@@ -2602,12 +2775,44 @@
         <Class abbreviatedIRI="obo:OBI_0600014"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0600052"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#achieves_planned_objective"/>
+            <Class abbreviatedIRI="obo:OBI_0000681"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0666666"/>
-        <Class abbreviatedIRI="obo:OBI_0302884"/>
+        <Class abbreviatedIRI="obo:OBI_0666667"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0666666"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:OBI_0000299"/>
+            <Class abbreviatedIRI="obo:CHEBI_33697"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_0666667"/>
         <Class abbreviatedIRI="obo:OBI_0302884"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0666667"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:OBI_0000293"/>
+            <ObjectUnionOf>
+                <Class abbreviatedIRI="obo:OBI_0000671"/>
+                <Class abbreviatedIRI="obo:OBI_0100026"/>
+                <Class abbreviatedIRI="obo:OBI_0100060"/>
+            </ObjectUnionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0666667"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:OBI_0000299"/>
+            <Class abbreviatedIRI="obo:CHEBI_33696"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_1000049"/>
@@ -2638,6 +2843,10 @@
     <SubClassOf>
         <Class abbreviatedIRI="obo:OBI_1110087"/>
         <Class abbreviatedIRI="snap:Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OGMS_0000045"/>
+        <Class abbreviatedIRI="snap:MaterialEntity"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OGMS_0000073"/>
@@ -3238,6 +3447,23 @@
         <Class abbreviatedIRI="obo:IAO_0020000"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="obo:OMIABIS_0001047"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
+            <ObjectIntersectionOf>
+                <Class abbreviatedIRI="obo:NCBITaxon_9606"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="ro:participates_in"/>
+                    <Class abbreviatedIRI="obo:OBI_0000659"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="/0000007"/>
+                    <Class abbreviatedIRI="obo:OBI_1110087"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001048"/>
         <Class abbreviatedIRI="obo:IAO_0000005"/>
     </SubClassOf>
@@ -3259,22 +3485,8 @@
         <Class abbreviatedIRI="obo:IAO_0000027"/>
     </SubClassOf>
     <SubClassOf>
-        <Class abbreviatedIRI="obo:OMIABIS_0001049"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty abbreviatedIRI="obo:IAO_0000004"/>
-            <Datatype abbreviatedIRI="xsd:dateTime"/>
-        </DataExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001050"/>
         <Class abbreviatedIRI="obo:IAO_0000027"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:OMIABIS_0001050"/>
-        <DataExactCardinality cardinality="1">
-            <DataProperty abbreviatedIRI="obo:IAO_0000004"/>
-            <Datatype abbreviatedIRI="xsd:dateTime"/>
-        </DataExactCardinality>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMIABIS_0001053"/>
@@ -3284,7 +3496,17 @@
         <Class abbreviatedIRI="obo:OMIABIS_0001053"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty abbreviatedIRI="obo:IAO_0000136"/>
-            <Class abbreviatedIRI="obo:OBI_0100051"/>
+            <ObjectIntersectionOf>
+                <Class abbreviatedIRI="obo:OBI_0100051"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="ro:has_part"/>
+                    <Class abbreviatedIRI="obo:OGMS_0000045"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="ro:has_part"/>
+                    <Class abbreviatedIRI="obo:OMIABIS_0001054"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3310,7 +3532,7 @@
                 <Class abbreviatedIRI="obo:OBI_0100051"/>
                 <ObjectSomeValuesFrom>
                     <ObjectProperty abbreviatedIRI="ro:has_part"/>
-                    <Class abbreviatedIRI="snap:Disposition"/>
+                    <Class abbreviatedIRI="obo:OGMS_0000045"/>
                 </ObjectSomeValuesFrom>
             </ObjectIntersectionOf>
         </ObjectSomeValuesFrom>
@@ -5290,6 +5512,56 @@ for now.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:OBI_0000370</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">contain function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000112"/>
+        <AbbreviatedIRI>obo:OBI_0000370</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A syringe, a beaker</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000114"/>
+        <AbbreviatedIRI>obo:OBI_0000370</AbbreviatedIRI>
+        <AbbreviatedIRI>obo:IAO_0000122</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:OBI_0000370</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A contain function is a function to constrain a material entities location in space</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000370</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Bill Bug</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000370</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Daniel Schober</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000370</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Frank Gibson</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000370</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Melanie Courtot</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
+        <AbbreviatedIRI>obo:OBI_0000370</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OBI_0000370</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">contain function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
         <AbbreviatedIRI>obo:OBI_0000371</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">heat function</Literal>
     </AnnotationAssertion>
@@ -5332,6 +5604,51 @@ for now.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OBI_0000371</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">heat function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:OBI_0000372</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">material separation function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000114"/>
+        <AbbreviatedIRI>obo:OBI_0000372</AbbreviatedIRI>
+        <AbbreviatedIRI>obo:IAO_0000122</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:OBI_0000372</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A material separation function is a function that increases the resolution between two or more material entities. The  to distinction between the entities is usually based on some associated physical quality.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000372</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Bill Bug</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000372</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Daniel Schober</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000372</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Frank Gibson</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000372</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Melanie Courtot</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
+        <AbbreviatedIRI>obo:OBI_0000372</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OBI_0000372</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">material separation function</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
@@ -5465,6 +5782,41 @@ for now.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:OBI_0000407</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">viral RNA extraction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000112"/>
+        <AbbreviatedIRI>obo:OBI_0000407</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">The AccuPrepTM Viral RNA Extraction Kit is designed for the rapid and convenient extraction of viral RNA from cell-free samples as serum, plasma, CSF, urine, etc - http://www.biokits.com/moreinfos.html?id=2703</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000114"/>
+        <AbbreviatedIRI>obo:OBI_0000407</AbbreviatedIRI>
+        <AbbreviatedIRI>obo:IAO_0000123</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:OBI_0000407</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">The extraction of RNA from an input material that specifically isolates viral RNA</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000407</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Person:Bjoern Peters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
+        <AbbreviatedIRI>obo:OBI_0000407</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OBI_0000407</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">viral RNA extraction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
         <AbbreviatedIRI>obo:OBI_0000423</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">extract</Literal>
     </AnnotationAssertion>
@@ -5552,6 +5904,56 @@ for now.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OBI_0000425</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">averaging objective</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:OBI_0000453</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">measure function</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000112"/>
+        <AbbreviatedIRI>obo:OBI_0000453</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A glucometer measures blood glucose concentration, the glucometer has a measure function.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000114"/>
+        <AbbreviatedIRI>obo:OBI_0000453</AbbreviatedIRI>
+        <AbbreviatedIRI>obo:IAO_0000122</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:OBI_0000453</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Measure function is a function that is borne by a processed material  and realized in a process in which information about some entity is expressed relative to some reference.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000453</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">PERSON: Daniel Schober</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000453</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">PERSON: Helen Parkinson</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000453</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">PERSON: Melanie Courtot</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000453</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">PERSON:Frank Gibson</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
+        <AbbreviatedIRI>obo:OBI_0000453</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OBI_0000453</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">measure function</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
@@ -5940,6 +6342,41 @@ for now.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:OBI_0000681</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">separation into different composition objective</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000112"/>
+        <AbbreviatedIRI>obo:OBI_0000681</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">The objective to obtain cells contained in a sample of blood.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000114"/>
+        <AbbreviatedIRI>obo:OBI_0000681</AbbreviatedIRI>
+        <AbbreviatedIRI>obo:IAO_0000120</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:OBI_0000681</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">is the objective to separate a material entity that has parts of different types, and end with at least one output that is a material with parts of fewer types (modulo impurities)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
+        <AbbreviatedIRI>obo:OBI_0000681</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">We should be using has the grain relations or concentrations to distinguish the portioning and other sub-objectives</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
+        <AbbreviatedIRI>obo:OBI_0000681</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OBI_0000681</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">separation into different composition objective</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
         <AbbreviatedIRI>obo:OBI_0000684</AbbreviatedIRI>
         <Literal datatypeIRI="&xsd;string">specimen creation objective</Literal>
     </AnnotationAssertion>
@@ -6107,6 +6544,46 @@ for now.</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OBI_0000806</AbbreviatedIRI>
         <Literal datatypeIRI="&xsd;string">material maintenance objective</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:OBI_0000832</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">measurement device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000112"/>
+        <AbbreviatedIRI>obo:OBI_0000832</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A ruler, a microarray scanner, a Geiger counter.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000114"/>
+        <AbbreviatedIRI>obo:OBI_0000832</AbbreviatedIRI>
+        <AbbreviatedIRI>obo:IAO_0000122</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:OBI_0000832</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">a processed material created to have the function to measure</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000832</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">GROUP:OBI Philly workshop</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
+        <AbbreviatedIRI>obo:OBI_0000832</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">OBI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
+        <AbbreviatedIRI>obo:OBI_0000832</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OBI_0000832</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">measurement device</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
@@ -7086,6 +7563,36 @@ Added duirng Mar 1, 2010 dev call</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:OBI_0000932</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">material separation device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000112"/>
+        <AbbreviatedIRI>obo:OBI_0000932</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">flow cytometer</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000114"/>
+        <AbbreviatedIRI>obo:OBI_0000932</AbbreviatedIRI>
+        <AbbreviatedIRI>obo:IAO_0000123</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:OBI_0000932</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A device with a separation function realized in a planed process</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
+        <AbbreviatedIRI>obo:OBI_0000932</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OBI_0000932</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">material separation device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
         <AbbreviatedIRI>obo:OBI_0000950</AbbreviatedIRI>
         <Literal datatypeIRI="&xsd;string">paraffin specimen</Literal>
     </AnnotationAssertion>
@@ -7208,6 +7715,66 @@ Added duirng Mar 1, 2010 dev call</Literal>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OBI_0000965</AbbreviatedIRI>
         <Literal datatypeIRI="&xsd;string">lyophilized specimen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:OBI_0000968</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">device</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000112"/>
+        <AbbreviatedIRI>obo:OBI_0000968</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A voltmeter is a measurement device which is intended to perform some measure function.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000114"/>
+        <AbbreviatedIRI>obo:OBI_0000968</AbbreviatedIRI>
+        <AbbreviatedIRI>obo:IAO_0000123</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:OBI_0000968</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A device is a processed material which is designed to perform some function or functions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
+        <AbbreviatedIRI>obo:OBI_0000968</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">food should not classify as a device - counter example for using manufacturer and not device. macroscopic only</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
+        <AbbreviatedIRI>obo:OBI_0000968</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">if we keep this exploratory term we could reinstate the old device class which is obsolete_device. didn&apos;t work before as we had manufacturing as part of  the definition. device was needed, but couldn&apos;t define in Philadelphia. If we decide  that in addition to function there are also capabilities for which a device is created we will include these in the definition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000968</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">PERSON: Helen Parkinson</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000118"/>
+        <AbbreviatedIRI>obo:OBI_0000968</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">instrument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
+        <AbbreviatedIRI>obo:OBI_0000968</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">OBI Vancouver workshop 2010</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
+        <AbbreviatedIRI>obo:OBI_0000968</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>obo:OBI_0000968</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">would include reagents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OBI_0000968</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">device</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
@@ -8547,6 +9114,51 @@ PMID: 14680949</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:OBI_0400106</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">centrifuge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000114"/>
+        <AbbreviatedIRI>obo:OBI_0400106</AbbreviatedIRI>
+        <AbbreviatedIRI>obo:IAO_0000122</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0400106</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Melanie Courtot</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0400106</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">Person: Jennifer Fostel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0400106</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Trish Whetzel</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
+        <AbbreviatedIRI>obo:OBI_0400106</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">http://en.wikipedia.org/wiki/Centrifuge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
+        <AbbreviatedIRI>obo:OBI_0400106</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>obo:OBI_0400106</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">A device with a rapidly rotating container that applies centrifugal force to its contents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OBI_0400106</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">centrifuge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
         <AbbreviatedIRI>obo:OBI_0600005</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">collecting specimen from organism</Literal>
     </AnnotationAssertion>
@@ -9182,6 +9794,36 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OBI_1110087</AbbreviatedIRI>
         <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">donor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:OGMS_0000045</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A material entity which is clinically abnormal and part of an extended organism. Disorders are the physical basis of disease.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OGMS_0000045</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Albert Goldfain</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
+        <AbbreviatedIRI>obo:OGMS_0000045</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000232"/>
+        <AbbreviatedIRI>obo:OGMS_0000045</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">creation date: 2009-06-23T11:39:44Z</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000412"/>
+        <AbbreviatedIRI>obo:OGMS_0000045</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;string">http://purl.obolibrary.org/obo/ogms.owl</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OGMS_0000045</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">disorder</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
@@ -10767,7 +11409,7 @@ However, Shaw explicates:
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <IRI>/0000002</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A temporal interval when the specimen collection process was updated in a database.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A planned process that involves updating a database that contains specimen collection data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -10777,7 +11419,7 @@ However, Shaw explicates:
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
         <IRI>/0000003</IRI>
-        <Literal datatypeIRI="&rdf;PlainLiteral">A temporal interval when the specimen collection process initiation date was reported in a database.</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A planned process that involves reporting into a database when the specimen collection process was initiation date.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
