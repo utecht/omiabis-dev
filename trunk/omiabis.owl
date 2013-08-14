@@ -29,18 +29,18 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
      xmlns:omiabis2="&obo;omiabis.owl/">
-    <owl:Ontology rdf:about="&obo;omiabis.owl">
-        <owl:versionInfo xml:lang="en">2013-03-24</owl:versionInfo>
+    <owl:Ontology rdf:about="&obo;omiabis/dev/omiabis.owl">
+        <dc:contributor>Maria Anderberg</dc:contributor>
+        <dc:creator>Mathias Brochhausen</dc:creator>
+        <dc:contributor>Roxana Merino-Martinez</dc:contributor>
+        <dc:contributor>Sanela Kjellqvist</dc:contributor>
         <dc:contributor>Loreana Norlin</dc:contributor>
         <dc:contributor>Jan-Eric Litton</dc:contributor>
-        <dc:source xml:lang="en">MIABIS_v2_accepted</dc:source>
-        <dc:contributor>Roxana Merino-Martinez</dc:contributor>
         <dc:contributor>Mikael Eriksson</dc:contributor>
-        <dc:contributor>Sanela Kjellqvist</dc:contributor>
-        <dc:creator>Mathias Brochhausen</dc:creator>
+        <owl:versionInfo xml:lang="en">2013-03-24</owl:versionInfo>
+        <dc:source xml:lang="en">MIABIS_v2_accepted</dc:source>
         <dc:contributor>William R. Hogan</dc:contributor>
         <dc:contributor>Martin N. Fransson</dc:contributor>
-        <dc:contributor>Maria Anderberg</dc:contributor>
         <dc:title xml:lang="en">Ontologized MIABIS</dc:title>
         <owl:imports rdf:resource="&obo;geo.owl"/>
         <owl:imports rdf:resource="&obo;iao/pno.owl"/>
@@ -62,11 +62,11 @@
     <rdf:Description rdf:about="&obo;IAO_0000116">
         <rdfs:label xml:lang="en">editor note</rdfs:label>
     </rdf:Description>
-    <rdf:Description rdf:about="&obo;IAO_0000114">
-        <rdfs:label xml:lang="en">has curation status</rdfs:label>
-    </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000412">
         <rdfs:label xml:lang="en">imported from</rdfs:label>
+    </rdf:Description>
+    <rdf:Description rdf:about="&obo;IAO_0000114">
+        <rdfs:label xml:lang="en">has curation status</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="&obo;IAO_0000232">
         <rdfs:label xml:lang="en">curator note</rdfs:label>
@@ -257,17 +257,6 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
     
 
 
-    <!-- http://purl.obolibrary.org/obo/RO_0001000 -->
-
-    <owl:ObjectProperty rdf:about="&obo;RO_0001000">
-        <rdfs:label xml:lang="en">derives from</rdfs:label>
-        <obo:IAO_0000111 rdf:datatype="&xsd;string">derives from</obo:IAO_0000111>
-        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
-        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
-    </owl:ObjectProperty>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OMIABIS_0000008 -->
 
     <owl:ObjectProperty rdf:about="&obo;OMIABIS_0000008">
@@ -303,8 +292,8 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
     <owl:ObjectProperty rdf:about="&obo;OMIABIS_0000009">
         <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
         <rdfs:label xml:lang="en">administrates</rdfs:label>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <rdfs:comment xml:lang="en">A definition of &quot;tranfers&quot; object property can be found in d-acts: http:purl.obolibrary.org/iao/d-acts.owl</rdfs:comment>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">a administrates b if c owns b and some rights and obligations grounded in the owning relation regarding b are transferred  from c to a.</obo:IAO_0000115>
         <rdfs:range>
             <owl:Class>
@@ -376,6 +365,17 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/RO_0001000 -->
+
+    <owl:ObjectProperty rdf:about="&obo;RO_0001000">
+        <rdfs:label xml:lang="en">derives from</rdfs:label>
+        <obo:IAO_0000111 rdf:datatype="&xsd;string">derives from</obo:IAO_0000111>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
+        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
 
@@ -1102,177 +1102,6 @@ for now.</obo:IAO_0000116>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000022 -->
-
-    <owl:Class rdf:about="&obo;OMRSE_00000022">
-        <rdfs:label xml:lang="en">collection of organisms</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000075"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0100026"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&snap;ObjectAggregate"/>
-        <obo:IAO_0000115 xml:lang="en">An object aggregate of organisms.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Any arbitrary collection of organisms.  They need not be of the same taxonomic class.  </rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000023 -->
-
-    <owl:Class rdf:about="&obo;OMRSE_00000023">
-        <rdfs:label xml:lang="en">collection of humans</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000075"/>
-                <owl:someValuesFrom rdf:resource="&obo;NCBITaxon_9606"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000022"/>
-        <rdfs:comment xml:lang="en">An object aggregate all of whose components are human beings.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000024 -->
-
-    <owl:Class rdf:about="&obo;OMRSE_00000024">
-        <rdfs:label xml:lang="en">role in human social processes</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;Role"/>
-        <obo:IAO_0000115 xml:lang="en">A role inhering in an entity realized by social interactions in human society.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
-        <rdfs:comment xml:lang="en">Previous definition: A role played by an entity in human social processes.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000028 -->
-
-    <owl:Class rdf:about="&obo;OMRSE_00000028">
-        <rdfs:label xml:lang="en">geopolitical organization</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0000245"/>
-        <obo:IAO_0000115 xml:lang="en">An organization that governs the people living in a particular geographical region or aggregate of geographical regions.  The geographical region it governs can change over time (such as the westward expansion of the United States and the addition of Hawaii).</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000029 -->
-
-    <owl:Class rdf:about="&obo;OMRSE_00000029">
-        <rdfs:label xml:lang="en">sovereign state</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000028"/>
-        <rdfs:comment xml:lang="en"></rdfs:comment>
-        <obo:IAO_0000115 xml:lang="en">A geopolitical entity with a defined territory on which it exercises internal and external sovereignty, a permanent population, a government, and the capacity to enter into relations with other sovereign states.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Per Wikipedia, the word &#39;nation&#39; does not always refer to soverign states.  For example, the &quot;nation of Islam&quot;.</rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-        <obo:IAO_0000119 xml:lang="en">http://en.wikipedia.org/wiki/Sovereign_state</obo:IAO_0000119>
-        <obo:IAO_0000118 xml:lang="en">nation</obo:IAO_0000118>
-        <obo:IAO_0000118 xml:lang="en">nation state</obo:IAO_0000118>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000030 -->
-
-    <owl:Class rdf:about="&obo;OMRSE_00000030">
-        <rdfs:label xml:lang="en">subnational entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000028"/>
-        <obo:IAO_0000115 xml:lang="en">A geopolitical entity that recognizes a sovereign state as its only higher political authority.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000032 -->
-
-    <owl:Class rdf:about="&obo;OMRSE_00000032">
-        <rdfs:label xml:lang="en">geopolitical dependency</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000030"/>
-        <obo:IAO_0000115 xml:lang="en">A subnational entity that does not possess full political independence or sovereignty as a sovereign state, but remains politically outside of the controlling state and controls a geographical region that is outside the controlling state&#39;s integral region.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">Typically, the common feature is that the dependency does not conduct foreign affairs, and relegates this authority to the sovereign state.  BUt otherwise, it is largely or completely autonomous relative to the administrative subdivisions.  Examples include Puerto Rico (U.S.), Guam (U.S.), Greenland (Denmark), French Polynesia (France), and Falkland Islands (United Kingdom). </rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000033 -->
-
-    <owl:Class rdf:about="&obo;OMRSE_00000033">
-        <rdfs:label xml:lang="en">aggregate of organizations</rdfs:label>
-        <owl:equivalentClass>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000075"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000245"/>
-            </owl:Restriction>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&snap;ObjectAggregate"/>
-        <obo:IAO_0000115 xml:lang="en">An aggregate of organizations that have some feature in common, but is not itself an organization.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">It is often convenient to group organizations together that otherwise might not even interact with one another. </rdfs:comment>
-        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMRSE_00000038 -->
-
-    <owl:Class rdf:about="&obo;OMRSE_00000038">
-        <rdfs:label xml:lang="en">legal person role</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000024"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&OBO_REL;inheres_in"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
-                            <rdf:Description rdf:about="&obo;OMRSE_00000023"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000119>Malcolm N. Shaw: International Law. Cambridge University Press, Cambridge, 2008.</obo:IAO_0000119>
-        <obo:IAO_0000115 xml:lang="en">A role borne by a human individual or by a collection of humans regarded as possessing rights and duties enforeable at law.</obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">We are aware of the fact that Wikipedia&#39;s definition differs from ours by saying that &quot;Legal personality (...) is the characteristic of a non-living entity regarded by law to have the status of personhood&quot; (http://en.wikipedia.org/wiki/Legal_personality) 
-However, Shaw explicates:
-&quot;In any legal system, certain entities, whether they be individuals or companies, will be regarded as possessing rights and duties enforceable at law. Thus an individual may prosecute or be prosecuted for assault and a company can sue for breach of contract. They are able to do this because the law recognises them as &#39;legal persons&#39; possessing the capacity to have and to maintain certain rights, and being subject to perform specific duties. (...) In municipal law individuals, limited companies and public corporations are recognized as each possessing a distinct legal personality, the terms of which are circumscribed by the relevant legislation&quot; (Shaw MN: International Law. Sixth Edition. Cambridge University Press, Cambridge, 2008).                We hold that Shaw&#39;s position is ontological more prolific since it not only allows to explain how groups of individuals become recognized as unities at law, but also how different individuals can hold different legal personality roles (always against the context of one legal system). The latter will proof useful when dealing with the representing comatous patients or minorsat law in ontologies.</rdfs:comment>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/PATO_0001985 -->
-
-    <owl:Class rdf:about="&obo;PATO_0001985">
-        <rdfs:label xml:lang="en">frozen</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
-        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
-        <obo:IAO_0000115 xml:lang="en">A quality inhering in a bearer by virtue of the bearer&#39;s being kept below its freezing point.</obo:IAO_0000115>
-        <obo:IAO_0000111 xml:lang="en">frozen</obo:IAO_0000111>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/geo.owl#GEO_000000102 -->
-
-    <owl:Class rdf:about="&obo;geo.owl#GEO_000000102">
-        <rdfs:label xml:lang="en">geographical entity</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&snap;Object"/>
-        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/geo.owl</obo:IAO_0000412>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/geo.owl#GEO_000000151 -->
-
-    <owl:Class rdf:about="&obo;geo.owl#GEO_000000151">
-        <rdfs:label xml:lang="en">geographical region</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;geo.owl#GEO_000000102"/>
-        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/geo.owl</obo:IAO_0000412>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OMIABIS_0000000 -->
 
     <owl:Class rdf:about="&obo;OMIABIS_0000000">
@@ -1357,9 +1186,9 @@ However, Shaw explicates:
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&snap;ObjectAggregate"/>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A biobank is a collections of samples of biological substances
 (e.g. tissue, blood, DNA) which are linked to data about the samples and their donors. They have a dual nature as collections of samples and data.</obo:IAO_0000115>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">definition derived from the definition of &#39;human biobank&#39;, based on http://www.ethikrat.org/files/der_opinion_human-biobanks.pdf</obo:IAO_0000119>
     </owl:Class>
     
@@ -1467,8 +1296,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
-        <obo:IAO_0000115 xml:lang="en">A textural string of letters that represents a biobank.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A textural string of letters that represents a biobank.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Name of biobank</obo:IAO_0000118>
     </owl:Class>
     
@@ -1492,9 +1321,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</obo:IAO_0000119>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">Two-letter country codes defined in ISO 3166-1, part of the ISO 3166 standard published by the International Organization for Standardization (ISO), to designate countries, dependent territories, and special areas of geographical interest.</obo:IAO_0000115>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -1673,8 +1502,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 <owl:someValuesFrom rdf:resource="&obo;OMIABIS_0000013"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An organization bearing legal personality that ownes or adminstrates a biobank.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">biobank juristic person</obo:IAO_0000118>
     </owl:Class>
     
@@ -1685,8 +1514,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     <owl:Class rdf:about="&obo;OMIABIS_0000011">
         <rdfs:label xml:lang="en">contacting</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">Contacting is the process of one human being starting a communication process with another human being. Contacting can be done using all modes of communication used by humans.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -1812,9 +1641,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000429"/>
+        <obo:IAO_0000115 xml:lang="en">An email address for the purpose of contacting a biobank contact person.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Biobank contact email</obo:IAO_0000118>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">An email address for the purpose of contacting a biobank contact person.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -1874,8 +1703,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Department</obo:IAO_0000119>
         <obo:IAO_0000115 xml:lang="en">A department is a part of a larger organization with a specific responsibility.</obo:IAO_0000115>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Department</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -1910,8 +1739,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000017"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A department that has a contact person for a biobank as an organizational member.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">Biobank contact department</obo:IAO_0000118>
     </owl:Class>
     
@@ -1935,9 +1764,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     <owl:Class rdf:about="&obo;OMIABIS_0000020">
         <rdfs:label xml:lang="en">biobank&#39;s unique resource locator</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000019"/>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A unique resource locator referring to the homepage of a biobank.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Biobank URL</obo:IAO_0000118>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -1953,10 +1782,10 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 <owl:allValuesFrom rdf:resource="&obo;IAO_0000029"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Telephone_number</obo:IAO_0000119>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A telephone number  is a textual entity consisting of a sequence of digits used to call from one telephone line to another in a public switched telephone network.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">MB: This class should probably be a subclass to CRID. However, the textual definition of CRID right now states that each instance has the CRID identifier as a part. This is not the case for telephone numbers. Therefore, they cannot be subsumed under CRID now. I am looking into changing IAO accordingly. Once that is done, the class ought to be a subclass of CRID.</rdfs:comment>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Telephone_number</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -1991,9 +1820,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000021"/>
+        <obo:IAO_0000115 xml:lang="en">A telephone number that is contact information about a biobank contact person.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Biobank contact phone</obo:IAO_0000118>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A telephone number that is contact information about a biobank contact person.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -2025,9 +1854,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     <owl:Class rdf:about="&obo;OMIABIS_0000024">
         <rdfs:label xml:lang="en">post-office box</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Post-office_box</obo:IAO_0000119>
         <obo:IAO_0000115 xml:lang="en">A post-office box is material entity that is a box on the premises of a post office station and is uniquely addressable.</obo:IAO_0000115>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -2092,8 +1921,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000021"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A telephone number that is contact information about a sample collection or study contact person.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">Sample Collection/Study contact phone</obo:IAO_0000118>
     </owl:Class>
     
@@ -2110,10 +1939,10 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 <owl:someValuesFrom rdf:resource="&obo;GAZ_00000448"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A postal code is a textual entity that is a series of letters and/or digits and is part of a postal address for the purpose of sorting mail.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">MB: This class should probably be a subclass to CRID. However, the textual definition of CRID right now states that each instance has the CRID identifier as a part. This is not the case for postal codes. Therefore, they cannot be subsumed under CRID now. I am looking into changing IAO accordingly. Once that is done, the class ought to be a subclass of CRID.</rdfs:comment>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Postal_code</obo:IAO_0000119>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -2205,8 +2034,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000004"/>
-        <obo:IAO_0000118 xml:lang="en">Biobank country code</obo:IAO_0000118>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">Biobank country code</obo:IAO_0000118>
         <obo:IAO_0000115 xml:lang="en">The ISO 3166-1 alpha-2 code that is part of the biobank contact person&#39;s postal address.</obo:IAO_0000115>
     </owl:Class>
     
@@ -2269,8 +2098,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000029"/>
-        <obo:IAO_0000118 xml:lang="en">Biobank contact city</obo:IAO_0000118>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">Biobank contact city</obo:IAO_0000118>
         <obo:IAO_0000115 xml:lang="en">The part of a biobank contact&#39;s adress denoting a settlement.</obo:IAO_0000115>
     </owl:Class>
     
@@ -2359,9 +2188,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000031"/>
+        <obo:IAO_0000118 xml:lang="en">Biobank contact address</obo:IAO_0000118>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An intra-settlement specification part of address that is part of a biobank contact&#39;s postal address.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">Biobank contact address</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -2533,8 +2362,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000300"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A textual entity describing a study aim or a sample collection.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">Sample collection or study description</obo:IAO_0000118>
     </owl:Class>
     
@@ -2556,8 +2385,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A proper name that designates a study.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">Study name</obo:IAO_0000118>
     </owl:Class>
     
@@ -2700,8 +2529,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020015"/>
-        <obo:IAO_0000115 xml:lang="en">A personal name that designates the person acting as contact for a sample collection or a study.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A personal name that designates the person acting as contact for a sample collection or a study.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Sample Collection/Study contact person</obo:IAO_0000118>
     </owl:Class>
     
@@ -2976,8 +2805,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000004"/>
         <obo:IAO_0000115 xml:lang="en">An ISO 3166-1 alpha-2 code that designates the country a biobank is located in.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">Biobank country code</obo:IAO_0000118>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">Biobank country code</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -3033,8 +2862,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A biobank identifier that has both an ISO 3166-1 alpha-2 code and a CTEP organization code.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -3185,6 +3014,177 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;NCBITaxon_9606"/>
         <obo:IAO_0000115 xml:lang="en">The principle investigtor or responsible person for a study or a sample collection.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMRSE_00000022 -->
+
+    <owl:Class rdf:about="&obo;OMRSE_00000022">
+        <rdfs:label xml:lang="en">collection of organisms</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000075"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0100026"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&snap;ObjectAggregate"/>
+        <obo:IAO_0000115 xml:lang="en">An object aggregate of organisms.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Any arbitrary collection of organisms.  They need not be of the same taxonomic class.  </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMRSE_00000023 -->
+
+    <owl:Class rdf:about="&obo;OMRSE_00000023">
+        <rdfs:label xml:lang="en">collection of humans</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000075"/>
+                <owl:someValuesFrom rdf:resource="&obo;NCBITaxon_9606"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000022"/>
+        <rdfs:comment xml:lang="en">An object aggregate all of whose components are human beings.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMRSE_00000024 -->
+
+    <owl:Class rdf:about="&obo;OMRSE_00000024">
+        <rdfs:label xml:lang="en">role in human social processes</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <obo:IAO_0000115 xml:lang="en">A role inhering in an entity realized by social interactions in human society.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
+        <rdfs:comment xml:lang="en">Previous definition: A role played by an entity in human social processes.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMRSE_00000028 -->
+
+    <owl:Class rdf:about="&obo;OMRSE_00000028">
+        <rdfs:label xml:lang="en">geopolitical organization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000245"/>
+        <obo:IAO_0000115 xml:lang="en">An organization that governs the people living in a particular geographical region or aggregate of geographical regions.  The geographical region it governs can change over time (such as the westward expansion of the United States and the addition of Hawaii).</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMRSE_00000029 -->
+
+    <owl:Class rdf:about="&obo;OMRSE_00000029">
+        <rdfs:label xml:lang="en">sovereign state</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000028"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">A geopolitical entity with a defined territory on which it exercises internal and external sovereignty, a permanent population, a government, and the capacity to enter into relations with other sovereign states.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Per Wikipedia, the word &#39;nation&#39; does not always refer to soverign states.  For example, the &quot;nation of Islam&quot;.</rdfs:comment>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+        <obo:IAO_0000119 xml:lang="en">http://en.wikipedia.org/wiki/Sovereign_state</obo:IAO_0000119>
+        <obo:IAO_0000118 xml:lang="en">nation</obo:IAO_0000118>
+        <obo:IAO_0000118 xml:lang="en">nation state</obo:IAO_0000118>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMRSE_00000030 -->
+
+    <owl:Class rdf:about="&obo;OMRSE_00000030">
+        <rdfs:label xml:lang="en">subnational entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000028"/>
+        <obo:IAO_0000115 xml:lang="en">A geopolitical entity that recognizes a sovereign state as its only higher political authority.</obo:IAO_0000115>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMRSE_00000032 -->
+
+    <owl:Class rdf:about="&obo;OMRSE_00000032">
+        <rdfs:label xml:lang="en">geopolitical dependency</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000030"/>
+        <obo:IAO_0000115 xml:lang="en">A subnational entity that does not possess full political independence or sovereignty as a sovereign state, but remains politically outside of the controlling state and controls a geographical region that is outside the controlling state&#39;s integral region.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">Typically, the common feature is that the dependency does not conduct foreign affairs, and relegates this authority to the sovereign state.  BUt otherwise, it is largely or completely autonomous relative to the administrative subdivisions.  Examples include Puerto Rico (U.S.), Guam (U.S.), Greenland (Denmark), French Polynesia (France), and Falkland Islands (United Kingdom). </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMRSE_00000033 -->
+
+    <owl:Class rdf:about="&obo;OMRSE_00000033">
+        <rdfs:label xml:lang="en">aggregate of organizations</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000075"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000245"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&snap;ObjectAggregate"/>
+        <obo:IAO_0000115 xml:lang="en">An aggregate of organizations that have some feature in common, but is not itself an organization.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">It is often convenient to group organizations together that otherwise might not even interact with one another. </rdfs:comment>
+        <obo:IAO_0000117 xml:lang="en">William R. Hogan</obo:IAO_0000117>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMRSE_00000038 -->
+
+    <owl:Class rdf:about="&obo;OMRSE_00000038">
+        <rdfs:label xml:lang="en">legal person role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000024"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&OBO_REL;inheres_in"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
+                            <rdf:Description rdf:about="&obo;OMRSE_00000023"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000119>Malcolm N. Shaw: International Law. Cambridge University Press, Cambridge, 2008.</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">A role borne by a human individual or by a collection of humans regarded as possessing rights and duties enforeable at law.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">We are aware of the fact that Wikipedia&#39;s definition differs from ours by saying that &quot;Legal personality (...) is the characteristic of a non-living entity regarded by law to have the status of personhood&quot; (http://en.wikipedia.org/wiki/Legal_personality) 
+However, Shaw explicates:
+&quot;In any legal system, certain entities, whether they be individuals or companies, will be regarded as possessing rights and duties enforceable at law. Thus an individual may prosecute or be prosecuted for assault and a company can sue for breach of contract. They are able to do this because the law recognises them as &#39;legal persons&#39; possessing the capacity to have and to maintain certain rights, and being subject to perform specific duties. (...) In municipal law individuals, limited companies and public corporations are recognized as each possessing a distinct legal personality, the terms of which are circumscribed by the relevant legislation&quot; (Shaw MN: International Law. Sixth Edition. Cambridge University Press, Cambridge, 2008).                We hold that Shaw&#39;s position is ontological more prolific since it not only allows to explain how groups of individuals become recognized as unities at law, but also how different individuals can hold different legal personality roles (always against the context of one legal system). The latter will proof useful when dealing with the representing comatous patients or minorsat law in ontologies.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/PATO_0001985 -->
+
+    <owl:Class rdf:about="&obo;PATO_0001985">
+        <rdfs:label xml:lang="en">frozen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;Quality"/>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
+        <obo:IAO_0000115 xml:lang="en">A quality inhering in a bearer by virtue of the bearer&#39;s being kept below its freezing point.</obo:IAO_0000115>
+        <obo:IAO_0000111 xml:lang="en">frozen</obo:IAO_0000111>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/geo.owl#GEO_000000102 -->
+
+    <owl:Class rdf:about="&obo;geo.owl#GEO_000000102">
+        <rdfs:label xml:lang="en">geographical entity</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;Object"/>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/geo.owl</obo:IAO_0000412>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/geo.owl#GEO_000000151 -->
+
+    <owl:Class rdf:about="&obo;geo.owl#GEO_000000151">
+        <rdfs:label xml:lang="en">geographical region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;geo.owl#GEO_000000102"/>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/geo.owl</obo:IAO_0000412>
     </owl:Class>
 </rdf:RDF>
 

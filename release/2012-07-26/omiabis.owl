@@ -27,18 +27,18 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#">
-    <owl:Ontology rdf:about="http://www.purl.obolibrary.org/obo/omiabis.owl">
-        <dc:contributor>Jan-Eric Litton</dc:contributor>
-        <dc:contributor>Sanela Kjellqvist</dc:contributor>
-        <dc:creator>Mathias Brochhausen</dc:creator>
-        <dc:contributor>Maria Anderberg</dc:contributor>
-        <dc:contributor>Martin N. Fransson</dc:contributor>
+    <owl:Ontology rdf:about="http://www.purl.obolibrary.org/obo/omiabis/2012-07-26/omiabis.owl">
         <dc:contributor>Roxana Merino-Martinez</dc:contributor>
-        <dc:contributor>Loreana Norlin</dc:contributor>
+        <dc:contributor>Martin N. Fransson</dc:contributor>
         <dc:contributor>Mikael Eriksson</dc:contributor>
-        <dc:source xml:lang="en">MIABIS_v2_accepted</dc:source>
-        <dc:title xml:lang="en">Ontologized MIABIS</dc:title>
         <dc:contributor>William R. Hogan</dc:contributor>
+        <dc:contributor>Jan-Eric Litton</dc:contributor>
+        <dc:contributor>Loreana Norlin</dc:contributor>
+        <dc:source xml:lang="en">MIABIS_v2_accepted</dc:source>
+        <dc:creator>Mathias Brochhausen</dc:creator>
+        <dc:contributor>Sanela Kjellqvist</dc:contributor>
+        <dc:contributor>Maria Anderberg</dc:contributor>
+        <dc:title xml:lang="en">Ontologized MIABIS</dc:title>
         <owl:versionInfo xml:lang="en">development version (further information, see svn trunk)</owl:versionInfo>
         <owl:imports rdf:resource="&obo;iao/pno.owl"/>
     </owl:Ontology>
@@ -164,6 +164,18 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
     
 
 
+    <!-- http://www.obofoundry.org/ro/ro.owl#bearer_of -->
+
+    <owl:ObjectProperty rdf:about="&ro;bearer_of"/>
+    
+
+
+    <!-- http://www.obofoundry.org/ro/ro.owl#inheres_in -->
+
+    <owl:ObjectProperty rdf:about="&ro;inheres_in"/>
+    
+
+
     <!-- http://www.purl.obolibrary.org/obo/omiabis.owl/OMIABIS_0000008 -->
 
     <owl:ObjectProperty rdf:about="&omiabis;OMIABIS_0000008">
@@ -172,14 +184,6 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">a owns b iff a is the bearer of the roles that concretizes the claims and obligations  regarding b.</obo:IAO_0000115>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Ownership</obo:IAO_0000119>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
-                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -190,6 +194,14 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
+                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 

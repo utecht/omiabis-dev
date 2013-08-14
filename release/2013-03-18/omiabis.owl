@@ -29,19 +29,19 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#">
-    <owl:Ontology rdf:about="http://www.purl.obolibrary.org/obo/omiabis.owl">
-        <dc:contributor>Jan-Eric Litton</dc:contributor>
+    <owl:Ontology rdf:about="http://www.purl.obolibrary.org/obo/omiabis/2013-03-18/omiabis.owl">
         <dc:contributor>Sanela Kjellqvist</dc:contributor>
-        <dc:creator>Mathias Brochhausen</dc:creator>
-        <dc:contributor>Maria Anderberg</dc:contributor>
-        <dc:contributor>Martin N. Fransson</dc:contributor>
-        <dc:contributor>Roxana Merino-Martinez</dc:contributor>
-        <dc:contributor>Loreana Norlin</dc:contributor>
-        <dc:contributor>Mikael Eriksson</dc:contributor>
         <owl:versionInfo xml:lang="en">2012-12-18</owl:versionInfo>
-        <dc:source xml:lang="en">MIABIS_v2_accepted</dc:source>
-        <dc:title xml:lang="en">Ontologized MIABIS</dc:title>
+        <dc:contributor>Loreana Norlin</dc:contributor>
         <dc:contributor>William R. Hogan</dc:contributor>
+        <dc:contributor>Maria Anderberg</dc:contributor>
+        <dc:contributor>Jan-Eric Litton</dc:contributor>
+        <dc:creator>Mathias Brochhausen</dc:creator>
+        <dc:source xml:lang="en">MIABIS_v2_accepted</dc:source>
+        <dc:contributor>Mikael Eriksson</dc:contributor>
+        <dc:title xml:lang="en">Ontologized MIABIS</dc:title>
+        <dc:contributor>Roxana Merino-Martinez</dc:contributor>
+        <dc:contributor>Martin N. Fransson</dc:contributor>
         <owl:imports rdf:resource="&obo;geo.owl"/>
         <owl:imports rdf:resource="&obo;iao/pno.owl"/>
     </owl:Ontology>
@@ -295,14 +295,6 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
         <rdfs:comment xml:lang="en">A definition of &quot;tranfers&quot; object property can be found in d-acts: http:purl.obolibrary.org/iao/d-acts.owl</rdfs:comment>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">a administrates b if c owns b and some rights and obligations grounded in the owning relation regarding b are transferred  from c to a.</obo:IAO_0000115>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
-                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -313,6 +305,14 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
+                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -1569,9 +1569,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&omiabis;OMIABIS_0000021"/>
+        <obo:IAO_0000118 xml:lang="en">Biobank contact phone</obo:IAO_0000118>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A telephone number that is contact information about a biobank contact person.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">Biobank contact phone</obo:IAO_0000118>
     </owl:Class>
     
 
