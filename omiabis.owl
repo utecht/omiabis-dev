@@ -6736,6 +6736,99 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OMIABIS_00001006 -->
+
+    <owl:Class rdf:about="&obo;OMIABIS_00001006">
+        <rdfs:label xml:lang="en">specimen disease state data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0100051"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMIABIS_00001010 -->
+
+    <owl:Class rdf:about="&obo;OMIABIS_00001010">
+        <rdfs:label xml:lang="en">diseased state specimen data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OMIABIS_00001006"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;OBI_0100051"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_part"/>
+                                <owl:someValuesFrom rdf:resource="&obo;OGMS_0000045"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMIABIS_00001011 -->
+
+    <owl:Class rdf:about="&obo;OMIABIS_00001011">
+        <rdfs:label xml:lang="en">mixed state specimen data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OMIABIS_00001006"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;OBI_0100051"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_part"/>
+                                <owl:someValuesFrom rdf:resource="&obo;OGMS_0000045"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&ro;has_part"/>
+                                <owl:someValuesFrom rdf:resource="&obo;OMIABIS_0001054"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMIABIS_00001012 -->
+
+    <owl:Class rdf:about="&obo;OMIABIS_00001012">
+        <rdfs:label xml:lang="en">normal state specimen data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OMIABIS_00001006"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="&obo;OMIABIS_0001054"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OMIABIS_00001013 -->
+
+    <owl:Class rdf:about="&obo;OMIABIS_00001013">
+        <rdfs:label xml:lang="en">unknown state specimen data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OMIABIS_00001006"/>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OMIABIS_0001000 -->
 
     <owl:Class rdf:about="&obo;OMIABIS_0001000">
@@ -7928,22 +8021,11 @@ https://en.wikipedia.org/wiki/Medical_record</rdfs:comment>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/OMIABIS_0001053 -->
-
-    <owl:Class rdf:about="&obo;OMIABIS_0001053">
-        <rdfs:label xml:lang="en">mixed state specimen</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
-        <obo:IAO_0000115 xml:lang="en">A specimen that is both normal and diseased.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
     <!-- http://purl.obolibrary.org/obo/OMIABIS_0001054 -->
 
     <owl:Class rdf:about="&obo;OMIABIS_0001054">
         <rdfs:label xml:lang="en">normal specimen</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
-        <rdfs:subClassOf>
+        <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&obo;OBI_0100051"/>
@@ -7957,38 +8039,9 @@ https://en.wikipedia.org/wiki/Medical_record</rdfs:comment>
                     </owl:Class>
                 </owl:intersectionOf>
             </owl:Class>
-        </rdfs:subClassOf>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
         <obo:IAO_0000115 xml:lang="en">A specimen that is normal.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMIABIS_0001055 -->
-
-    <owl:Class rdf:about="&obo;OMIABIS_0001055">
-        <rdfs:label xml:lang="en">diseased specimen</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;OBI_0100051"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&ro;has_part"/>
-                        <owl:someValuesFrom rdf:resource="&obo;OGMS_0000045"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A specimen that is diseased.</obo:IAO_0000115>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/OMIABIS_0001056 -->
-
-    <owl:Class rdf:about="&obo;OMIABIS_0001056">
-        <rdfs:label xml:lang="en">unknown state specimen</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
     </owl:Class>
     
 
@@ -7996,11 +8049,10 @@ https://en.wikipedia.org/wiki/Medical_record</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/OMIABIS_0001075 -->
 
     <owl:Class rdf:about="&obo;OMIABIS_0001075">
-        <rdfs:label xml:lang="en">cerebrospinal fluid</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0001479"/>
+        <rdfs:label xml:lang="en">cerebrospinal fluid specimen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
         <rdfs:comment>Abbreviated as &#39;CSF&#39;.</rdfs:comment>
-        <obo:IAO_0000115>TBR</obo:IAO_0000115>
-        <obo:IAO_0000115>a portion of a fluid largely secreted by the choroid plexuses of the ventricles of the brain, filling the ventricles and the subarachnoid cavities of the brain and spinal cord, collected from an organism.</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">a specimen consisting of a portion of a fluid largely secreted by the choroid plexuses of the ventricles of the brain, filling the ventricles and the subarachnoid cavities of the brain and spinal cord, collected from an organism.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -8008,9 +8060,9 @@ https://en.wikipedia.org/wiki/Medical_record</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/OMIABIS_0001076 -->
 
     <owl:Class rdf:about="&obo;OMIABIS_0001076">
-        <rdfs:label>a portion of faeces collected from a specimen.</rdfs:label>
-        <rdfs:label xml:lang="en">faeces</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0001479"/>
+        <rdfs:label xml:lang="en">faeces specimen</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
+        <obo:IAO_0000115 xml:lang="en">a specimen consisting of a portion of faeces collected from an organism.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -8019,9 +8071,9 @@ https://en.wikipedia.org/wiki/Medical_record</rdfs:comment>
 
     <owl:Class rdf:about="&obo;OMIABIS_0001077">
         <rdfs:label xml:lang="en">saliva specimen</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0001479"/>
-        <obo:IAO_0000115>a portion of saliva collected from an organism.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
         <rdfs:comment>It is a clear, tasteless, odorless, slightly acidic (pH 6.8) viscid fluid, secreted from the parotid, sublingual, and submandibular salivary glands and the mucous glands of the oral cavity.</rdfs:comment>
+        <obo:IAO_0000115 xml:lang="en">a specimen consisting of a portion of saliva collected from an organism.</obo:IAO_0000115>
     </owl:Class>
     
 
