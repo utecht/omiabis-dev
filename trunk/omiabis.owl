@@ -79,19 +79,19 @@
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000116">
         <rdfs:label xml:lang="en">editor note</rdfs:label>
     </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000114">
-        <rdfs:label xml:lang="en">has curation status</rdfs:label>
-    </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000412">
         <rdfs:label xml:lang="en">imported from</rdfs:label>
     </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&obo;IAO_0000119">
-        <rdfs:label>definition source</rdfs:label>
-        <rdfs:label xml:lang="en">definition source</rdfs:label>
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000114">
+        <rdfs:label xml:lang="en">has curation status</rdfs:label>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000232">
         <rdfs:label>curator note</rdfs:label>
         <rdfs:label xml:lang="en">curator note</rdfs:label>
+    </owl:AnnotationProperty>
+    <owl:AnnotationProperty rdf:about="&obo;IAO_0000119">
+        <rdfs:label>definition source</rdfs:label>
+        <rdfs:label xml:lang="en">definition source</rdfs:label>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&obo;IAO_0000117">
         <rdfs:label>definition editor</rdfs:label>
@@ -547,14 +547,6 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">a administrates b if c owns b and some rights and obligations grounded in the owning relation regarding b are transferred  from c to a.</obo:IAO_0000115>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
-                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -565,6 +557,14 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
                 </owl:unionOf>
             </owl:Class>
         </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&obo;IAO_0000030"/>
+                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
     </owl:ObjectProperty>
     
 
@@ -1295,17 +1295,7 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;OBI_0000339"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                                <owl:someValuesFrom rdf:resource="&obo;OBI_0500000"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000471"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1317,7 +1307,17 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000471"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;OBI_0000339"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                                <owl:someValuesFrom rdf:resource="&obo;OBI_0500000"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -1370,6 +1370,12 @@ Modification made by JZ.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000047"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:allValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
@@ -1384,12 +1390,6 @@ Modification made by JZ.</obo:IAO_0000116>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:allValuesFrom rdf:resource="&snap;MaterialEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000047"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000112 rdf:datatype="&xsd;string">A cell lysis, production of a cloning vector, creating a buffer.</obo:IAO_0000112>
@@ -1730,14 +1730,14 @@ for now.</obo:IAO_0000116>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000456"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0100066"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0100066"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000456"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -2119,13 +2119,13 @@ for now.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000094"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2262,12 +2262,6 @@ for now.</obo:IAO_0000116>
         <rdfs:label rdf:datatype="&xsd;string">whole organism preparation</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0001000"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0100026"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="&snap;MaterialEntity"/>
@@ -2277,6 +2271,12 @@ for now.</obo:IAO_0000116>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0001000"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0100026"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -2660,14 +2660,14 @@ for now.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0001010"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33697"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0666666"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0666666"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33697"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">Group: UPenn Group</obo:IAO_0000119>
@@ -2872,12 +2872,6 @@ aspiration.</obo:IAO_0000115>
         <rdfs:label rdf:datatype="&xsd;string">freezing storage</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0302893"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -2914,6 +2908,12 @@ aspiration.</obo:IAO_0000115>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000116 rdf:datatype="&xsd;string">2010/3/3 Alan Ruttenberg: There is a question of whether we should have a separate objective to &quot;prepare for maintenance&quot;</obo:IAO_0000116>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A process in which a material entity has it&apos;s temperature lowered to below the freezing point in order to bring it to a state in which it can be maintained at this lower temperature in order to preserve some of its qualities</obo:IAO_0000115>
@@ -2962,12 +2962,6 @@ exudate and epithelial debris for microbiological or cellular examination.</obo:
         <rdfs:label rdf:datatype="&xsd;string">labeled RNA extract</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0001143"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33697"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -2990,6 +2984,12 @@ exudate and epithelial debris for microbiological or cellular examination.</obo:
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33697"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">Group: OBI group</obo:IAO_0000117>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">Group: OBI group</obo:IAO_0000119>
@@ -3264,14 +3264,14 @@ Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0302893"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0100060"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0100060"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Chris Stoeckert</obo:IAO_0000117>
@@ -3329,14 +3329,14 @@ Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0001010"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_16991"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000257"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000257"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_16991"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000111 rdf:datatype="&xsd;string">DNA extract</obo:IAO_0000111>
@@ -3354,12 +3354,6 @@ Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
     <owl:Class rdf:about="&obo;OBI_0001143">
         <rdfs:label rdf:datatype="&xsd;string">labeled nucleic acid extract</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000924"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33696"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -3383,6 +3377,12 @@ Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33696"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">MO_221 labeledExtract</obo:IAO_0000119>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">Person: Jie Zheng</obo:IAO_0000117>
@@ -3556,17 +3556,6 @@ Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
         <rdfs:label xml:lang="en">blood plasma specimen</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000953"/>
         <rdfs:subClassOf>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&obo;BFO_0000087"/>
-                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000112"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
                 <owl:someValuesFrom>
@@ -3581,6 +3570,17 @@ Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
                     </owl:Class>
                 </owl:someValuesFrom>
             </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&snap;MaterialEntity"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="&obo;BFO_0000087"/>
+                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000112"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&obo;OBI_0100017"/>
         <owl:disjointWith rdf:resource="&obo;OBI_0100060"/>
@@ -3607,12 +3607,6 @@ Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000953"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000087"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000112"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -3631,6 +3625,12 @@ Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000087"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000112"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&obo;OBI_0100060"/>
@@ -3787,14 +3787,14 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
         <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
-                <owl:allValuesFrom rdf:resource="&obo;OBI_0600044"/>
+                <owl:onProperty rdf:resource="&obo;BFO_0000087"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000112"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000087"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000112"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
+                <owl:allValuesFrom rdf:resource="&obo;OBI_0600044"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
@@ -3817,12 +3817,6 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:allValuesFrom rdf:resource="&obo;IAO_0000027"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3835,13 +3829,19 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:allValuesFrom rdf:resource="&obo;IAO_0000027"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
+                <owl:allValuesFrom rdf:resource="&obo;IAO_0000027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:allValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">Philippe Rocca-Serra</obo:IAO_0000117>
@@ -4075,14 +4075,14 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
         <rdfs:subClassOf rdf:resource="&obo;OBI_0600014"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;has_participant"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0400106"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000681"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000681"/>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0400106"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">Philippe Rocca-Serra</obo:IAO_0000117>
@@ -4317,14 +4317,14 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000659"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000684"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0100051"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0100051"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000684"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
@@ -4403,12 +4403,6 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000094"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0100060"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
                 <owl:someValuesFrom rdf:resource="&obo;OBI_0000684"/>
             </owl:Restriction>
@@ -4422,13 +4416,19 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000079"/>
+                <owl:someValuesFrom rdf:resource="&obo;CL_0000000"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&obo;CL_0000000"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000079"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0100060"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
@@ -4452,18 +4452,6 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000094"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000456"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -4476,6 +4464,18 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000456"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
@@ -4558,12 +4558,6 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
         <rdfs:subClassOf rdf:resource="&obo;OBI_0302884"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33696"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -4574,6 +4568,12 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33696"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
@@ -4597,14 +4597,14 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
         <rdfs:subClassOf rdf:resource="&obo;OBI_0001479"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0001000"/>
-                <owl:someValuesFrom rdf:resource="&obo;CARO_0001008"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000341"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000341"/>
+                <owl:onProperty rdf:resource="&obo;RO_0001000"/>
+                <owl:someValuesFrom rdf:resource="&obo;CARO_0001008"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Philippe Rocca-Serra</obo:IAO_0000117>
@@ -4683,6 +4683,20 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
         <obo:IAO_0000115 xml:lang="en">The representation of a conclusion of a diagnostic process.</obo:IAO_0000115>
         <obo:IAO_0000119>http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000119>
         <obo:IAO_0000232>creation date: 2009-06-23T12:42:23Z</obo:IAO_0000232>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/OGMS_0000090 -->
+
+    <owl:Class rdf:about="&obo;OGMS_0000090">
+        <rdfs:label>treatment</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
+        <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/ogms.owl</obo:IAO_0000412>
+        <obo:IAO_0000119>http://code.google.com/p/ogms/issues/detail?id=35</obo:IAO_0000119>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000232>creation date: 2010-03-31T04:51:11Z</obo:IAO_0000232>
+        <obo:IAO_0000115 xml:lang="en">A processual entity whose completion is hypothesized (by a healthcare provider) to alleviate the signs and symptoms associated with a disorder</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -5310,6 +5324,12 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
         <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000024"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000054"/>
+                <owl:someValuesFrom rdf:resource="&obo;OMIABIS_0000011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&OBO_REL;inheres_in"/>
                 <owl:allValuesFrom>
                     <owl:Class>
@@ -5322,12 +5342,6 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:allValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000054"/>
-                <owl:someValuesFrom rdf:resource="&obo;OMIABIS_0000011"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -6773,6 +6787,16 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     
 
 
+    <!-- http://purl.obolibrary.org/obo/OMIABIS_0000059 -->
+
+    <owl:Class rdf:about="&obo;OMIABIS_0000059">
+        <rdfs:label xml:lang="en">treatment role</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&snap;Role"/>
+        <obo:IAO_0000115 xml:lang="en">A role that is as a result of treatment.</obo:IAO_0000115>
+    </owl:Class>
+    
+
+
     <!-- http://purl.obolibrary.org/obo/OMIABIS_0000093 -->
 
     <owl:Class rdf:about="&obo;OMIABIS_0000093">
@@ -6928,12 +6952,7 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     <owl:Class rdf:about="&obo;OMIABIS_00001006">
         <rdfs:label xml:lang="en">specimen disease state data</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;IAO_0000136"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0100051"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
+        <obo:IAO_0000115 xml:lang="en">A data item that indicates the condition of the specimen.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -7013,8 +7032,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     <!-- http://purl.obolibrary.org/obo/OMIABIS_00001013 -->
 
     <owl:Class rdf:about="&obo;OMIABIS_00001013">
-        <rdfs:label xml:lang="en">unknown state specimen data</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OMIABIS_00001006"/>
+        <rdfs:label xml:lang="en">obsolote_unknown state specimen data</rdfs:label>
+        <rdfs:subClassOf rdf:resource="&oboInOwl;ObsoleteClass"/>
         <obo:IAO_0000115 xml:lang="en">A specimen disease state data of the procured specimen that is unclear.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">This is a temporary state.</rdfs:comment>
     </owl:Class>
@@ -7136,8 +7155,13 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&obo;OBI_0200125"/>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
-                                <owl:allValuesFrom rdf:resource="&obo;OMIABIS-0001035"/>
+                                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                                <owl:someValuesFrom>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
+                                        <owl:allValuesFrom rdf:resource="&obo;OMIABIS-0001035"/>
+                                    </owl:Restriction>
+                                </owl:someValuesFrom>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -7920,13 +7944,21 @@ https://en.wikipedia.org/wiki/Medical_record</rdfs:comment>
                     <owl:Class>
                         <owl:intersectionOf rdf:parseType="Collection">
                             <rdf:Description rdf:about="&obo;NCBITaxon_9606"/>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&ro;participates_in"/>
+                                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000659"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="&ro;participates_in"/>
+                                        <owl:someValuesFrom rdf:resource="&obo;OBI_0000838"/>
+                                    </owl:Restriction>
+                                </owl:unionOf>
+                            </owl:Class>
                             <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;participates_in"/>
-                                <owl:someValuesFrom rdf:resource="&obo;OBI_0000094"/>
-                            </owl:Restriction>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&ro;participates_in"/>
-                                <owl:someValuesFrom rdf:resource="&obo;OBI_0000838"/>
+                                <owl:onProperty rdf:resource="&OBO_REL;bearer_of"/>
+                                <owl:someValuesFrom rdf:resource="&obo;OMIABIS_0000012"/>
                             </owl:Restriction>
                         </owl:intersectionOf>
                     </owl:Class>
@@ -8593,60 +8625,6 @@ However, Shaw explicates:
         <oboInOwl:hasAlternativeId>CHEBI:5142</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>CHEBI:14274</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>CHEBI:337763</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasRelatedSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -8656,6 +8634,45 @@ However, Shaw explicates:
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
+        <oboInOwl:hasRelatedSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasRelatedSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasRelatedSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasRelatedSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
@@ -8671,6 +8688,21 @@ However, Shaw explicates:
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
@@ -8680,7 +8712,9 @@ However, Shaw explicates:
 
     <!-- http://www.geneontology.org/formats/oboInOwl#ObsoleteClass -->
 
-    <owl:Class rdf:about="&oboInOwl;ObsoleteClass"/>
+    <owl:Class rdf:about="&oboInOwl;ObsoleteClass">
+        <rdfs:label xml:lang="en">ObsoleteClass</rdfs:label>
+    </owl:Class>
     
 
 
