@@ -42,19 +42,19 @@
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
     <owl:Ontology rdf:about="&obo;omiabis/dev/omiabis.owl">
-        <dc:contributor>Martin N. Fransson</dc:contributor>
-        <owl:versionInfo xml:lang="en">2013-03-24</owl:versionInfo>
-        <dc:contributor>Jan-Eric Litton</dc:contributor>
-        <dc:contributor>Loreana Norlin</dc:contributor>
-        <dc:source xml:lang="en">MIABIS_v2_accepted</dc:source>
-        <dc:contributor>Mikael Eriksson</dc:contributor>
-        <dc:title xml:lang="en">Ontologized MIABIS</dc:title>
-        <dc:contributor>William R. Hogan</dc:contributor>
-        <dc:contributor>Sanela Kjellqvist</dc:contributor>
-        <dc:creator>Alice Nzinga</dc:creator>
-        <dc:contributor>Roxana Merino-Martinez</dc:contributor>
-        <dc:creator>Mathias Brochhausen</dc:creator>
         <dc:contributor>Maria Anderberg</dc:contributor>
+        <dc:creator>Mathias Brochhausen</dc:creator>
+        <dc:contributor>Roxana Merino-Martinez</dc:contributor>
+        <dc:creator>Alice Nzinga</dc:creator>
+        <dc:contributor>Sanela Kjellqvist</dc:contributor>
+        <dc:contributor>Loreana Norlin</dc:contributor>
+        <dc:contributor>Jan-Eric Litton</dc:contributor>
+        <dc:contributor>Mikael Eriksson</dc:contributor>
+        <owl:versionInfo xml:lang="en">2013-03-24</owl:versionInfo>
+        <dc:source xml:lang="en">MIABIS_v2_accepted</dc:source>
+        <dc:contributor>William R. Hogan</dc:contributor>
+        <dc:contributor>Martin N. Fransson</dc:contributor>
+        <dc:title xml:lang="en">Ontologized MIABIS</dc:title>
         <owl:imports rdf:resource="&obo;geo.owl"/>
         <owl:imports rdf:resource="&obo;iao/pno.owl"/>
     </owl:Ontology>
@@ -370,8 +370,8 @@
 
     <owl:ObjectProperty rdf:about="&obo;BFO_0000108">
         <rdfs:label xml:lang="en">exists at</rdfs:label>
-        <obo:IAO_0000116>BFO2 Reference: temporal region</obo:IAO_0000116>
         <obo:IAO_0000116>BFO2 Reference: entity</obo:IAO_0000116>
+        <obo:IAO_0000116>BFO2 Reference: temporal region</obo:IAO_0000116>
         <obo:IAO_0000600 xml:lang="en">b exists_at t means: b is an entity which exists at some temporal region t. (axiom label in BFO2 Reference: [118-002])</obo:IAO_0000600>
         <rdfs:isDefinedBy rdf:resource="&obo;bfo.owl"/>
         <rdfs:domain rdf:resource="&bfo;Entity"/>
@@ -411,9 +411,9 @@
 
     <owl:ObjectProperty rdf:about="&obo;BFO_0000157">
         <rdfs:label xml:lang="en">during which exists</rdfs:label>
-        <obo:IAO_0000116>[copied from inverse property &apos;exists at&apos;] BFO2 Reference: temporal region</obo:IAO_0000116>
-        <obo:IAO_0000116>[copied from inverse property &apos;exists at&apos;] BFO2 Reference: entity</obo:IAO_0000116>
         <obo:IAO_0000600>[copied from inverse property &apos;exists at&apos;] b exists_at t means: b is an entity which exists at some temporal region t. (axiom label in BFO2 Reference: [118-002])</obo:IAO_0000600>
+        <obo:IAO_0000116>[copied from inverse property &apos;exists at&apos;] BFO2 Reference: entity</obo:IAO_0000116>
+        <obo:IAO_0000116>[copied from inverse property &apos;exists at&apos;] BFO2 Reference: temporal region</obo:IAO_0000116>
         <owl:inverseOf rdf:resource="&obo;BFO_0000108"/>
         <rdfs:isDefinedBy rdf:resource="&obo;bfo.owl"/>
         <rdfs:range rdf:resource="&bfo;Entity"/>
@@ -530,17 +530,17 @@
         <rdfs:label rdf:datatype="&xsd;string">is member of organization</rdfs:label>
         <rdfs:label xml:lang="en">is member of organization</rdfs:label>
         <obo:IAO_0000116 rdf:datatype="&xsd;string">2009/10/01 Alan Ruttenberg. Barry prefers generic is-member-of. Question of what the range should be. For now organization. Is organization a population? Would the same relation be used to record members of a population</obo:IAO_0000116>
-        <obo:IAO_0000119 rdf:datatype="&xsd;string">Person:Alan Ruttenberg</obo:IAO_0000119>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">Person:Alan Ruttenberg</obo:IAO_0000117>
-        <obo:IAO_0000117 rdf:datatype="&xsd;string">Person:Helen Parkinson</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:datatype="&xsd;string">Person:Alan Ruttenberg</obo:IAO_0000119>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">Person:Helen Parkinson</obo:IAO_0000119>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">Person:Helen Parkinson</obo:IAO_0000117>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">Relating a legal person to an organization in the case where the legal person has a role as member of the organization</obo:IAO_0000115>
         <obo:IAO_0000111 rdf:datatype="&xsd;string">is member of organization</obo:IAO_0000111>
-        <obo:IAO_0000119>&quot;Person:Helen Parkinson&quot;</obo:IAO_0000119>
-        <obo:IAO_0000115>&quot;Relating a legal person to an organization in the case where the legal person has a role as member of the organization&quot;</obo:IAO_0000115>
-        <obo:IAO_0000116>&quot;2009/10/01 Alan Ruttenberg. Barry prefers generic is-member-of. Question of what the range should be. For now organization. Is organization a population? Would the same relation be used to record members of a population&quot;</obo:IAO_0000116>
-        <obo:IAO_0000111>&quot;is member of organization&quot;</obo:IAO_0000111>
         <obo:IAO_0000119>&quot;Person:Alan Ruttenberg&quot;</obo:IAO_0000119>
+        <obo:IAO_0000111>&quot;is member of organization&quot;</obo:IAO_0000111>
+        <obo:IAO_0000116>&quot;2009/10/01 Alan Ruttenberg. Barry prefers generic is-member-of. Question of what the range should be. For now organization. Is organization a population? Would the same relation be used to record members of a population&quot;</obo:IAO_0000116>
+        <obo:IAO_0000115>&quot;Relating a legal person to an organization in the case where the legal person has a role as member of the organization&quot;</obo:IAO_0000115>
+        <obo:IAO_0000119>&quot;Person:Helen Parkinson&quot;</obo:IAO_0000119>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
     
@@ -566,8 +566,8 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
     <owl:ObjectProperty rdf:about="&obo;OMIABIS_0000008">
         <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
         <rdfs:label xml:lang="en">owns</rdfs:label>
-        <dc:source>Reinach, A. Sämtliche Werke. Texkritische Ausgabe, München: Philosophia Verlag, 1989, p.189-204.</dc:source>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <dc:source>Reinach, A. Sämtliche Werke. Texkritische Ausgabe, München: Philosophia Verlag, 1989, p.189-204.</dc:source>
         <obo:IAO_0000600 xml:lang="en">This is a primitive relation. This relation is the foundation to the owners right to have the owned entity at his/her full disposal. </obo:IAO_0000600>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
         <rdfs:range>
@@ -597,8 +597,8 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
     <owl:ObjectProperty rdf:about="&obo;OMIABIS_0000009">
         <rdf:type rdf:resource="&owl;AsymmetricProperty"/>
         <rdfs:label xml:lang="en">administrates</rdfs:label>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <rdfs:comment xml:lang="en">A definition of &quot;tranfers&quot; object property can be found in d-acts: http:purl.obolibrary.org/iao/d-acts.owl</rdfs:comment>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">a administrates b if c owns b and some rights and obligations grounded in the owning relation regarding b are transferred  from c to a.</obo:IAO_0000115>
         <rdfs:domain>
@@ -681,8 +681,8 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
         <rdfs:label xml:lang="en">derives from</rdfs:label>
         <obo:IAO_0000111 rdf:datatype="&xsd;string">derives from</obo:IAO_0000111>
         <obo:IAO_0000412 rdf:resource="&obo;ro.owl"/>
-        <rdfs:range rdf:resource="&snap;IndependentContinuant"/>
         <rdfs:domain rdf:resource="&snap;IndependentContinuant"/>
+        <rdfs:range rdf:resource="&snap;IndependentContinuant"/>
         <owl:equivalentProperty rdf:resource="&ro;derives_from"/>
         <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
     </owl:ObjectProperty>
@@ -821,8 +821,8 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
         <owl:disjointWith rdf:resource="&obo;IAO_0000032"/>
         <owl:disjointWith rdf:resource="&obo;IAO_0000582"/>
         <owl:disjointWith rdf:resource="&obo;OMIABIS_0001012"/>
-        <rdfs:comment>It can be denoted as an arithmetic value or in form of a word, and is usually as a result of a process.</rdfs:comment>
         <obo:IAO_0000115>An information content entity that is a representation of counting.</obo:IAO_0000115>
+        <rdfs:comment>It can be denoted as an arithmetic value or in form of a word, and is usually as a result of a process.</rdfs:comment>
     </owl:Class>
     
 
@@ -1170,8 +1170,8 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000030"/>
         <obo:IAO_0000115 xml:lang="en">A proper name is an information content entity that is the outcome of a dubbing process and is used to refer to one instance of entity shared by a group of people to refer to that individual entity. </obo:IAO_0000115>
-        <dc:creator xml:lang="en">Mathias Brochhausen</dc:creator>
         <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
+        <dc:creator xml:lang="en">Mathias Brochhausen</dc:creator>
     </owl:Class>
     
 
@@ -1188,8 +1188,8 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
         <obo:IAO_0000115 xml:lang="en">A dubbing process is a planned process that provides a reference to an individual entity shared by a group of subscribers to refer to that individual entity.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
         <dc:creator xml:lang="en">Mathias Brochhausen</dc:creator>
+        <obo:IAO_0000117 xml:lang="en">Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -1365,6 +1365,12 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000471"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000572"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1372,12 +1378,6 @@ https://sourceforge.net/tracker/index.php?func=detail&amp;aid=3512902&amp;group_
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000144"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000471"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000118 rdf:datatype="&xsd;string"></obo:IAO_0000118>
@@ -1425,25 +1425,25 @@ Modification made by JZ.</obo:IAO_0000116>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000047"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:allValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:allValuesFrom rdf:resource="&snap;MaterialEntity"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000047"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:allValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000112 rdf:datatype="&xsd;string">A cell lysis, production of a cloning vector, creating a buffer.</obo:IAO_0000112>
@@ -1759,8 +1759,8 @@ for now.</obo:IAO_0000116>
             </owl:Class>
         </rdfs:subClassOf>
         <obo:IAO_0000116 rdf:datatype="&xsd;string">7/18/2011 BP: planning used to itself be a planned process. Barry Smith pointed out that this would lead to an infinite regression, as there would have to be a plan to conduct a planning process, which in itself would be the result of planning etc. Therefore, the restrictions on &apos;planning&apos; were loosened to allow for informal processes that result in an &apos;ad hoc plan &apos;. This required changing from &apos;has_specified_output some plan specifiction&apos; to &apos;has_participant some plan specification&apos;. </obo:IAO_0000116>
-        <obo:IAO_0000119 rdf:datatype="&xsd;string">Bjoern Peters</obo:IAO_0000119>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:datatype="&xsd;string">Bjoern Peters</obo:IAO_0000119>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">PPPB branch</obo:IAO_0000119>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
         <obo:IAO_0000111 rdf:datatype="&xsd;string">planning</obo:IAO_0000111>
@@ -2125,8 +2125,8 @@ for now.</obo:IAO_0000116>
     <owl:Class rdf:about="&obo;OBI_0000639">
         <rdfs:label rdf:datatype="&xsd;string">material separation objective</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000456"/>
-        <obo:IAO_0000117 rdf:datatype="&xsd;string">PPPB branch</obo:IAO_0000117>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">PPPB branch</obo:IAO_0000119>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">PPPB branch</obo:IAO_0000117>
         <obo:IAO_0000112 rdf:datatype="&xsd;string">The objective to obtain multiple aliquots of an enzyme preparation. The objective to obtain cells contained in a sample of blood.</obo:IAO_0000112>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">is an objective to transform a material entity into spatially separated components.</obo:IAO_0000115>
@@ -2173,19 +2173,19 @@ for now.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000094"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000112 rdf:datatype="&xsd;string">Mixing two fluids. Adding salt into water. Injecting a mouse with PBS.</obo:IAO_0000112>
-        <obo:IAO_0000119 rdf:datatype="&xsd;string">bp</obo:IAO_0000119>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">bp</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:datatype="&xsd;string">bp</obo:IAO_0000119>
         <obo:IAO_0000116 rdf:datatype="&xsd;string">created at workshop as parent class for &apos;adding material into target&apos;, which is asymmetric, while combination encompasses all addition processes.</obo:IAO_0000116>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">is a material processing with the objective to combine two or more material entities as input into a single material entity as output.</obo:IAO_0000115>
@@ -2208,8 +2208,8 @@ for now.</obo:IAO_0000116>
         <owl:disjointWith rdf:resource="&obo;OBI_0100016"/>
         <owl:disjointWith rdf:resource="&obo;OBI_0100017"/>
         <owl:disjointWith rdf:resource="&obo;OBI_0100067"/>
-        <obo:IAO_0000117 rdf:datatype="&xsd;string">Bjoern Peters</obo:IAO_0000117>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">Bjoern Peters</obo:IAO_0000119>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">Bjoern Peters</obo:IAO_0000117>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">a material entity derived from a portion of blood collected from an organism</obo:IAO_0000115>
         <obo:IAO_0000112 rdf:datatype="&xsd;string">blood drawn from a human for glucose assay</obo:IAO_0000112>
         <obo:IAO_0000111 rdf:datatype="&xsd;string">blood specimen</obo:IAO_0000111>
@@ -2317,12 +2317,6 @@ for now.</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0001000"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0100026"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
                 <owl:someValuesFrom rdf:resource="&obo;OBI_0000659"/>
             </owl:Restriction>
@@ -2337,6 +2331,12 @@ for now.</obo:IAO_0000116>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;RO_0001000"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0100026"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <owl:disjointWith rdf:resource="&obo;OBI_0000909"/>
         <owl:disjointWith rdf:resource="&obo;OBI_0000914"/>
@@ -2381,8 +2381,8 @@ for now.</obo:IAO_0000116>
         <owl:disjointWith rdf:resource="&obo;OMIABIS_0001015"/>
         <owl:disjointWith rdf:resource="&obo;OMIABIS_0001016"/>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A specimen creation objective is to obtain a material entity for potential use as an input during an investigation</obo:IAO_0000115>
-        <obo:IAO_0000119 rdf:datatype="&xsd;string">Bjoern Peters</obo:IAO_0000119>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">Bjoern Peters</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:datatype="&xsd;string">Bjoern Peters</obo:IAO_0000119>
         <obo:IAO_0000112 rdf:datatype="&xsd;string">The objective to collect bits of excrement in the rainforest. The objective to obtain a blood sample from a patient.</obo:IAO_0000112>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
         <obo:IAO_0000111 rdf:datatype="&xsd;string">specimen creation objective</obo:IAO_0000111>
@@ -2465,7 +2465,7 @@ for now.</obo:IAO_0000116>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000953"/>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A material entity that has the material sample role</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">OBI: workshop</obo:IAO_0000117>
@@ -2819,12 +2819,6 @@ for now.</obo:IAO_0000116>
         <rdfs:label rdf:datatype="&xsd;string">labeled DNA extract</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0001143"/>
         <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_16991"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -2848,8 +2842,14 @@ for now.</obo:IAO_0000116>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000117 rdf:datatype="&xsd;string">Group: OBI group</obo:IAO_0000117>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_16991"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">Group: OBI group</obo:IAO_0000119>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">Group: OBI group</obo:IAO_0000117>
         <obo:IAO_0000116 rdf:datatype="&xsd;string">Need to find out if we consider labeled nucleotides still nucleotides. It is after consulting with ChEBI group.
 Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">a labeled specimen that is the output of a labeling process and has grain labeled DNA to be able to detect DNA in future experiments.</obo:IAO_0000115>
@@ -2926,6 +2926,12 @@ aspiration.</obo:IAO_0000115>
         <rdfs:label rdf:datatype="&xsd;string">freezing storage</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0302893"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -2962,12 +2968,6 @@ aspiration.</obo:IAO_0000115>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
-            </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000116 rdf:datatype="&xsd;string">2010/3/3 Alan Ruttenberg: There is a question of whether we should have a separate objective to &quot;prepare for maintenance&quot;</obo:IAO_0000116>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A process in which a material entity has it&apos;s temperature lowered to below the freezing point in order to bring it to a state in which it can be maintained at this lower temperature in order to preserve some of its qualities</obo:IAO_0000115>
@@ -3016,6 +3016,12 @@ exudate and epithelial debris for microbiological or cellular examination.</obo:
         <rdfs:label rdf:datatype="&xsd;string">labeled RNA extract</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0001143"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33697"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -3039,14 +3045,8 @@ exudate and epithelial debris for microbiological or cellular examination.</obo:
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33697"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000119 rdf:datatype="&xsd;string">Group: OBI group</obo:IAO_0000119>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">Group: OBI group</obo:IAO_0000117>
+        <obo:IAO_0000119 rdf:datatype="&xsd;string">Group: OBI group</obo:IAO_0000119>
         <obo:IAO_0000116 rdf:datatype="&xsd;string">Need to find out if we consider labeled nucleotides still nucleotides. It is after consulting with ChEBI group.
 Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">a labeled specimen that is the output of a labeling process and has grain labeled RNA to be able to detect RNA in future experiments.</obo:IAO_0000115>
@@ -3199,8 +3199,8 @@ Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000047"/>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A specimen that has been intentionally physically modified.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="&xsd;string">Bjoern Peters</obo:IAO_0000117>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">Bjoern Peters</obo:IAO_0000119>
+        <obo:IAO_0000117 rdf:datatype="&xsd;string">Bjoern Peters</obo:IAO_0000117>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
         <obo:IAO_0000111 rdf:datatype="&xsd;string">processed specimen</obo:IAO_0000111>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
@@ -3232,14 +3232,14 @@ Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000047"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
-                <owl:someValuesFrom rdf:resource="&snap;Function"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000094"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000094"/>
+                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
+                <owl:someValuesFrom rdf:resource="&snap;Function"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">A device is a processed material which is designed to perform some function or functions</obo:IAO_0000115>
@@ -3318,14 +3318,14 @@ Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0302893"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0100060"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000806"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0100060"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Chris Stoeckert</obo:IAO_0000117>
@@ -3347,6 +3347,12 @@ Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000423"/>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000953"/>
         <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33696"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <owl:Restriction>
@@ -3359,12 +3365,6 @@ Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33696"/>
-            </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 rdf:datatype="&xsd;string">An extract that is the output of an extraction process in which nucleic acid molecules are isolated from a specimen.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Jie Zheng</obo:IAO_0000117>
@@ -3383,14 +3383,14 @@ Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0001010"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_16991"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000257"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000257"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_16991"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000111 rdf:datatype="&xsd;string">DNA extract</obo:IAO_0000111>
@@ -3408,12 +3408,6 @@ Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
     <owl:Class rdf:about="&obo;OBI_0001143">
         <rdfs:label rdf:datatype="&xsd;string">labeled nucleic acid extract</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000924"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33696"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
@@ -3437,6 +3431,12 @@ Added duirng Mar 1, 2010 dev call</obo:IAO_0000116>
                     </owl:Restriction>
                 </owl:intersectionOf>
             </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000643"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33696"/>
+            </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">MO_221 labeledExtract</obo:IAO_0000119>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">Person: Jie Zheng</obo:IAO_0000117>
@@ -3871,24 +3871,18 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:allValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:allValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -3896,6 +3890,12 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
                 <owl:someValuesFrom rdf:resource="&obo;OBI_0200166"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;IAO_0000027"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">Philippe Rocca-Serra</obo:IAO_0000117>
@@ -4129,14 +4129,14 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
         <rdfs:subClassOf rdf:resource="&obo;OBI_0600014"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&ro;has_participant"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0400106"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000681"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000681"/>
+                <owl:onProperty rdf:resource="&ro;has_participant"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0400106"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">Philippe Rocca-Serra</obo:IAO_0000117>
@@ -4202,22 +4202,6 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000932"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:intersectionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="&obo;OBI_0000372"/>
-                            <owl:Restriction>
-                                <owl:onProperty rdf:resource="&obo;BFO_0000054"/>
-                                <owl:allValuesFrom rdf:resource="&obo;OBI_0302886"/>
-                            </owl:Restriction>
-                        </owl:intersectionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000051"/>
                 <owl:someValuesFrom>
                     <owl:Restriction>
@@ -4231,6 +4215,22 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
                 <owl:someValuesFrom rdf:resource="&obo;OBI_0000453"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
+                <owl:someValuesFrom>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="&obo;OBI_0000372"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="&obo;BFO_0000054"/>
+                                <owl:allValuesFrom rdf:resource="&obo;OBI_0302886"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment rdf:datatype="&xsd;string">A device with a rapidly rotating container that applies centrifugal force to its contents</rdfs:comment>
@@ -4253,13 +4253,13 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000379"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000372"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000085"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000372"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000379"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000119 rdf:datatype="&xsd;string">PERSON: Daniel Schober</obo:IAO_0000119>
@@ -4293,14 +4293,14 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000659"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0100026"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0100051"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0100051"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0100026"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4371,14 +4371,14 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000659"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0100051"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000684"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000684"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0100051"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
@@ -4429,13 +4429,13 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000094"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
                 <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4457,14 +4457,20 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000094"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000456"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0100060"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:someValuesFrom rdf:resource="&obo;CL_0000000"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000684"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -4476,13 +4482,7 @@ Thyroidectomy during laryngectomy for advanced laryngeal carcinoma--whole organ 
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000684"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0100060"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000456"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
@@ -4506,18 +4506,6 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000094"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000456"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
-                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -4530,6 +4518,18 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
                         </owl:intersectionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000417"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000456"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
+                <owl:someValuesFrom rdf:resource="&snap;MaterialEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
@@ -4612,6 +4612,12 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
         <rdfs:subClassOf rdf:resource="&obo;OBI_0302884"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
+                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33696"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;OBI_0000293"/>
                 <owl:someValuesFrom>
                     <owl:Class>
@@ -4622,12 +4628,6 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
                         </owl:unionOf>
                     </owl:Class>
                 </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000299"/>
-                <owl:someValuesFrom rdf:resource="&obo;CHEBI_33696"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
@@ -4651,14 +4651,14 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
         <rdfs:subClassOf rdf:resource="&obo;OBI_0001479"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
-                <owl:someValuesFrom rdf:resource="&obo;OBI_0000341"/>
+                <owl:onProperty rdf:resource="&obo;RO_0001000"/>
+                <owl:someValuesFrom rdf:resource="&obo;CARO_0001008"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;RO_0001000"/>
-                <owl:someValuesFrom rdf:resource="&obo;CARO_0001008"/>
+                <owl:onProperty rdf:resource="&obo;OBI_0000312"/>
+                <owl:someValuesFrom rdf:resource="&obo;OBI_0000341"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000117 rdf:datatype="&xsd;string">PERSON: Philippe Rocca-Serra</obo:IAO_0000117>
@@ -4686,8 +4686,8 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
         <obo:IAO_0000118 rdf:datatype="&xsd;string">donor role</obo:IAO_0000118>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/obi.owl</obo:IAO_0000412>
         <obo:IAO_0000115 xml:lang="en">A role which inheres in an organism or part thereof from which any part including cell, organ or tissue is removed with the intention that the donated part will be placed into another organism and/or cultured in vitro.</obo:IAO_0000115>
-        <obo:IAO_0000117 xml:lang="en">IEDB</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">IEDB</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">IEDB</obo:IAO_0000117>
         <obo:IAO_0000114 rdf:resource="&obo;IAO_0000120"/>
     </owl:Class>
     
@@ -4699,10 +4699,10 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
         <rdfs:label>disease</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;Disposition"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/ogms.owl</obo:IAO_0000412>
-        <obo:IAO_0000119>http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000119>
-        <obo:IAO_0000115 xml:lang="en">A disposition (i) to undergo pathological processes that (ii) exists in an organism because of one or more disorders in that organism.</obo:IAO_0000115>
-        <obo:IAO_0000232>creation date: 2009-06-23T11:21:20Z</obo:IAO_0000232>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000232>creation date: 2009-06-23T11:21:20Z</obo:IAO_0000232>
+        <obo:IAO_0000115 xml:lang="en">A disposition (i) to undergo pathological processes that (ii) exists in an organism because of one or more disorders in that organism.</obo:IAO_0000115>
+        <obo:IAO_0000119>http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -4713,10 +4713,10 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
         <rdfs:label>disorder</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/ogms.owl</obo:IAO_0000412>
-        <obo:IAO_0000232>creation date: 2009-06-23T11:39:44Z</obo:IAO_0000232>
-        <obo:IAO_0000115 xml:lang="en">A material entity which is clinically abnormal and part of an extended organism. Disorders are the physical basis of disease.</obo:IAO_0000115>
-        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000119>http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000119>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A material entity which is clinically abnormal and part of an extended organism. Disorders are the physical basis of disease.</obo:IAO_0000115>
+        <obo:IAO_0000232>creation date: 2009-06-23T11:39:44Z</obo:IAO_0000232>
     </owl:Class>
     
 
@@ -4733,10 +4733,10 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000027"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/ogms.owl</obo:IAO_0000412>
-        <obo:IAO_0000232>creation date: 2009-06-23T12:42:23Z</obo:IAO_0000232>
-        <obo:IAO_0000119>http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000119>
         <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">The representation of a conclusion of a diagnostic process.</obo:IAO_0000115>
+        <obo:IAO_0000119>http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000119>
+        <obo:IAO_0000232>creation date: 2009-06-23T12:42:23Z</obo:IAO_0000232>
     </owl:Class>
     
 
@@ -4747,10 +4747,10 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
         <rdfs:label>treatment</rdfs:label>
         <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/ogms.owl</obo:IAO_0000412>
-        <obo:IAO_0000115 xml:lang="en">A processual entity whose completion is hypothesized (by a healthcare provider) to alleviate the signs and symptoms associated with a disorder</obo:IAO_0000115>
-        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000232>creation date: 2010-03-31T04:51:11Z</obo:IAO_0000232>
         <obo:IAO_0000119>http://code.google.com/p/ogms/issues/detail?id=35</obo:IAO_0000119>
+        <obo:IAO_0000232>creation date: 2010-03-31T04:51:11Z</obo:IAO_0000232>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A processual entity whose completion is hypothesized (by a healthcare provider) to alleviate the signs and symptoms associated with a disorder</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -4761,10 +4761,10 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
         <rdfs:label>diagnostic process</rdfs:label>
         <rdfs:subClassOf rdf:resource="&span;ProcessualEntity"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.obolibrary.org/obo/ogms.owl</obo:IAO_0000412>
-        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
-        <obo:IAO_0000119>http://groups.google.com/group/ogms-discuss/browse_thread/thread/2a7008f311fac766/e7de486c94dfd82e</obo:IAO_0000119>
-        <obo:IAO_0000115 xml:lang="en">An interpretive process that has as input a clinical picture of a given patient and as output an assertion (diagnostic statement) to the effect that the patient has a disease of such and such a type.</obo:IAO_0000115>
         <obo:IAO_0000232>creation date: 2011-09-20T09:57:44Z</obo:IAO_0000232>
+        <obo:IAO_0000119>http://groups.google.com/group/ogms-discuss/browse_thread/thread/2a7008f311fac766/e7de486c94dfd82e</obo:IAO_0000119>
+        <obo:IAO_0000117>Albert Goldfain</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An interpretive process that has as input a clinical picture of a given patient and as output an assertion (diagnostic statement) to the effect that the patient has a disease of such and such a type.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -4883,8 +4883,8 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
     <owl:Class rdf:about="&obo;OMIABIS-0001036">
         <rdfs:label xml:lang="en">temperature regulating</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
-        <rdfs:comment>As per placing the term as a planned process, it can be argued that nature does play a role in the final output of the actual temperature.</rdfs:comment>
         <obo:IAO_0000115>A planned process that aims to control or maintain the temperature of a material entity to a given or required measurement datum.</obo:IAO_0000115>
+        <rdfs:comment>As per placing the term as a planned process, it can be argued that nature does play a role in the final output of the actual temperature.</rdfs:comment>
     </owl:Class>
     
 
@@ -5012,9 +5012,9 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&snap;ObjectAggregate"/>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A biobank is a collections of samples of biological substances
 (e.g. tissue, blood, DNA) which are linked to data about the samples and their donors. They have a dual nature as collections of samples and data.</obo:IAO_0000115>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000119 xml:lang="en">definition derived from the definition of &apos;human biobank&apos;, based on http://www.ethikrat.org/files/der_opinion_human-biobanks.pdf</obo:IAO_0000119>
     </owl:Class>
     
@@ -5025,11 +5025,11 @@ When harvesting blood from a human, isolating T cells, and then limited dilution
     <owl:Class rdf:about="&obo;OMIABIS_0000001">
         <rdfs:label xml:lang="en">human biobank</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000000"/>
+        <obo:IAO_0000119>Deutscher Ethikrat: Human biobanks for research. Opinion. Berlin, 2010. http://www.ethikrat.org/files/der_opinion_human-biobanks.pdf</obo:IAO_0000119>
         <obo:IAO_0000115 xml:lang="en">A human biobank is a collections of samples of human body substances
 (e.g. Tissue, blood, DNA) which are linked to personal data and socio
 deographic information about the donors of the material. They have a dual
 nature as collections of samples and data.&quot;</obo:IAO_0000115>
-        <obo:IAO_0000119>Deutscher Ethikrat: Human biobanks for research. Opinion. Berlin, 2010. http://www.ethikrat.org/files/der_opinion_human-biobanks.pdf</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -5122,8 +5122,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
-        <obo:IAO_0000115 xml:lang="en">A textural string of letters that represents a biobank.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A textural string of letters that represents a biobank.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Name of biobank</obo:IAO_0000118>
     </owl:Class>
     
@@ -5147,9 +5147,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</obo:IAO_0000119>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">Two-letter country codes defined in ISO 3166-1, part of the ISO 3166 standard published by the International Organization for Standardization (ISO), to designate countries, dependent territories, and special areas of geographical interest.</obo:IAO_0000115>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -5173,8 +5173,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">Biobank ID</obo:IAO_0000118>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">Textual string of letters starting with the country code (according to standard ISO1366 alpha2) followed by the underscore “_” and post-fixed by a biobank ID or name specified by its juristic person (nationally specific).</obo:IAO_0000115>
     </owl:Class>
     
@@ -5210,8 +5210,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A sample collection or study proper name that is centrally registered and unique within one framework.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A sample collection or study proper name that is centrally registered and unique within one framework.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Sample Collection/Study ID</obo:IAO_0000118>
     </owl:Class>
     
@@ -5351,9 +5351,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 <owl:someValuesFrom rdf:resource="&obo;OMIABIS_0000013"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115>An organization bearing legal personality that ownes or adminstrates a biobank.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">An organization bearing legal personality that ownes or adminstrates a biobank.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">biobank juristic person</obo:IAO_0000118>
     </owl:Class>
     
@@ -5364,9 +5364,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     <owl:Class rdf:about="&obo;OMIABIS_0000011">
         <rdfs:label xml:lang="en">contacting</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OBI_0000011"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115>Contacting is the process of one human being starting a communication process with another human being. Contacting can be done using all modes of communication used by humans.</obo:IAO_0000115>
         <obo:IAO_0000115 xml:lang="en">Contacting is the process of one human being starting a communication process with another human being. Contacting can be done using all modes of communication used by humans.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -5376,12 +5376,6 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     <owl:Class rdf:about="&obo;OMIABIS_0000012">
         <rdfs:label xml:lang="en">contact role</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OMRSE_00000024"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&obo;OBI_0000300"/>
-                <owl:allValuesFrom rdf:resource="&obo;OMIABIS_0000011"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&OBO_REL;inheres_in"/>
@@ -5402,6 +5396,12 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&obo;BFO_0000054"/>
                 <owl:someValuesFrom rdf:resource="&obo;OMIABIS_0000011"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&obo;OBI_0000300"/>
+                <owl:allValuesFrom rdf:resource="&obo;OMIABIS_0000011"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A role borne by a human being that is part of an group of individuals and acts as contact person for the group. This role gets realized by the bearer being a participant in a contacting process.</obo:IAO_0000115>
@@ -5445,8 +5445,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;NCBITaxon_9606"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A human being that is member of a biobank organization and bears the organization contact role.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -5476,9 +5476,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020015"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A personal name that designates the person acting as contact for a sample collection or a study.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Biobank contact person</obo:IAO_0000118>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -5513,9 +5513,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000429"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An email address for the purpose of contacting a biobank contact person.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Biobank contact email</obo:IAO_0000118>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -5575,8 +5575,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Department</obo:IAO_0000119>
         <obo:IAO_0000115 xml:lang="en">A department is a part of a larger organization with a specific responsibility.</obo:IAO_0000115>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Department</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -5611,9 +5611,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000017"/>
-        <obo:IAO_0000118 xml:lang="en">Biobank contact department</obo:IAO_0000118>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A department that has a contact person for a biobank as an organizational member.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">Biobank contact department</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -5623,9 +5623,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     <owl:Class rdf:about="&obo;OMIABIS_0000019">
         <rdfs:label xml:lang="en">unique resource locator</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000578"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
-        <obo:IAO_0000115 xml:lang="en">A CRID that constitutes a reference to an Internet resource.</obo:IAO_0000115>
         <obo:IAO_0000119>http://en.wikipedia.org/wiki/Uniform_resource_locator</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">A CRID that constitutes a reference to an Internet resource.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">uri</obo:IAO_0000118>
     </owl:Class>
     
@@ -5636,9 +5636,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     <owl:Class rdf:about="&obo;OMIABIS_0000020">
         <rdfs:label xml:lang="en">biobank&apos;s unique resource locator</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000019"/>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A unique resource locator referring to the homepage of a biobank.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Biobank URL</obo:IAO_0000118>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -5654,10 +5654,10 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 <owl:allValuesFrom rdf:resource="&obo;IAO_0000029"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Telephone_number</obo:IAO_0000119>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A telephone number  is a textual entity consisting of a sequence of digits used to call from one telephone line to another in a public switched telephone network.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">MB: This class should probably be a subclass to CRID. However, the textual definition of CRID right now states that each instance has the CRID identifier as a part. This is not the case for telephone numbers. Therefore, they cannot be subsumed under CRID now. I am looking into changing IAO accordingly. Once that is done, the class ought to be a subclass of CRID.</rdfs:comment>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Telephone_number</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -5692,9 +5692,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000021"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A telephone number that is contact information about a biobank contact person.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Biobank contact phone</obo:IAO_0000118>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -5715,8 +5715,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000578"/>
-        <obo:IAO_0000115 xml:lang="en">A CRID denoting a post-office box.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A CRID denoting a post-office box.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -5726,9 +5726,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     <owl:Class rdf:about="&obo;OMIABIS_0000024">
         <rdfs:label xml:lang="en">post-office box</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Post-office_box</obo:IAO_0000119>
-        <obo:IAO_0000115 xml:lang="en">A post-office box is material entity that is a box on the premises of a post office station and is uniquely addressable.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A post-office box is material entity that is a box on the premises of a post office station and is uniquely addressable.</obo:IAO_0000115>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Post-office_box</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -5793,8 +5793,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000021"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A telephone number that is contact information about a sample collection or study contact person.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">Sample Collection/Study contact phone</obo:IAO_0000118>
     </owl:Class>
     
@@ -5811,10 +5811,10 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 <owl:someValuesFrom rdf:resource="&obo;GAZ_00000448"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Postal_code</obo:IAO_0000119>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A postal code is a textual entity that is a series of letters and/or digits and is part of a postal address for the purpose of sorting mail.</obo:IAO_0000115>
         <rdfs:comment xml:lang="en">MB: This class should probably be a subclass to CRID. However, the textual definition of CRID right now states that each instance has the CRID identifier as a part. This is not the case for postal codes. Therefore, they cannot be subsumed under CRID now. I am looking into changing IAO accordingly. Once that is done, the class ought to be a subclass of CRID.</rdfs:comment>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000119>http://en.wikipedia.org/wiki/Postal_code</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -5859,8 +5859,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000026"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">Biobank contact ZIP</obo:IAO_0000118>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">The postal code that is part of the postal address of the biobank contact person.</obo:IAO_0000115>
     </owl:Class>
     
@@ -5906,8 +5906,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000004"/>
-        <obo:IAO_0000118 xml:lang="en">Biobank country code</obo:IAO_0000118>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">Biobank country code</obo:IAO_0000118>
         <obo:IAO_0000115 xml:lang="en">The ISO 3166-1 alpha-2 code that is part of the biobank contact person&apos;s postal address.</obo:IAO_0000115>
     </owl:Class>
     
@@ -5924,8 +5924,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 <owl:someValuesFrom rdf:resource="&obo;GAZ_00000448"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A textual entity that is part of a postal address and denotes a human settlement for the purpose of delivering mail.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -5970,8 +5970,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000029"/>
-        <obo:IAO_0000118 xml:lang="en">Biobank contact city</obo:IAO_0000118>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">Biobank contact city</obo:IAO_0000118>
         <obo:IAO_0000115 xml:lang="en">The part of a biobank contact&apos;s adress denoting a settlement.</obo:IAO_0000115>
     </owl:Class>
     
@@ -6014,8 +6014,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000300"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A textual entity that is part of a postal address and specifies the location inside the settlement. This can be a street name and a house number, or just a number or a post-office box number.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -6060,8 +6060,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000031"/>
-        <obo:IAO_0000115 xml:lang="en">An intra-settlement specification part of address that is part of a biobank contact&apos;s postal address.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An intra-settlement specification part of address that is part of a biobank contact&apos;s postal address.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Biobank contact address</obo:IAO_0000118>
     </owl:Class>
     
@@ -6094,9 +6094,9 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 </owl:intersectionOf>
             </owl:Class>
         </owl:equivalentClass>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A object aggregate that consists of specimens, participates in a study and is part of a biobank.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Hosted studies</obo:IAO_0000118>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -6183,8 +6183,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000429"/>
-        <obo:IAO_0000115 xml:lang="en">An email address for the purpose of contacting a sample collection or study contact person.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">An email address for the purpose of contacting a sample collection or study contact person.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Sample Collection/Study contact email</obo:IAO_0000118>
     </owl:Class>
     
@@ -6234,8 +6234,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000300"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A textual entity describing a study aim or a sample collection.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">Sample collection or study description</obo:IAO_0000118>
     </owl:Class>
     
@@ -6257,8 +6257,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020000"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A proper name that designates a study.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">Study name</obo:IAO_0000118>
     </owl:Class>
     
@@ -6329,8 +6329,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020015"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A personal name that designates the human being responsible for a sample collection or the human being being the principal investigator in a study.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">Sample Collection Responsible / Principal Investigator</obo:IAO_0000118>
     </owl:Class>
     
@@ -6401,8 +6401,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Restriction>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0020015"/>
-        <obo:IAO_0000115 xml:lang="en">A personal name that designates the person acting as contact for a sample collection or a study.</obo:IAO_0000115>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000115 xml:lang="en">A personal name that designates the person acting as contact for a sample collection or a study.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Sample Collection/Study contact person</obo:IAO_0000118>
     </owl:Class>
     
@@ -6478,8 +6478,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000017"/>
-        <obo:IAO_0000115 xml:lang="en">A department that has a contact person for a sample collection or a study as an organizational member.</obo:IAO_0000115>
         <obo:IAO_0000115>Mathias Brochhausen</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">A department that has a contact person for a sample collection or a study as an organizational member.</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Sample Collection/Study contact department</obo:IAO_0000118>
     </owl:Class>
     
@@ -6490,8 +6490,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     <owl:Class rdf:about="&obo;OMIABIS_0000041">
         <rdfs:label xml:lang="en">street</rdfs:label>
         <rdfs:subClassOf rdf:resource="&snap;MaterialEntity"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A street is a  thoroughfare in a built environment.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -6566,8 +6566,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000031"/>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">An intra-settlement specification part of address that is part of a sample collection or study contact&apos;s postal address.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">Sample Collection/Study contact address</obo:IAO_0000115>
     </owl:Class>
     
@@ -6677,8 +6677,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000004"/>
         <obo:IAO_0000115 xml:lang="en">An ISO 3166-1 alpha-2 code that designates the country a biobank is located in.</obo:IAO_0000115>
-        <obo:IAO_0000118 xml:lang="en">Biobank country code</obo:IAO_0000118>
         <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
+        <obo:IAO_0000118 xml:lang="en">Biobank country code</obo:IAO_0000118>
     </owl:Class>
     
 
@@ -6694,8 +6694,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 <owl:allValuesFrom rdf:resource="&obo;OBI_0000245"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A proper name for an organization that is assigned to that organization by the Cancer Therapy Evaluation Program</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -6734,8 +6734,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
                 </owl:intersectionOf>
             </owl:Class>
         </rdfs:subClassOf>
-        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A biobank identifier that has both an ISO 3166-1 alpha-2 code and a CTEP organization code.</obo:IAO_0000115>
+        <obo:IAO_0000117>Mathias Brochhausen</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -6755,7 +6755,7 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
 
     <owl:Class rdf:about="&obo;OMIABIS_0000050">
         <rdfs:label xml:lang="en">fixed tissue specimen</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000953"/>
         <obo:IAO_0000115>A specimen that has been converted into stable, biologically assimilable compounds.</obo:IAO_0000115>
     </owl:Class>
     
@@ -6765,7 +6765,7 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
 
     <owl:Class rdf:about="&obo;OMIABIS_0000051">
         <rdfs:label xml:lang="en">fixed tissue block specimen</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000953"/>
         <obo:IAO_0000115>A specimen that is in block form after it has has been converted into stable, biologically assimilable compounds.</obo:IAO_0000115>
     </owl:Class>
     
@@ -6775,7 +6775,7 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
 
     <owl:Class rdf:about="&obo;OMIABIS_0000052">
         <rdfs:label xml:lang="en">fixed tissue slide specimen</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000953"/>
         <obo:IAO_0000115>A specimen that is placed in a slide after it has been converted into stable, biologically assimilable compounds.</obo:IAO_0000115>
     </owl:Class>
     
@@ -6785,9 +6785,10 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
 
     <owl:Class rdf:about="&obo;OMIABIS_0000053">
         <rdfs:label xml:lang="en">flash frozen specimen</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
-        <obo:IAO_0000115 xml:lang="en">A specimen that has been frozen and </obo:IAO_0000115>
-        <rdfs:comment xml:lang="en">TBR</rdfs:comment>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000922"/>
+        <obo:IAO_0000115 xml:lang="en">A frozen specimen that has been instantly/quickly frozen by subjecting the specimen to cryogenic temperatures, or in direct contact with liquid nitrogen at -320.8F 0r -196C.</obo:IAO_0000115>
+        <obo:IAO_0000119 xml:lang="en">http://en.wikipedia.org/wiki/Flash_freezing
+</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -6796,8 +6797,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
 
     <owl:Class rdf:about="&obo;OMIABIS_0000054">
         <rdfs:label xml:lang="en">fresh tissue specimen</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
-        <obo:IAO_0000115 xml:lang="en">A specimen that is in it&apos;s natural form.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000971"/>
+        <obo:IAO_0000115 xml:lang="en">A fresh specimen that is in a tissue form.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -6806,8 +6807,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
 
     <owl:Class rdf:about="&obo;OMIABIS_0000055">
         <rdfs:label xml:lang="en">frozen tissue block specimen</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
-        <obo:IAO_0000115 xml:lang="en">A specimen that has been frozen by placing it in a block.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000922"/>
+        <obo:IAO_0000115 xml:lang="en">A frozen specimen is a tissue sample preserved in a block.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -6816,8 +6817,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
 
     <owl:Class rdf:about="&obo;OMIABIS_0000056">
         <rdfs:label xml:lang="en">frozen tissue slide specimen</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&obo;OBI_0100051"/>
-        <obo:IAO_0000115 xml:lang="en">A specimen that has been frozen in a slide form.</obo:IAO_0000115>
+        <rdfs:subClassOf rdf:resource="&obo;OBI_0000922"/>
+        <obo:IAO_0000115 xml:lang="en">A frozen specimen that has been sliced from a tissue block into thin layers that are placed on a glass to be examined under a microscope.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -7414,10 +7415,10 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
         <rdfs:label xml:lang="en">comorbidity</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OGMS_0000073"/>
         <owl:disjointWith rdf:resource="&obo;OMIABIS_0001009"/>
+        <obo:IAO_0000119>http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000119>
         <obo:IAO_0000115 xml:lang="en">A diagnosis that specifies diseases, or complaints or disorders which exist from the beginning with the main diagnosis or which develop during the stay in hospital and occurs due to the disposition established by a prior infection with a pathogenic organism of a different kind.
 </obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Alice Nzinga</obo:IAO_0000117>
-        <obo:IAO_0000119>http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000119>
     </owl:Class>
     
 
@@ -7427,11 +7428,11 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     <owl:Class rdf:about="&obo;OMIABIS_0001009">
         <rdfs:label xml:lang="en">main diagnosis</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OGMS_0000073"/>
-        <obo:IAO_0000115 xml:lang="en">A diagnosis that is established after analysis as that which is mainly responsible for the inducement of the impatient hospital stay (or visit) and states a disposition caused by a presence of a pathologic organism within a host organism or abnormal imbalance in the host organismal flora or a disease.</obo:IAO_0000115>
-        <obo:IAO_0000119>http://www.gbe-bund.de/gbe10/ergebnisse.prc_tab?fid=11115&amp;suchstring=&amp;query_id=&amp;sprache=E&amp;fund_typ=DEF&amp;methode=&amp;vt=&amp;verwandte=1&amp;page_ret=0&amp;seite=1&amp;p_sprachkz=E&amp;p_uid=&amp;p_lfd_nr=&amp;p_news=&amp;p_aid=&amp;hlp_nr=&amp;p_janein=</obo:IAO_0000119>
-        <obo:IAO_0000117 xml:lang="en">Alice Nzinga</obo:IAO_0000117>
-        <obo:IAO_0000119>http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000119>
         <rdfs:comment xml:lang="en">It should be represented as textual string of letters for ICD-10.</rdfs:comment>
+        <obo:IAO_0000119>http://ontology.buffalo.edu/medo/Disease_and_Diagnosis.pdf</obo:IAO_0000119>
+        <obo:IAO_0000117 xml:lang="en">Alice Nzinga</obo:IAO_0000117>
+        <obo:IAO_0000119>http://www.gbe-bund.de/gbe10/ergebnisse.prc_tab?fid=11115&amp;suchstring=&amp;query_id=&amp;sprache=E&amp;fund_typ=DEF&amp;methode=&amp;vt=&amp;verwandte=1&amp;page_ret=0&amp;seite=1&amp;p_sprachkz=E&amp;p_uid=&amp;p_lfd_nr=&amp;p_news=&amp;p_aid=&amp;hlp_nr=&amp;p_janein=</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">A diagnosis that is established after analysis as that which is mainly responsible for the inducement of the impatient hospital stay (or visit) and states a disposition caused by a presence of a pathologic organism within a host organism or abnormal imbalance in the host organismal flora or a disease.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -7555,8 +7556,8 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A measurement datum that contains the assessment information about the functioning of a major organ system, the extent of disease or disability,as well as the provision and/or response to therapeutic interventions.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">Alice Nzinga</obo:IAO_0000117>
-        <rdfs:comment xml:lang="en">Examples: Audiology, Cardiac Physiology, GI Physiology, Neurophysiology, Ophthalmic and Vision Science, Respiratory and Sleep Physiology, Urodynamics, Vascular Technology</rdfs:comment>
         <obo:IAO_0000119>http://www.improvement.nhs.uk/physiologydiagnostics/documents/WhatisPhysiologicalMeasurement.pdf</obo:IAO_0000119>
+        <rdfs:comment xml:lang="en">Examples: Audiology, Cardiac Physiology, GI Physiology, Neurophysiology, Ophthalmic and Vision Science, Respiratory and Sleep Physiology, Urodynamics, Vascular Technology</rdfs:comment>
     </owl:Class>
     
 
@@ -7773,11 +7774,11 @@ nature as collections of samples and data.&quot;</obo:IAO_0000115>
     <owl:Class rdf:about="&obo;OMIABIS_0001026">
         <rdfs:label xml:lang="en">medical record</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;IAO_0000310"/>
-        <obo:IAO_0000115>A document that contains information representing health-relevant qualities of a patient written in a chronological manner and is primarily used for patient care in a clinical setting. It is required to be compliant with requirements of 21 CFR Part 11.</obo:IAO_0000115>
+        <rdfs:comment>It is a chronological written account of examination, treatment, medical history or complaints.</rdfs:comment>
+        <obo:IAO_0000117>Martin Fransson</obo:IAO_0000117>
         <rdfs:comment>It is used interchangeably with health record and medical chart.
 https://en.wikipedia.org/wiki/Medical_record</rdfs:comment>
-        <obo:IAO_0000117>Martin Fransson</obo:IAO_0000117>
-        <rdfs:comment>It is a chronological written account of examination, treatment, medical history or complaints.</rdfs:comment>
+        <obo:IAO_0000115>A document that contains information representing health-relevant qualities of a patient written in a chronological manner and is primarily used for patient care in a clinical setting. It is required to be compliant with requirements of 21 CFR Part 11.</obo:IAO_0000115>
     </owl:Class>
     
 
@@ -8340,8 +8341,8 @@ https://en.wikipedia.org/wiki/Medical_record</rdfs:comment>
             </owl:Class>
         </owl:equivalentClass>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000000"/>
-        <obo:IAO_0000117>Alice Nzinga</obo:IAO_0000117>
         <obo:IAO_0000115 xml:lang="en">A biobank that collects and stores specimen during specimen collection primarily for the purposes of some study.</obo:IAO_0000115>
+        <obo:IAO_0000117>Alice Nzinga</obo:IAO_0000117>
     </owl:Class>
     
 
@@ -8514,8 +8515,8 @@ Amanda Hicks</obo:IAO_0000117>
                 </owl:someValuesFrom>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 xml:lang="en">A role borne by a human individual or by a collection of humans regarded as possessing rights and duties enforeable at law.</obo:IAO_0000115>
         <obo:IAO_0000119>Malcolm N. Shaw: International Law. Cambridge University Press, Cambridge, 2008.</obo:IAO_0000119>
+        <obo:IAO_0000115 xml:lang="en">A role borne by a human individual or by a collection of humans regarded as possessing rights and duties enforeable at law.</obo:IAO_0000115>
         <obo:IAO_0000119 xml:lang="en">Malcolm N. Shaw: International Law. Cambridge University Press, Cambridge, 2008.</obo:IAO_0000119>
         <rdfs:comment xml:lang="en">We are aware of the fact that Wikipedia&apos;s definition differs from ours by saying that &quot;Legal personality (...) is the characteristic of a non-living entity regarded by law to have the status of personhood&quot; (http://en.wikipedia.org/wiki/Legal_personality) 
 However, Shaw explicates:
@@ -8673,76 +8674,67 @@ However, Shaw explicates:
         <rdfs:label xml:lang="en">formaldehyde</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;CHEBI_23367"/>
         <obo:IAO_0000412 rdf:datatype="&xsd;string">http://purl.org/obo/owl/foo</obo:IAO_0000412>
-        <oboInOwl:hasAlternativeId>CHEBI:337763</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>CHEBI:14274</oboInOwl:hasAlternativeId>
-        <oboInOwl:hasAlternativeId>CHEBI:5142</oboInOwl:hasAlternativeId>
         <oboInOwl:hasAlternativeId>CHEBI:24077</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>CHEBI:5142</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>CHEBI:14274</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasAlternativeId>CHEBI:337763</oboInOwl:hasAlternativeId>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
+        <oboInOwl:hasRelatedSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasRelatedSynonym>
             <rdf:Description/>
         </oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasExactSynonym>
             <rdf:Description/>
         </oboInOwl:hasExactSynonym>
+        <oboInOwl:hasExactSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>
             <rdf:Description/>
         </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasExactSynonym>
             <rdf:Description/>
-        </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
-        <oboInOwl:hasDbXref>
-            <rdf:Description/>
-        </oboInOwl:hasDbXref>
+        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>
             <rdf:Description/>
         </oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasDefinition>
             <rdf:Description/>
         </oboInOwl:hasDefinition>
+        <oboInOwl:hasDbXref>
+            <rdf:Description/>
+        </oboInOwl:hasDbXref>
         <oboInOwl:hasRelatedSynonym>
             <rdf:Description/>
         </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasRelatedSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
-        <oboInOwl:hasRelatedSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasRelatedSynonym>
-        <oboInOwl:hasExactSynonym>
-            <rdf:Description/>
-        </oboInOwl:hasExactSynonym>
         <oboInOwl:hasRelatedSynonym>
             <rdf:Description/>
         </oboInOwl:hasRelatedSynonym>
@@ -8755,9 +8747,18 @@ However, Shaw explicates:
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
+        <oboInOwl:hasRelatedSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasRelatedSynonym>
+        <oboInOwl:hasRelatedSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasRelatedSynonym>
         <oboInOwl:hasDbXref>
             <rdf:Description/>
         </oboInOwl:hasDbXref>
+        <oboInOwl:hasRelatedSynonym>
+            <rdf:Description/>
+        </oboInOwl:hasRelatedSynonym>
     </owl:Class>
     
 
