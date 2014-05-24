@@ -250,6 +250,33 @@ edited definition on 'planned sampled human study participant'\
 edited label on 'planned total human study participant'\
 	to: 'number of total human study participant objective'\
 \
+edited definition on 'survey plan specification'\
+	to: "A plan specification that is realized by  process of gathering information (e.g. by 	asking questions)."\
+\
+moved 'specimen measurement specification'\
+ from: directive information entity\
+	to: objective specification\
+\
+edited definition of 'biobank proper name'\
+	to: An identifier in natural language referring  to a biobank.\
+\
+edited label on 'sampled age interval'\
+	to: 'sample group age interval'\
+\
+edited subclass restriction on 'sampled group age interval'\
+	to: 'information content entity'\
+	 and ('is about' some \
+    ('is part of' some ('data set'\
+     and 'is about' some \
+        (temporal_interval\
+         and ('has temporal occupant' exactly 1 (history\
+         and 'history of' some 'specimen donor'))))))\
+\
+added subclass restriction on 'comment form tissue procurement'\
+	'is about' some (('participates in' some 'sampling specimens for biobank') or 	'sampling specimens for biobank')\
+\
+deleted 'storage temperature'\
+\
   \
 \
 \
