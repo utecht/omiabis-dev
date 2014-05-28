@@ -41,20 +41,20 @@
      xmlns:OBO_REL="http://purl.org/obo/owl/OBO_REL#"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
      xmlns:span="http://www.ifomis.org/bfo/1.1/span#">
-    <owl:Ontology rdf:about="&obo;omiabis/dev/omiabis.owl">
+    <owl:Ontology rdf:about="&obo;omiabis/2014-05-28/omiabis.owl">
         <dc:contributor>Martin N. Fransson</dc:contributor>
-        <dc:contributor>Jan-Eric Litton</dc:contributor>
-        <dc:contributor>Loreana Norlin</dc:contributor>
-        <dc:title xml:lang="en">Ontologized MIABIS</dc:title>
-        <dc:contributor>William R. Hogan</dc:contributor>
+        <dc:contributor>Roxana Merino-Martinez</dc:contributor>
+        <dc:contributor>Sanela Kjellqvist</dc:contributor>
         <dc:source xml:lang="en">MIABIS_v2_accepted</dc:source>
         <dc:contributor>Mikael Eriksson</dc:contributor>
-        <dc:contributor>Sanela Kjellqvist</dc:contributor>
+        <dc:title xml:lang="en">Ontologized MIABIS</dc:title>
+        <dc:contributor>William R. Hogan</dc:contributor>
         <dc:creator>Alice Nzinga</dc:creator>
-        <dc:contributor>Roxana Merino-Martinez</dc:contributor>
+        <dc:contributor>Jan-Eric Litton</dc:contributor>
         <dc:creator>Mathias Brochhausen</dc:creator>
         <dc:contributor>Maria Anderberg</dc:contributor>
-        <owl:versionInfo xml:lang="en">development version</owl:versionInfo>
+        <dc:contributor>Loreana Norlin</dc:contributor>
+        <owl:versionInfo xml:lang="en">2014-05-28</owl:versionInfo>
         <owl:imports rdf:resource="&obo;geo.owl"/>
         <owl:imports rdf:resource="&obo;iao/pno.owl"/>
     </owl:Ontology>

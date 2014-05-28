@@ -277,8 +277,74 @@ added subclass restriction on 'comment form tissue procurement'\
 \
 deleted 'storage temperature'\
 \
-  \
+moved 'physiological measurement data'\
+	from: 'measurement data item'\
+	to 'data item'\
 \
+edited subclass restriction on 'physiological measurement data'\
+	to: 'data item' and 'is about' some (disease or disorder or treatment or \
+	(function and ('inheres in' some (proper_part_of some organism))))\
+\
+delete 'treatment role'\
+\
+changed URI on fixation to:\
+	http://purl.obolibrary.org/obo/OMIABIS_0000911\
+\
+edited definition on 'fixed tissue specimen'\
+	to: A processed specimen that is the output of a fixation process.\
+\
+delete 'whole bone marrow specimen'\
+\
+changed URI on 'addition of molecular label'\
+	to: http://purl.obolibrary.org/obo/OMIABIS_0000912\
+\
+edited label on 'omics experiment'\
+	to 'omics experiment on specimen'\
+\
+moved 'omits experiment on specimen'\
+	to: planned process\
+\
+added subclass restriction to 'omits experiment on specimen'\
+	'planned process' and realizes some 'study design' and 'has participant' some specimen\
+\
+edited label of "biobank contact's department'\
+	to: 'department of biobank contact'\
+\
+edited label of 'sample collection or study contact's department'\
+	to: department of sample collection or study contact'\
+\
+edited label of 'biobank contact's postal code'\
+	to: 'postal code of biobank contact'\
+\
+edited label of 'biobank contact's telephone number'\
+	to: 'telephone number of biobank contact'\
+\
+edited label of 'intra-settlement specification part of biobank contact's address'\
+	to: 'intra-settlement specification part of address of biobank contact'\
+\
+edited label of 'intra-settlement specification part of sample collection or study contact's address'\
+	to: 'intra-settlement specification part of address of sample collection or study contact'\
+\
+edited label of 'sample collection or study contact's email address'\
+	to: 'email address of sample collection or study contact'\
+\
+edited label of 'biobank contact person's ISO 3166-1 alpha-2 code'\
+	to: 'ISO 3166-1 alpha-2 code for biobank contact person'\
+\
+edited label of 'sample collection or study contact's ISO 3166-1 alpha-2 code'\
+	to: 'ISO 3166-1 alpha-2 code for sample collection or study contact'  \
+\
+edited label of 'sample collection or study contact's postal code'\
+	to: 'postal code for sample collection or study contact'\
+\
+edited label of 'sample collection or study contact's telephone number'\
+	to: 'telephone number of sample collection or study contact'\
+\
+edited label of 'settlement part of biobank contact's address'\
+	to: 'settlement part of address biobank contact'\
+\
+edited label of 'settlement part of sample collection or study contact's address'\
+	to: 'settlement part of address of sample collection or study contact'\
 \
 	 \
 \
