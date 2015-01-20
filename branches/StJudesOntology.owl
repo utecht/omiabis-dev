@@ -36,18 +36,18 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000029 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000029 -->
 
-    <owl:Class rdf:about="&obo;CT_StJUDES_00000029">
+    <owl:Class rdf:about="&obo;CT_StJUDE_00000029">
         <rdfs:label xml:lang="en">tissue bank</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000000"/>
     </owl:Class>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000030 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000030 -->
 
-    <owl:Class rdf:about="&obo;CT_StJUDES_00000030">
+    <owl:Class rdf:about="&obo;CT_StJUDE_00000030">
         <rdfs:label xml:lang="en">blood bank</rdfs:label>
         <rdfs:subClassOf rdf:resource="&obo;OMIABIS_0000000"/>
     </owl:Class>
@@ -65,260 +65,260 @@
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000031 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000031 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000031">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000031">
         <rdf:type rdf:resource="&obo;OBI_0000471"/>
-        <rdfs:label xml:lang="en">St. Judes Clinical Study 1</rdfs:label>
+        <rdfs:label xml:lang="en">St. Jude Clinical Study 1</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000032 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000032 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000032">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000032">
         <rdf:type rdf:resource="&obo;OBI_0000471"/>
-        <rdfs:label xml:lang="en">St. Judes Clinical Study 2</rdfs:label>
+        <rdfs:label xml:lang="en">St. Jude Clinical Study 2</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000033 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000033 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000033">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000033">
         <rdf:type rdf:resource="&obo;OBI_0600005"/>
         <rdfs:label xml:lang="en">Specimen creation 10</rdfs:label>
-        <ro:part_of rdf:resource="&obo;CT_StJUDES_00000031"/>
+        <ro:part_of rdf:resource="&obo;CT_StJUDE_00000031"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000034 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000034 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000034">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000034">
         <rdf:type rdf:resource="&obo;OBI_0600005"/>
         <rdfs:label xml:lang="en">Specimen creation 11</rdfs:label>
-        <ro:part_of rdf:resource="&obo;CT_StJUDES_00000031"/>
+        <ro:part_of rdf:resource="&obo;CT_StJUDE_00000031"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000035 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000035 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000035">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000035">
         <rdf:type rdf:resource="&obo;OBI_0600005"/>
         <rdfs:label xml:lang="en">Specimen creation 12</rdfs:label>
-        <ro:part_of rdf:resource="&obo;CT_StJUDES_00000031"/>
+        <ro:part_of rdf:resource="&obo;CT_StJUDE_00000031"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000036 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000036 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000036">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000036">
         <rdf:type rdf:resource="&obo;OBI_0600005"/>
         <rdfs:label xml:lang="en">Specimen creation 13</rdfs:label>
-        <ro:part_of rdf:resource="&obo;CT_StJUDES_00000031"/>
+        <ro:part_of rdf:resource="&obo;CT_StJUDE_00000031"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000037 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000037 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000037">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000037">
         <rdf:type rdf:resource="&obo;OBI_0600005"/>
         <rdfs:label xml:lang="en">Specimen creation 14</rdfs:label>
-        <ro:part_of rdf:resource="&obo;CT_StJUDES_00000031"/>
+        <ro:part_of rdf:resource="&obo;CT_StJUDE_00000031"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000038 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000038 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000038">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000038">
         <rdf:type rdf:resource="&obo;OBI_0600005"/>
         <rdfs:label xml:lang="en">Specimen creation 15</rdfs:label>
-        <ro:part_of rdf:resource="&obo;CT_StJUDES_00000031"/>
+        <ro:part_of rdf:resource="&obo;CT_StJUDE_00000031"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000039 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000039 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000039">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000039">
         <rdf:type rdf:resource="&obo;OBI_0600005"/>
         <rdfs:label xml:lang="en">Specimen creation 20</rdfs:label>
-        <ro:part_of rdf:resource="&obo;CT_StJUDES_00000032"/>
+        <ro:part_of rdf:resource="&obo;CT_StJUDE_00000032"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000040 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000040 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000040">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000040">
         <rdf:type rdf:resource="&obo;OBI_0600005"/>
         <rdfs:label xml:lang="en">Specimen creation 21</rdfs:label>
-        <ro:part_of rdf:resource="&obo;CT_StJUDES_00000032"/>
+        <ro:part_of rdf:resource="&obo;CT_StJUDE_00000032"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000041 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000041 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000041">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000041">
         <rdf:type rdf:resource="&obo;OBI_0600005"/>
         <rdfs:label xml:lang="en">Specimen creation 22</rdfs:label>
-        <ro:part_of rdf:resource="&obo;CT_StJUDES_00000032"/>
+        <ro:part_of rdf:resource="&obo;CT_StJUDE_00000032"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000042 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000042 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000042">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000042">
         <rdf:type rdf:resource="&obo;OBI_0600005"/>
         <rdfs:label xml:lang="en">Specimen creation 23</rdfs:label>
-        <ro:part_of rdf:resource="&obo;CT_StJUDES_00000032"/>
+        <ro:part_of rdf:resource="&obo;CT_StJUDE_00000032"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000043 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000043 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000043">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000043">
         <rdf:type rdf:resource="&obo;OBI_0600005"/>
         <rdfs:label xml:lang="en">Specimen creation 24</rdfs:label>
-        <ro:part_of rdf:resource="&obo;CT_StJUDES_00000032"/>
+        <ro:part_of rdf:resource="&obo;CT_StJUDE_00000032"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000044 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000044 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000044">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000044">
         <rdf:type rdf:resource="&obo;OBI_0600005"/>
         <rdfs:label xml:lang="en">Specimen creation 25</rdfs:label>
-        <ro:part_of rdf:resource="&obo;CT_StJUDES_00000032"/>
+        <ro:part_of rdf:resource="&obo;CT_StJUDE_00000032"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000045 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000045 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000045">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000045">
         <rdf:type rdf:resource="&obo;OBI_0100051"/>
         <rdfs:label xml:lang="en">Specimen 10</rdfs:label>
-        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDES_00000033"/>
+        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDE_00000033"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000046 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000046 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000046">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000046">
         <rdf:type rdf:resource="&obo;OBI_0100051"/>
         <rdfs:label xml:lang="en">Specimen 11</rdfs:label>
-        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDES_00000034"/>
+        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDE_00000034"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000047 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000047 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000047">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000047">
         <rdf:type rdf:resource="&obo;OBI_0100051"/>
         <rdfs:label xml:lang="en">Specimen 12</rdfs:label>
-        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDES_00000035"/>
+        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDE_00000035"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000048 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000048 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000048">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000048">
         <rdf:type rdf:resource="&obo;OBI_0100051"/>
         <rdfs:label xml:lang="en">Specimen 13</rdfs:label>
-        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDES_00000036"/>
+        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDE_00000036"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000049 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000049 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000049">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000049">
         <rdf:type rdf:resource="&obo;OBI_0100051"/>
         <rdfs:label xml:lang="en">Specimen 14</rdfs:label>
-        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDES_00000037"/>
+        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDE_00000037"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000050 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000050 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000050">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000050">
         <rdf:type rdf:resource="&obo;OBI_0100051"/>
         <rdfs:label xml:lang="en">Specimen 15</rdfs:label>
-        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDES_00000038"/>
+        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDE_00000038"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000051 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000051 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000051">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000051">
         <rdf:type rdf:resource="&obo;OBI_0100051"/>
         <rdfs:label xml:lang="en">Specimen 21</rdfs:label>
-        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDES_00000040"/>
+        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDE_00000040"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000052 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000052 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000052">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000052">
         <rdf:type rdf:resource="&obo;OBI_0100051"/>
         <rdfs:label xml:lang="en">Specimen 20</rdfs:label>
-        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDES_00000039"/>
+        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDE_00000039"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000053 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000053 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000053">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000053">
         <rdf:type rdf:resource="&obo;OBI_0100051"/>
         <rdfs:label xml:lang="en">Specimen 22</rdfs:label>
-        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDES_00000041"/>
+        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDE_00000041"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000054 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000054 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000054">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000054">
         <rdf:type rdf:resource="&obo;OBI_0100051"/>
         <rdfs:label xml:lang="en">Specimen 23</rdfs:label>
-        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDES_00000042"/>
+        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDE_00000042"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000055 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000055 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000055">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000055">
         <rdf:type rdf:resource="&obo;OBI_0100051"/>
         <rdfs:label xml:lang="en">Specimen 24</rdfs:label>
-        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDES_00000043"/>
+        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDE_00000043"/>
     </owl:NamedIndividual>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/CT_StJUDES_00000056 -->
+    <!-- http://purl.obolibrary.org/obo/CT_StJUDE_00000056 -->
 
-    <owl:NamedIndividual rdf:about="&obo;CT_StJUDES_00000056">
+    <owl:NamedIndividual rdf:about="&obo;CT_StJUDE_00000056">
         <rdf:type rdf:resource="&obo;OBI_0100051"/>
         <rdfs:label xml:lang="en">Specimen 25</rdfs:label>
-        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDES_00000044"/>
+        <obo:OBI_0000312 rdf:resource="&obo;CT_StJUDE_00000044"/>
     </owl:NamedIndividual>
 </rdf:RDF>
 
